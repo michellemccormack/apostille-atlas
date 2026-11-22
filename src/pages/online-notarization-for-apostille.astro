@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+import Aff from '../components/Aff.astro';
+const title = 'Online notarization (RON) for apostille documents';
+const description = 'How remote online notarization relates to a U.S. apostille, what Texas requires when it apostilles a RON document, and which official pages do and do not address online notarization.';
+---
+<Base title={title} description={description} updated="2026-11-22">
+  <h1>Online notarization for apostille documents</h1>
+  <p class="lede">A remote online notary (RON) can notarize a document over two-way audio and video. The apostille, if you need one, still comes from the competent authority in the state of the notary or the record, not from the notarization platform.</p>
+
+  <div class="note">This page covers only what official government pages said when we checked them on November 22, 2026. An online notary platform does not issue an apostille. Some destination countries refuse remotely notarized documents even after a state office authenticates them.</div>
+
+  <h2>The two steps are separate</h2>
+  <p>Notarization confirms that a signer appeared before a notary and that the notarial certificate was completed. An apostille authenticates the notary’s (or other public official’s) signature, seal, and capacity for use abroad. California’s official FAQ puts it this way: an apostille certifies the authenticity of the public official’s signature, the capacity in which that official acted, and, when appropriate, the identity of the seal or stamp; it “does not validate the contents of the document.”<Src href="https://www.sos.ca.gov/notary/apostille-faqs" /></p>
+  <p>If the document is a notarized private paper (for example, a power of attorney or a school-record affidavit), you typically get it notarized first, then send the original notarized document to the state office. If it is a vital record or court paper, you usually need a certified copy from the issuing agency, not a fresh notarization.</p>
+
+  <h2>What official pages say, state by state</h2>
+  <h3>Texas</h3>
+  <p>The Texas Secretary of State is explicit. “Online (RON) notarization documents can be apostilled by our Office if presented with the following items:” a notarization ledger that details the date and time signatures were applied, a document description, and signer information; and “a true and accurate notarial certificate, which contains the required statements indicating the document was notarized via ‘electronic or online notarization by two-way audio and visual communication.’”<Src href="https://www.sos.texas.gov/authinfo.shtml" /></p>
+  <p>The same official page warns: “some countries do not accept online (RON) notarized documents, even if properly authenticated by our Office. Please verify with the agency, or entity you are submitting your documents to in order to ensure they accept this type of notarization.”<Src href="https://www.sos.texas.gov/authinfo.shtml" /></p>
+  <p>Texas also requires that documents be “issued from the state of Texas or properly notarized by a Texas notary” to qualify for an apostille.<Src href="https://www.sos.texas.gov/statdoc/request.shtml" /></p>
+
+  <h3>Florida</h3>
+  <p>Florida has authorized remote online notarization since January 1, 2020, under Chapter 2019-71, Laws of Florida, and Rule 1N-7.001 of the Florida Administrative Code. Only an already commissioned Florida notary (or a qualifying civil-law notary or commissioner of deeds) may register as an online notary, after training, an application, and an initial $10 fee.<Src href="https://dos.fl.gov/sunbiz/other-services/notaries/remote-online-notary-public" /></p>
+  <p>The Florida apostille page lists “Documents Notarized by a Florida Notary Public” among the documents the Division of Corporations will authenticate.<Src href="https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification" /> That page does not publish a separate RON checklist (for example, it does not mention a ledger). If you have a remotely notarized Florida document, confirm the current attachment requirements with the Apostille Section before you mail it.</p>
+
+  <h3>New York</h3>
+  <p>New York’s notary FAQ discusses electronic notarization, including fees: “An Electronic Notary may charge up to $25.00 per electronic notarial act performed,” and “A certificate of authenticity for any document that has been created through an electronic notarial act is a notarial act for which $2.00 may be charged.”<Src href="https://dos.ny.gov/notary-public-frequently-asked-questions" /> Those are notary fees, not the Department of State apostille fee.</p>
+  <p>The official apostille page requires notarized documents to be certified by the county clerk of the county where the notary is commissioned, then submitted to the Department of State with a $10 fee per document.<Src href="https://dos.ny.gov/apostille-certificate-authentication" /> That page, checked November 22, 2026, does not specifically describe remote or electronic notarizations. Confirm with the Apostille and Authentication Unit, and with the county clerk, before you rely on a RON document.</p>
+
+  <h3>California and Massachusetts</h3>
+  <p>The California request-an-apostille and apostille FAQ pages, and the Massachusetts apostilles page, checked November 22, 2026, do not address remote online notarization. California will apostille a document signed by a California public official or “an original notarized and/or certified document.”<Src href="https://www.sos.ca.gov/notary/request-apostille" /> Massachusetts will certify documents that carry an original signature of a valid Massachusetts notary public (or certain other named officials), and says photocopied signatures can’t be certified.<Src href="https://www.sec.state.ma.us/divisions/commissions/apostilles.htm" /> Whether a particular electronically notarized document meets those offices’ current requirements is not stated on those pages, so ask the office before you file.</p>
+
+  <h2>Online notarization platforms</h2>
+  <p>These companies provide online notarization. They are not government offices and they do not issue apostilles. Compare their current prices and state coverage on their own sites, and confirm that the notary is commissioned in the same state as the office that will apostille the document.</p>
+  <ul>
+    <li><Aff id="notarize" href="https://app.proof.com/referral?campaign=813d4b9c-eab9-4604-8f1b-99eb28ff49b8" text="Notarize (Proof)" /></li>
+    <li><Aff id="bluenotary" href="https://app.bluenotary.us/business/register?referralCode=ve5sumc1gl" text="BlueNotary" /></li>
+    <li><Aff id="onenotary" href="https://onenotary.com" text="OneNotary" /></li>
+    <li><Aff id="notarylive" href="https://notarylive.com" text="NotaryLive" /></li>
+  </ul>
+  <p>See the <a href="/affiliate-disclosure/">affiliate disclosure</a> for how those links work.</p>
+</Base>

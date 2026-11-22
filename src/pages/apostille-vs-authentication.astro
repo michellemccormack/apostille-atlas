@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+const title = 'Apostille versus authentication for Hague and non-Hague countries';
+const description = 'How a U.S. apostille differs from an authentication certificate, what the 1961 Hague Apostille Convention covers, and how New York, California, Texas, Florida, and Massachusetts issue the certificate.';
+---
+<Base title={title} description={description} updated="2026-11-22">
+  <h1>Apostille versus authentication</h1>
+  <p class="lede">The paper you need depends on the destination country, and on which U.S. office issued or notarized the document. States do not all use the same certificate for non-Hague countries.</p>
+
+  <h2>What an apostille is</h2>
+  <p>The Convention of 5 October 1961 Abolishing the Requirement of Legalisation for Foreign Public Documents — the HCCH 1961 Apostille Convention — is meant to replace the traditional, often long legalization chain with a single apostille issued by a competent authority in the place where the document originates.<Src href="https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille" /> The HCCH Apostille Section, checked November 22, 2026, stated that the Convention has 130 Contracting Parties.<Src href="https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille" /></p>
+  <p>The current list of Contracting Parties is maintained by the Hague Conference. We do not reproduce that list here because it changes when countries join. Check the official <a href="https://www.hcch.net/en/instruments/conventions/status-table/?cid=41" target="_blank" rel="noopener">HCCH status table</a> for the country that will receive the document.</p>
+  <p>The HCCH also notes that only designated competent authorities of Contracting Parties may issue or verify apostilles, and that an e-Apostille (an apostille issued in digital form) cannot be refused simply because it is electronic.<Src href="https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille" /> Whether a particular U.S. state issues e-apostilles is a separate question; none of the five state pages reviewed for this site advertised an e-apostille option on the date we checked.</p>
+
+  <h2>What an authentication certificate is</h2>
+  <p>When the destination country is not a party to the Apostille Convention, U.S. offices often issue a different certificate, sometimes called a certificate of authentication or a notarial certification. That certificate may not finish the process: the destination country may still require legalization by its embassy or consulate, and some U.S. states say a further certification from the U.S. Department of State may be required first.</p>
+  <div class="warnbox">We were not able to load the live U.S. Department of State authentications pages from this research environment (the site returned a Cloudflare block). We therefore do not quote a federal fee or federal processing time. For federal documents, and for any extra State Department step after a state authentication, use the official pages: <a href="https://travel.state.gov/content/travel/en/replace-certify-docs/authenticate-your-document.html" target="_blank" rel="noopener">Authenticate Your Document</a> and the <a href="https://travel.state.gov/content/travel/en/replace-certify-docs/authenticate-your-document/office-of-authentications.html" target="_blank" rel="noopener">Office of Authentications</a>.</div>
+
+  <h2>What each state actually issues</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>What the official page says</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/new-york-apostille/">New York</a></td>
+          <td>An apostille is issued for use in countries that have joined the 1961 Hague Convention. A Certificate of Authentication is issued for use in a country that is not a member. Certificates of Authentication “may also require an additional certification from the United States Department of State prior to submission to the foreign country.”<Src href="https://dos.ny.gov/apostille-certificate-authentication" /></td>
+        </tr>
+        <tr>
+          <td><a href="/california-apostille/">California</a></td>
+          <td>The California Secretary of State “issues a single Apostille for documents to be used outside of the United States, regardless of the country of destination.” It does not issue a separate authentication certificate.<Src href="https://www.sos.ca.gov/notary/apostille-faqs" /></td>
+        </tr>
+        <tr>
+          <td><a href="/texas-apostille/">Texas</a></td>
+          <td>Texas issues a “universal Apostille.” It “operates as an apostille for countries that are party to the Apostille Convention and operates as an authentication for countries that are not.” If the destination country is not a party, Texas says you “likely need to get your universal Apostille validated by the Office of Authentications with the U.S. State Department.”<Src href="https://www.sos.state.tx.us/authfaqs.shtml" /></td>
+        </tr>
+        <tr>
+          <td><a href="/florida-apostille/">Florida</a></td>
+          <td>Florida issues an apostille for Hague Convention member states. “Countries that are nonmembers of the 1961 Hague Convention are not issued an apostille; they are issued notarial certificates or certifications.”<Src href="https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification/faq" /></td>
+        </tr>
+        <tr>
+          <td><a href="/massachusetts-apostille/">Massachusetts</a></td>
+          <td>“If the country is a signatory to the Hague Convention, the document will be called an apostille.” The office issues certifications and apostilles, and the official page tells you to identify the destination country because “different countries require different types of certification.”<Src href="https://www.sec.state.ma.us/divisions/commissions/apostilles.htm" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Federal and out-of-state documents</h2>
+  <p>State apostille offices generally authenticate only that state’s public documents or documents notarized by that state’s notaries. New York says Federal/FBI background checks must be authenticated by the U.S. Department of State.<Src href="https://dos.ny.gov/apostille-certificate-authentication" /> Florida says federal documents should be submitted to the U.S. Department of State, and that a document issued or notarized in another state should go to that state’s competent authority.<Src href="https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification" /> Massachusetts says it does not certify out-of-state documents; they must be certified by the state of origin.<Src href="https://www.sec.state.ma.us/divisions/commissions/download/apostille_and_certification_information.pdf" /></p>
+  <p>The federal fee and the current Office of Authentications process are not quoted here. Use the official State Department pages linked above.</p>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href="https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille" target="_blank" rel="noopener">HCCH Apostille Section</a></li>
+    <li><a href="https://www.hcch.net/en/instruments/conventions/status-table/?cid=41" target="_blank" rel="noopener">HCCH status table (Contracting Parties)</a></li>
+    <li><a href="https://travel.state.gov/content/travel/en/replace-certify-docs/authenticate-your-document.html" target="_blank" rel="noopener">U.S. Department of State, Authenticate Your Document</a></li>
+  </ul>
+</Base>
