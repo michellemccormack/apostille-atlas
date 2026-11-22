@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+research/*.html
+.deploy/
+
+research/*-body.txt
+.astro/
