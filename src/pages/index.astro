@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+const title = 'Apostille Atlas';
+const description = 'State-by-state apostille fees, offices, and mail versus in-person rules, copied from official secretary of state pages, plus apostille versus authentication and online notarization.';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Apostille Atlas',
+  url: 'https://michellemccormack.github.io/apostille-atlas/',
+  description,
+  publisher: { '@type': 'Organization', name: 'Atlas Guides' }
+};
+---
+<Base title={title} description={description} schema={schema} updated="2026-11-22">
+  <h1>Apostille Atlas</h1>
+  <p class="lede">A state-by-state guide to U.S. apostilles and authentication certificates: the official fee, the issuing office, mail versus in-person filing, and whatever processing time that office actually publishes.</p>
+  <p>An apostille is a certificate that authenticates the signature on a public document so the document can be used in another country that belongs to the 1961 Hague Apostille Convention. The Hague Conference describes the Convention as replacing the longer legalization chain with a single apostille issued by a competent authority where the document originates.<Src href="https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille" /></p>
+  <div class="note">We copy fees and rules from official government pages and put a source link on every claim. Offices change prices and counter hours. This is general information, not legal advice, and we don't file documents for you.</div>
+
+  <h2>State guides</h2>
+  <div class="cards">
+    <div class="card">
+      <h3><a href="/new-york-apostille/">New York</a></h3>
+      <p>$10 per document at the Department of State. Same-day walk-in service, limited to 10 documents, at five customer-service offices. No published mail turnaround.</p>
+    </div>
+    <div class="card">
+      <h3><a href="/california-apostille/">California</a></h3>
+      <p>$20 per apostille by mail; in person add $6 special handling per public official’s signature. Sacramento was processing mail received November 12, 2026, as of November 20, 2026.</p>
+    </div>
+    <div class="card">
+      <h3><a href="/texas-apostille/">Texas</a></h3>
+      <p>$15 per universal apostille ($10, capped at $100, for an adoption). Same-day in-person service for up to 10 documents; mailed requests can take up to two weeks from receipt.</p>
+    </div>
+    <div class="card">
+      <h3><a href="/florida-apostille/">Florida</a></h3>
+      <p>$10 per document, or $20 when a clerk-of-court certification needs a certificate of incumbency. Walk-in service in Tallahassee; as of November 20, 2026, apostille requests received November 16, 2026 were being processed.</p>
+    </div>
+    <div class="card">
+      <h3><a href="/massachusetts-apostille/">Massachusetts</a></h3>
+      <p>$6 per document. Up to three documents at the Boston counter; mailed requests are processed within two to three weeks. Regional offices in Springfield and Fall River.</p>
+    </div>
+  </div>
+
+  <h2>How the certificate works</h2>
+  <div class="cards">
+    <div class="card">
+      <h3><a href="/apostille-vs-authentication/">Apostille versus authentication</a></h3>
+      <p>Hague Convention countries generally use an apostille. Non-Hague countries often need a different certificate, and sometimes a further step at the U.S. Department of State. States do not all issue the same kind of paper.</p>
+    </div>
+    <div class="card">
+      <h3><a href="/online-notarization-for-apostille/">Online notarization (RON)</a></h3>
+      <p>A remote online notary can notarize a document, but the apostille still comes from the state competent authority. Texas publishes a specific RON checklist; some countries still refuse online notarizations.</p>
+    </div>
+  </div>
+
+  <h2>Official fees at a glance</h2>
+  <p>These are the government fees published on each office’s own page, last checked November 22, 2026. They do not include county-clerk, certified-copy, notary, translation, courier, or embassy charges.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Official fee</th>
+          <th>Mail</th>
+          <th>In person</th>
+          <th>Processing as published</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/new-york-apostille/">New York</a></td>
+          <td>$10 per document<Src href="https://dos.ny.gov/apostille-certificate-authentication" /></td>
+          <td>Yes</td>
+          <td>Yes, five offices</td>
+          <td>Walk-in same day, 10-document limit. Mail turnaround not published.</td>
+        </tr>
+        <tr>
+          <td><a href="/california-apostille/">California</a></td>
+          <td>$20 per apostille; $6 special handling in person per public official’s signature<Src href="https://www.sos.ca.gov/notary/request-apostille" /></td>
+          <td>Yes, Sacramento only</td>
+          <td>Yes, Sacramento and Los Angeles</td>
+          <td>In person typically within 30 minutes. Mail: Sacramento was processing requests received 11/12/2026 (page last updated November 20, 2026).<Src href="https://www.sos.ca.gov/notary/processing-times" /></td>
+        </tr>
+        <tr>
+          <td><a href="/texas-apostille/">Texas</a></td>
+          <td>$15 per document; $10 each for adoption, not more than $100 per child<Src href="https://www.sos.state.tx.us/authfaqs.shtml" /></td>
+          <td>Yes</td>
+          <td>Yes, Austin; appointments Tue–Thu, walk-in Mon and Fri</td>
+          <td>In person same day, 10-document limit. Drop-off within 72 hours / three days. Mail can take up to two weeks from receipt.<Src href="https://www.sos.texas.gov/statdoc/request.shtml" /></td>
+        </tr>
+        <tr>
+          <td><a href="/florida-apostille/">Florida</a></td>
+          <td>$10 per document, or $20 if a clerk-of-court document needs a certificate of incumbency with the apostille<Src href="https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification" /></td>
+          <td>Yes</td>
+          <td>Yes, Tallahassee</td>
+          <td>No expedited service. Walk-in: most requests may be completed while you wait.<Src href="https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification/faq" /> Mail: apostille requests received 11/16/26 were being processed (dates page updated 11/20/26).<Src href="https://dos.fl.gov/sunbiz/document-processing-dates" /></td>
+        </tr>
+        <tr>
+          <td><a href="/massachusetts-apostille/">Massachusetts</a></td>
+          <td>$6 per document<Src href="https://www.sec.state.ma.us/divisions/commissions/apostilles.htm" /></td>
+          <td>Yes</td>
+          <td>Yes, Boston, Springfield, and Fall River</td>
+          <td>Boston counter: up to three documents; four or more ready after 3 p.m. the next business day. Mail: two to three weeks.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Base>
