@@ -2,21 +2,21 @@
 
 An independent, source-cited guide to U.S. state apostille and authentication rules, published by Atlas Guides.
 
-Live (GitHub Pages): https://michellemccormack.github.io/apostille-atlas/
+Live: https://apostillesteps.com/ (GitHub Pages, gh-pages branch; public/CNAME sets the domain; DNS on Vercel).
 
 ```
 npm install
-SITE_URL=https://michellemccormack.github.io/apostille-atlas BASE_PATH=/apostille-atlas npm run build
+SITE_URL=https://apostillesteps.com BASE_PATH=/ npm run build
 npm run preview
 ```
+
+Defaults build for https://apostillesteps.com. For the github.io path: `SITE_URL=https://michellemccormack.github.io/apostille-atlas BASE_PATH=/apostille-atlas npm run build`.
 
 `scripts/postbuild.mjs` writes `robots.txt` and `sitemap.xml`, adds `.nojekyll`, and prefixes root-relative links when `BASE_PATH` is not `/`.
 
 ## Publish
 
-Copy the contents of `dist/` to the root of the `gh-pages` branch (keep `.nojekyll`). Do not add a `CNAME` until a custom domain is purchased.
-
-When a custom domain is added, set `SITE_URL` to that origin and `BASE_PATH` to `/`.
+Copy the contents of `dist/` to the root of the `gh-pages` branch (keep `.nojekyll` and `CNAME`). Do not copy source files (`src/`, `scripts/`, `research/`, `package.json`, and so on) onto `gh-pages`.
 
 ## Add a page
 
