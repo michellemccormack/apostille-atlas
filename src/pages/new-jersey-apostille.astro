@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in New Jersey';
+const description = 'New Jersey apostille and certification: the $25 standard and $40 expedited fees, the required online order, 12 to 20 business day mail processing, and Trenton walk-in service from the Division of Revenue and Enterprise Services.';
+const ORDER = 'https://www.njportal.com/dor/apostille';
+const INFO = 'https://www.nj.gov/treasury/revenue/apostilles.shtml';
+---
+<Base title={title} description={description} updated="2026-11-23">
+  <h1>How to get an apostille in New Jersey</h1>
+  <p class="lede">In New Jersey, apostilles and certifications come from the Department of the Treasury, Division of Revenue and Enterprise Services, not from a Secretary of State. Every request starts with an online order that you prepay, and you then mail or hand-deliver the original document with the printed order confirmation.<Src href={INFO} /><Src href={ORDER} /></p>
+
+  <h2>At a glance</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>What the official page says</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Issuing office</td><td>New Jersey Department of the Treasury, Division of Revenue and Enterprise Services. Apostilles and certifications are one-page, 8.5 x 11 documents with a color print of the Great Seal of the State of New Jersey and the signature of the State Treasurer, stapled to the signature page of your document. Do not remove it.<Src href={INFO} /></td></tr>
+        <tr><td>Standard fee</td><td>$25.00 per record (non-adoption), plus a $2.50 credit card or $1.00 e-check service fee. Adoption documents: $5.00 per document, no service fee.<Src href={ORDER} /></td></tr>
+        <tr><td>Expedited fee</td><td>$40.00 per document (non-adoption), plus the same card or e-check service fee. Adoption documents: $20.00 per document.<Src href={ORDER} /></td></tr>
+        <tr><td>Standard processing</td><td>12 to 20 business days from the date the document is received and entered in the system.<Src href={ORDER} /></td></tr>
+        <tr><td>Expedited processing</td><td>8.5 business hours from the time the document is received and entered in the system, subject to daily workload.<Src href={ORDER} /></td></tr>
+        <tr><td>Faster options</td><td>Accelerated processing of 1 or 2 business hours is available at “substantially higher fees.” For that service, call 609-292-9292.<Src href={ORDER} /></td></tr>
+        <tr><td>Payment</td><td>Online only, by e-check (debit) or credit card, when you place the order.<Src href={ORDER} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol>
+    <li><strong>Get the right original.</strong> You need the original or a certified copy of the document that carries the original notarization or the original certification of the public official.<Src href={INFO} /></li>
+    <li><strong>Check the notarization.</strong> A notarized document must carry the original (inked) signature of the New Jersey notary public and the original (inked) signature of the person who presented the document for notarization.<Src href={INFO} /></li>
+    <li><strong>Place the online order.</strong> The order asks for your contact details, a description of each document (for example the state registrar, the notary’s commission ID, and the date of the event), the processing level, how you want the documents returned, and payment.<Src href={ORDER} /> You must place a separate online order for each country where you will present the documents.<Src href={ORDER} /></li>
+    <li><strong>Send the original with the confirmation.</strong> Print the order confirmation that is emailed to you and send it with the original documents, as described below.<Src href={ORDER} /></li>
+  </ol>
+
+  <h2>Where to send it</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Service</th><th>How to deliver</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Standard (by mail)</td><td>Mail the originals and the printed confirmation by USPS first class, Priority, or Certified Mail to Division of Revenue and Enterprise Services, PO Box 452, Trenton, NJ 08646.<Src href={ORDER} /></td></tr>
+        <tr><td>Expedited (in person)</td><td>Customer Service Counter, 33 West State Street, 5th floor, Trenton, NJ 08608, between 8:30 a.m. and 2:00 p.m. If you deliver in person, you can wait for the apostille; the wait can be up to 2.5 hours, and walk-in service depends on workload, so the office suggests calling 609-292-9292 before you go.<Src href={ORDER} /></td></tr>
+        <tr><td>Expedited (courier)</td><td>Send it by an express delivery service such as UPS or FedEx to the same 33 West State Street address. The US Postal Service is not available for expedited requests.<Src href={ORDER} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Which documents New Jersey will certify</h2>
+  <p>The Division certifies the signatures of New Jersey notaries public and selected public officials, such as Superior Court judges, county clerks, and the State Registrar of Vital Statistics.<Src href={INFO} /></p>
+  <p>It issues an apostille when the document is going to a country that belongs to the Hague Convention. For a country that is not on the Hague list, it issues a certification of the public official instead. See <a href="/apostille-vs-authentication/">apostille versus authentication</a>.<Src href={INFO} /></p>
+  <h3>Birth, marriage, and other vital records</h3>
+  <p>Vital records (birth, marriage, divorce, death, and so on) from January 1, 1923 forward come from the New Jersey Department of Health, Office of Vital Statistics and Registry (609-292-4087). For records dated before January 1, 1923, contact the New Jersey State Archives.<Src href={INFO} /></p>
+  <p>New Jersey cannot issue apostilles or certifications for vital records from other states. Those must be authenticated in the state where they were issued.<Src href={INFO} /></p>
+  <h3>Documents in another language</h3>
+  <p>For documents that are not in English, the Division recommends attaching a notarized English translation. If you attach a notarized translation to a vital record, it issues two apostilles or certifications and charges two fees.<Src href={INFO} /></p>
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/new-york-apostille/">New York apostille</a>: if your document was notarized or issued across the river, it goes to New York, not Trenton.</li>
+    <li><a href="/apostille-vs-authentication/">Apostille versus authentication</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={INFO} target="_blank" rel="noopener">Apostilles and Notary Certifications (NJ Treasury, Division of Revenue and Enterprise Services)</a></li>
+    <li><a href={ORDER} target="_blank" rel="noopener">Online Apostille and Certification Service, including the service and fee table</a></li>
+  </ul>
+</Base>

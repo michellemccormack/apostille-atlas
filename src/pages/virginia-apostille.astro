@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Virginia';
+const description = 'Virginia apostille and Great Seal authentication: the $10 fee ($5 for extra same-signer documents), the 12-month rule, appointment-only Richmond service, mail times, and why Virginia will not authenticate eNotary documents.';
+const MAIN = 'https://www.commonwealth.virginia.gov/official-documents/authentications/';
+const HOW = 'https://www.commonwealth.virginia.gov/official-documents/authentications/how-to-submit/';
+const TYPES = 'https://www.commonwealth.virginia.gov/official-documents/authentications/types-of-documents/';
+const REJECT = 'https://www.commonwealth.virginia.gov/official-documents/authentications/document-rejection/';
+---
+<Base title={title} description={description} updated="2026-11-23">
+  <h1>How to get an apostille in Virginia</h1>
+  <p class="lede">The Office of the Secretary of the Commonwealth, Authentication Division, issues Virginia’s authentications. Depending on the destination country, the certificate is either an Apostille or a Great Seal authentication. It confirms that the Virginia notary, Virginia clerk of court, or Virginia deputy state registrar is in the office’s system and notarized or issued your document correctly.<Src href={MAIN} /></p>
+
+  <div class="warnbox">Two Virginia rules catch people out. Notarized documents, vital records, court records, and State Corporation Commission documents must all be dated within the past 12 months. And Virginia cannot currently authenticate a document signed by a Virginia electronic notary (eNotary).<Src href={TYPES} /></div>
+
+  <h2>At a glance</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>What the official page says</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fee</td><td>$10.00 per document, not per page. If several documents were signed by the same public official on the same date for the same country, it is $10.00 for the first and $5.00 for each additional document. Checks and money orders payable to the Secretary of the Commonwealth. Overpayments of $5 or less may not be refunded.<Src href={HOW} /></td></tr>
+        <tr><td>Cover letter</td><td>Required with every request. You create it online on the state’s authentications cover-letter site, which requires you to register or log in.<Src href={HOW} /></td></tr>
+        <tr><td>Mail processing</td><td>Generally 7 to 10 business days from when you send the documents. You can ask about status only after 7 to 10 days have passed.<Src href={HOW} /> On November 23, 2026, the office’s main page carried a holiday notice that processing and return shipping for authentication requests was running about 4 weeks.<Src href={MAIN} /></td></tr>
+        <tr><td>In person</td><td>By appointment only, Monday through Thursday, up to 10 documents. Most authentications are processed the same day if the documents are properly notarized or issued. Without an appointment you will not be seen.<Src href={HOW} /></td></tr>
+        <tr><td>Drop box</td><td>Without an appointment, you can leave documents in the drop box at 400 East Cary Street. They are processed and returned in your prepaid mailer within 5 to 7 business days.<Src href={HOW} /></td></tr>
+        <tr><td>Phone and email</td><td>804-692-0114, <a href="mailto:notary@governor.virginia.gov">notary@governor.virginia.gov</a><Src href={MAIN} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Addresses: USPS and couriers go to different places</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>How you send it</th><th>Address</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>U.S. Postal Service</td><td>Office of the Secretary of the Commonwealth, Authentication Division, 1111 East Broad Street, Richmond, Virginia 23219<Src href={MAIN} /></td></tr>
+        <tr><td>FedEx, UPS, or DHL</td><td>Office of the Secretary of the Commonwealth, Authentication Division, 400 East Cary Street, Richmond, Virginia 23219<Src href={MAIN} /></td></tr>
+        <tr><td>Appointments and drop box</td><td>400 East Cary Street, Richmond, VA 23219, behind the Virginia Department of Health. Limited public parking and street parking.<Src href={HOW} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Include the cover letter, payment, and a self-addressed, prepaid return mailer. For FedEx, UPS, or DHL return labels, list your own name and address as both sender and recipient. If the office is listed as the sender, your documents come back by regular mail without tracking.<Src href={HOW} /></p>
+
+  <h2>Booking an appointment</h2>
+  <p>Appointments open online only on Fridays at 10:00 a.m., for the following week only. The limit is 10 documents per customer or family, and one appointment per family member per day. Bring a valid government-issued ID (required for all adults entering the building), limit your party to two people, and print or photograph your appointment confirmation.<Src href={HOW} /></p>
+  <p>Appointments are for individual constituents. Couriers and apostille companies must use the drop box, and those documents are returned by mail only.<Src href={HOW} /></p>
+
+  <h2>What Virginia will authenticate</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>Requirement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Notarized document</td><td>Properly notarized by a Virginia notary within the past 12 months. Virginia does not accept documents notarized in another state.<Src href={TYPES} /></td></tr>
+        <tr><td>Birth, death, marriage, or divorce certificate</td><td>Must be issued by the Virginia Department of Health, Vital Records (or your local DMV) within the past 12 months, and must not be notarized. Circuit Court marriage certificates need a Certification of Official Record (triple seal).<Src href={TYPES} /></td></tr>
+        <tr><td>Court record</td><td>Issued by the Virginia Circuit Court within the past 12 months with a Certification of Official Record (triple seal), showing the date and the clerk’s signature and printed name. Cannot be notarized.<Src href={TYPES} /></td></tr>
+        <tr><td>Business documents</td><td>A State Corporation Commission document issued within the past 12 months and signed by the Clerk of the Commission. To order one, call the SCC at 804-371-9733 and ask for a certified copy for international authentication.<Src href={TYPES} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Virginia will not process federal documents, including FBI background checks, or documents notarized by military notaries. Those go to the U.S. Department of State’s Office of Authentications. It also will not process out-of-state documents, including out-of-state school transcripts and diplomas.<Src href={TYPES} /></p>
+  <p>Virginia does not require a translation before you submit, but the notarization itself must be in English.<Src href={MAIN} /><Src href={TYPES} /></p>
+
+  <h2>The seven things a Virginia notarization needs</h2>
+  <p>The office rejects a notarized document unless it shows all of these:<Src href={TYPES} /></p>
+  <ol>
+    <li>the county or independent city where the document was signed;</li>
+    <li>the date of notarization;</li>
+    <li>the notarial statement saying what is being notarized (a signature, a true copy of an original, or an oath);</li>
+    <li>the notary’s signature;</li>
+    <li>the notary’s commission expiration date (month, day, year);</li>
+    <li>the notary’s registration number;</li>
+    <li>a photographically reproducible seal or stamp with the name matching the office’s records exactly.</li>
+  </ol>
+  <p>Other common rejection reasons include a notarization more than 12 months old, a notarization split across pages, and a photocopy of a notarization.<Src href={REJECT} /></p>
+
+  <h2>Online and electronic notarization</h2>
+  <p>The Virginia authentications page says that, at this time, it cannot authenticate an electronic notarization with an Apostille or Great Seal authentication.<Src href={TYPES} /> If your document is headed abroad from Virginia, have it notarized in person by a commissioned Virginia notary. The office says many banks, FedEx stores, UPS stores, and USPS locations offer notary services. Other states handle this differently; see <a href="/online-notarization-for-apostille/">online notarization for apostille documents</a>.<Src href={MAIN} /></p>
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/north-carolina-apostille/">North Carolina apostille</a></li>
+    <li><a href="/apostille-vs-authentication/">Apostille versus authentication</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={MAIN} target="_blank" rel="noopener">Authentications (Office of the Secretary of the Commonwealth)</a></li>
+    <li><a href={HOW} target="_blank" rel="noopener">How to Submit</a></li>
+    <li><a href={TYPES} target="_blank" rel="noopener">Types of Documents</a></li>
+    <li><a href={REJECT} target="_blank" rel="noopener">Why Would a Document Be Rejected?</a></li>
+  </ul>
+</Base>
