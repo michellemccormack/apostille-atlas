@@ -1,4 +1,6 @@
-# Official sources checked November 22, 2026
+# Official sources
+
+Pages for the original launch were checked November 22, 2026. Sections below note their own checked-on date when different.
 
 Every fee, address, and processing statement on the live site is taken from one of these official pages. Third-party summaries were used only to find URLs, never as a source of figures.
 
@@ -42,6 +44,33 @@ Every fee, address, and processing statement on the live site is taken from one 
 - https://www.sec.state.ma.us/divisions/commissions/apostilles.htm
 - https://www.sec.state.ma.us/divisions/commissions/download/apostille_and_certification_information.pdf
 - https://www.sec.state.ma.us/divisions/commissions/download/authentication-form.pdf
+
+## New Jersey (checked November 23, 2026)
+
+- https://www.nj.gov/treasury/revenue/apostilles.shtml (issuing office, officials certified, Hague vs certification, vital-records rules, 1923 cut-off, translation and double-fee rule, inked-signature rule; page last updated 04/23/25)
+- https://www.njportal.com/dor/apostille (fees: $25 standard / $40 expedited non-adoption, $5 / $20 adoption, $2.50 card / $1.00 e-check service fee; 12-20 business days standard; 8.5 business hours expedited; 33 West State Street, 5th floor, Trenton NJ 08608, 8:30 a.m.-2:00 p.m.; PO Box 452, Trenton NJ 08646; one order per country; 609-292-9292)
+
+## Virginia (checked November 23, 2026)
+
+- https://www.commonwealth.virginia.gov/official-documents/authentications/ (Great Seal vs Apostille; USPS 1111 East Broad Street and courier 400 East Cary Street addresses; 804-692-0114; notary@governor.virginia.gov; holiday notice of about 4 weeks processing and return shipping; no translation required)
+- https://www.commonwealth.virginia.gov/official-documents/authentications/how-to-submit/ ($10 per document, $5 each additional same official/date/country; appointments Mon-Thu, booked Fridays 10:00 a.m.; 10-document limit; drop box 5-7 business days; mail 7-10 business days; return-label rules)
+- https://www.commonwealth.virginia.gov/official-documents/authentications/types-of-documents/ (12-month rule; vital records, court, SCC requirements; SCC 804-371-9733; seven notarization items; no federal/military/out-of-state; cannot authenticate eNotary documents)
+- https://www.commonwealth.virginia.gov/official-documents/authentications/document-rejection/ (rejection reasons)
+
+## North Carolina (checked November 23, 2026)
+
+- https://www.sosnc.gov/divisions/authentications (document types; PO Box 29622, Raleigh NC 27626-0622; 2 South Salisbury Street, Raleigh NC 27601-2903; 919-814-5400; hours Mon-Fri 8-5)
+- https://www.sosnc.gov/divisions/authentications/Apostille_Certificates (process, English translation, notarization, offices that need no notary, school documents, April 2000 rule, $10 fee, refund, emergencies, Vital Records 919-733-3526)
+- https://www.sosnc.gov/fees/by_title/_authentications (fees, adoption duplicate originals)
+- https://www.sosnc.gov/frequently_asked_questions/by_title/_Authentications (Apostille / Authentication / Authority; no out-of-state; wet-signature translation since late 2024; no online authentications; cover-letter contents; denial reasons)
+- https://www.sosnc.gov/divisions/authentications/TurnAround_Times (mail generally five business days longer than hand delivery; no appointment)
+- https://www.sosnc.gov/divisions/authentications/Courier_Policies (label rules; no UPS/FedEx/DHL to foreign addresses)
+- https://www.sosnc.gov/forms/by_title/_Authentications (cover letters and templates)
+
+## Checked November 23, 2026 but not usable
+
+- travel.state.gov authentication pages and fbi.gov Identity History Summary page returned 403 from this environment; no federal fee or FBI process is quoted.
+- Illinois (ilsos.gov) still did not connect. Pennsylvania, Washington, Georgia, Arizona, Maryland, Connecticut, and Oregon apostille URLs tried returned 403 or 404; the current official pages still need to be located.
 
 ## Not fetched
 
