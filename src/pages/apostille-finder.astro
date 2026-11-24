@@ -1,0 +1,145 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+import { STATES, DOS, HCCH } from '../data/finder.js';
+const updated = '2026-11-23';
+const title = 'Apostille Finder: Steps, Office and Fee for Your State and Document';
+const description = 'Pick the state that issued your document, the document type and the destination country. Get the steps in order, the office, the fee for your number of documents, and mail versus in-person options, from official state pages.';
+const all = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+const covered = Object.keys(STATES).sort();
+const others = all.filter(s => !STATES[s]);
+const DOCS = [
+  ['notarized', 'Notarized document (power of attorney, affidavit, consent letter)'],
+  ['vital', 'Birth, death or marriage certificate'],
+  ['court', 'Court document (divorce decree, judgment)'],
+  ['school', 'Diploma or transcript'],
+  ['business', 'Business document (certificate of good standing, articles)'],
+  ['stateBg', 'State criminal background check'],
+  ['federal', 'FBI background check or other federal document'],
+];
+const D = { STATES, DOS, HCCH };
+const schema = [
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Apostille Finder","url":"https://apostillesteps.com/apostille-finder/","description":description,"applicationCategory":"ReferenceApplication","operatingSystem":"Any (runs in the browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true,"dateModified":updated,"publisher":{"@type":"Organization","name":"Atlas Guides"}},
+  {"@context":"https://schema.org","@type":"HowTo","name":"How to get an apostille for a U.S. document","step":[
+    {"@type":"HowToStep","name":"Find who issues it","text":"State documents and documents notarized in a state go to that state's apostille office, usually the Secretary of State. Federal documents such as FBI background checks go to the U.S. Department of State, Office of Authentications."},
+    {"@type":"HowToStep","name":"Prepare the document","text":"Get an original or certified copy signed by an official the state office recognizes, or have it notarized by a notary commissioned in that state. Some states require a county-clerk certification first."},
+    {"@type":"HowToStep","name":"Check the destination country","text":"Countries in the 1961 Hague Apostille Convention take an apostille. Others take a certificate of authentication and may require further steps."},
+    {"@type":"HowToStep","name":"Submit by mail or in person","text":"Send or bring the document with the request form or cover letter, the fee, and a return envelope to the state office."}]},
+];
+---
+<Base title={title} description={description} updated={updated} schema={schema}>
+  <h1>Apostille finder</h1>
+  <p class="lede">Choose where your document was issued, what it is, and where it's going. You'll get the steps in order, the office, the fee for your number of documents, and how mail and in-person filing compare. Every detail comes from the state's official page, as summarized in our state guides.</p>
+
+  <form id="af" class="card" style="display:grid;gap:12px;max-width:640px" onsubmit="return false">
+    <label>What is the document?<br/>
+      <select id="doc" style="width:100%;padding:8px;font-size:16px">{DOCS.map(([v, t]) => <option value={v}>{t}</option>)}</select>
+    </label>
+    <label id="st-wrap">State that issued it (or where it was notarized)<br/>
+      <select id="st" style="width:100%;padding:8px;font-size:16px">
+        <option value="">Choose a state</option>
+        <optgroup label="Full guides">{covered.map(s => <option value={s}>{s}</option>)}</optgroup>
+        <optgroup label="Other states">{others.map(s => <option value={s}>{s}</option>)}</optgroup>
+      </select>
+    </label>
+    <label>Destination country is…<br/>
+      <select id="dest" style="width:100%;padding:8px;font-size:16px">
+        <option value="hague">In the Hague Apostille Convention</option>
+        <option value="non">Not in the Hague Convention</option>
+        <option value="unsure">Not sure</option>
+      </select>
+    </label>
+    <fieldset style="border:0;padding:0;margin:0"><legend>How do you want to file?</legend>
+      <label><input type="radio" name="how" value="mail" checked /> By mail</label>&nbsp;&nbsp;
+      <label><input type="radio" name="how" value="person" /> In person</label>
+    </fieldset>
+    <label>Number of documents<br/><input id="n" type="number" min="1" max="50" step="1" value="1" inputmode="numeric" style="width:100px;padding:8px;font-size:16px" /></label>
+    <label><input type="checkbox" id="same" /> All signed by the same official (changes the fee in California and Virginia)</label>
+  </form>
+
+  <div id="out" aria-live="polite" style="margin-top:1rem"><p class="note">Choose a state to see your steps.</p></div>
+  <noscript><p class="note">The finder needs JavaScript. The same details are in the state guides on the <a href="/">home page</a>.</p></noscript>
+
+  <h2>Where the answers come from</h2>
+  <p>Each state's office, fee, addresses and processing times come from its official page, as copied into our guides: {covered.map((s, i) => <>{i > 0 && ', '}<a href={STATES[s].page}>{s}</a></>)}. Where an office doesn't publish something, the finder shows a dash instead of a guess. For whether a country is in the Hague Convention, check the <a href={HCCH} target="_blank" rel="noopener">HCCH status table</a>. Federal documents go to the <a href={DOS.url} target="_blank" rel="noopener">U.S. Department of State</a>; we don't quote its fee or processing time.</p>
+  <p>Fees shown are the state's own fee. County-clerk, certified-copy, notary, translation, courier and embassy charges are extra. More on the two kinds of certificate: <a href="/apostille-vs-authentication/">apostille vs authentication</a>. Notarizing online first: <a href="/online-notarization-for-apostille/">online notarization for apostille documents</a>.</p>
+
+  <script type="application/json" id="af-data" set:html={JSON.stringify(D)} />
+  <script is:inline>
+  (function(){
+    var D=JSON.parse(document.getElementById('af-data').textContent);
+    var $=function(i){return document.getElementById(i)};
+    function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+    function src(h){return ' <a class="src" href="'+esc(h)+'" target="_blank" rel="noopener">[source]</a>'}
+    function money(v){return '$'+(Math.round(v*100)/100).toFixed(2).replace(/\.00$/,'')}
+    function slug(s){return s.toLowerCase().replace(/ /g,'-')}
+    function cta(st){return '<p><a class="btn" href="/get-it-done/'+(st?'?state='+encodeURIComponent(st):'')+'">Get it done for me</a> <span class="meta">Free quote from an independent apostille service.</span></p>'}
+    function fee(s,n,how,same,doc){
+      var f=s.fee;
+      if(f.kind==='flat') return {v:f.per*n,t:n+' × '+money(f.per)};
+      if(f.kind==='ca'){ if(how==='mail') return {v:f.per*n,t:n+' × $20 (no handling fee by mail)'}; var off=same?1:n; return {v:f.per*n+f.handling*off,t:n+' × $20 + '+off+' × $6 special handling'}; }
+      if(f.kind==='fl'){ var p=doc==='court'?f.court:f.per; return {v:p*n,t:n+' × '+money(p)+(doc==='court'?' (apostille + certificate of incumbency)':'')}; }
+      if(f.kind==='nj'){ var p2=how==='person'?f.exp:f.std; return {v:p2*n,t:n+' × '+money(p2)+(how==='person'?' expedited':' standard')+', plus the card or e-check service fee'}; }
+      if(f.kind==='va'){ if(same&&n>1) return {v:f.per+(n-1)*f.extra,t:'$10 + '+(n-1)+' × $5 (same official, same date, same country)'}; return {v:f.per*n,t:n+' × $10'}; }
+      return {v:null,t:'—'};
+    }
+    function run(){
+      var doc=$('doc').value, st=$('st').value, dest=$('dest').value, how=document.querySelector('input[name=how]:checked').value;
+      var n=Math.max(1,Math.min(50,parseInt($('n').value||'1',10)||1)), same=$('same').checked, out=$('out');
+      var h='';
+      if(doc==='federal'){
+        $('st-wrap').style.opacity='.5';
+        h+='<h2 style="margin-top:1rem">Federal document</h2><ol>';
+        h+='<li><strong>Skip the state office.</strong> State apostille offices don\'t handle federal documents: New York, Florida, Massachusetts and Virginia all say so on their official pages. FBI background checks and other federal records go to the '+esc(D.DOS.name)+'. <a href="/apostille-vs-authentication/">Why</a></li>';
+        h+='<li><strong>Follow the State Department\'s process.</strong> <a href="'+D.DOS.how+'" target="_blank" rel="noopener">Authenticate Your Document</a> and the <a href="'+D.DOS.url+'" target="_blank" rel="noopener">Office of Authentications</a> pages have the current request form, fee and processing time.</li>';
+        h+='<li><strong>Check the destination.</strong> '+destTxt(dest,null)+'</li></ol>';
+        h+='<div class="tablewrap"><table><tbody><tr><th>Office</th><td>'+esc(D.DOS.name)+'</td></tr><tr><th>Fee</th><td>—</td></tr><tr><th>Processing</th><td>—</td></tr></tbody></table></div>';
+        h+=cta('');
+        out.innerHTML=h; return;
+      }
+      $('st-wrap').style.opacity='1';
+      if(!st){out.innerHTML='<p class="note">Choose a state to see your steps.</p>';return;}
+      if(history.replaceState) history.replaceState(null,'','#'+slug(st));
+      var s=D.STATES[st];
+      if(!s){
+        h+='<h2 style="margin-top:1rem">'+esc(st)+'</h2>';
+        h+='<p>We haven\'t written a guide for '+esc(st)+' yet, so we can\'t show its office, fee or processing time.</p>';
+        h+='<div class="tablewrap"><table><tbody><tr><th>Office</th><td>—</td></tr><tr><th>Fee</th><td>—</td></tr><tr><th>Mail</th><td>—</td></tr><tr><th>In person</th><td>—</td></tr><tr><th>Processing</th><td>—</td></tr></tbody></table></div>';
+        h+='<p>What holds everywhere we\'ve checked: the apostille comes from the state where the document was issued or notarized, not the state you live in, and each state office handles only its own documents. '+destTxt(dest,null)+'</p>';
+        h+=cta(st); out.innerHTML=h; return;
+      }
+      var m=how==='mail'?s.mail:s.person; var f=fee(s,n,how,same,doc);
+      var prep=s.docs[doc];
+      h+='<h2 style="margin-top:1rem">'+esc(st)+': your steps</h2><ol>';
+      h+='<li><strong>Check it qualifies.</strong> '+esc(s.general)+src(s.src)+'</li>';
+      h+='<li><strong>Prepare the document.</strong> '+(prep?esc(prep):'Our '+esc(st)+' guide has no extra step for this document type beyond the rule above. Use the original or a certified copy, not a photocopy.')+src(s.src)+'</li>';
+      if(doc==='notarized'&&st==='Virginia') h+='<li><strong>Use an in-person notary.</strong> Virginia can\'t authenticate electronic notarizations. <a href="/online-notarization-for-apostille/">Online notarization and apostilles</a></li>';
+      else if(doc==='notarized') h+='<li><strong>Need a notary?</strong> The apostille comes from the state where the notary is commissioned, so for a '+esc(st)+' apostille use a '+esc(st)+' notary. Rules on online notarization differ by state; see <a href="/online-notarization-for-apostille/">online notarization for apostille documents</a>.</li>';
+      h+='<li><strong>Check the destination.</strong> '+destTxt(dest,s)+'</li>';
+      h+='<li><strong>'+(how==='mail'?'Mail it':'Go in person')+'.</strong> '+esc(m.notes||'')+' '+src(s.src)+'</li></ol>';
+      h+='<div class="tablewrap"><table><tbody>';
+      h+='<tr><th>Office</th><td>'+esc(s.office)+'</td></tr>';
+      h+='<tr><th>State fee for '+n+' document'+(n>1?'s':'')+'</th><td><strong>'+(f.v===null?'—':money(f.v))+'</strong> <span class="meta">'+esc(f.t)+'</span><br/><span class="meta">'+esc(s.fee.text)+'</span></td></tr>';
+      h+='<tr><th>'+(how==='mail'?'Mail to':'Where')+'</th><td>'+esc(how==='mail'?m.addr:m.where)+'</td></tr>';
+      h+='<tr><th>Processing</th><td>'+esc(m.time)+'</td></tr>';
+      var other=how==='mail'?s.person:s.mail;
+      h+='<tr><th>'+(how==='mail'?'In person instead':'By mail instead')+'</th><td>'+esc(how==='mail'?other.where.replace(/\.$/,'')+'. '+other.time:other.time)+'</td></tr>';
+      h+='</tbody></table></div>';
+      h+='<p><a href="'+s.page+'">Full '+esc(st)+' apostille guide →</a></p>';
+      h+=cta(st);
+      out.innerHTML=h;
+    }
+    function destTxt(dest,s){
+      var hl='<a href="'+D.HCCH+'" target="_blank" rel="noopener">HCCH status table</a>';
+      if(dest==='hague') return 'An apostille is the certificate you need. The Hague Convention replaces the longer legalization chain with this one certificate.';
+      var t = s ? (s.nonHague) : 'Non-Hague countries generally take a certificate of authentication, and the destination\'s embassy or consulate may need to legalize it.';
+      if(dest==='non') return 'For a non-Hague country: '+esc(t)+' <a href="/apostille-vs-authentication/">Apostille vs authentication</a>';
+      return 'Check the '+hl+'. If the country is listed, you need an apostille. If not: '+esc(t);
+    }
+    ['doc','st','dest','n','same'].forEach(function(i){$(i).addEventListener('input',run);$(i).addEventListener('change',run);});
+    Array.prototype.forEach.call(document.querySelectorAll('input[name=how]'),function(e){e.addEventListener('change',run)});
+    var h0=decodeURIComponent(location.hash.slice(1)); if(h0){Array.prototype.forEach.call($('st').options,function(o){if(o.value&&slug(o.value)===h0)$('st').value=o.value;});}
+    run();
+  })();
+  </script>
+</Base>
