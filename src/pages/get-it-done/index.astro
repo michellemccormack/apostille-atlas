@@ -1,0 +1,75 @@
+---
+import Base from '../../layouts/Base.astro';
+const title = 'Get your apostille done for you';
+const description = 'Send one short request and an independent apostille service will reply with a quote to handle your state, federal, or embassy authentication for you.';
+const STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+const DOCS = ['Birth certificate','Marriage certificate','Death certificate','Divorce decree','Diploma or transcript','FBI background check','Power of attorney or other notarized document','Business document (articles, good standing, etc.)','Court document','Other'];
+---
+<Base title={title} description={description} updated="2026-11-23">
+  <h1>Get your apostille done for you</h1>
+  <p class="lede">Fill in what you know and send it. We'll pass your request to an independent apostille service that handles state, federal, and embassy authentications, and they'll reply by email with a price and a timeline.</p>
+  <div class="note">Apostille Atlas is a free guide, not an apostille service. This form sends a request to partner services we work with; it isn't an order, and nothing is charged. A service only starts work after you accept its quote and pay it directly. We may receive a referral fee from the service you choose, at no extra cost to you.</div>
+
+  <form class="reqform" action="https://formsubmit.co/0c86b377ed178525225c0250460fc9ad" method="POST">
+    <input type="hidden" name="_subject" value="New apostille request from apostillesteps.com" />
+    <input type="hidden" name="_next" value="https://apostillesteps.com/get-it-done/thanks/" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="source_page" id="source_page" value="" />
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+    <label for="document_type">What document needs the apostille?</label>
+    <select id="document_type" name="document_type" required>
+      <option value="">Choose one</option>
+      {DOCS.map(d => <option value={d}>{d}</option>)}
+    </select>
+
+    <label for="issuing_state">Where was it issued?</label>
+    <select id="issuing_state" name="issuing_state" required>
+      <option value="">Choose one</option>
+      <option value="Federal document (U.S. agency, including FBI)">Federal document (U.S. agency, including FBI)</option>
+      {STATES.map(s => <option value={s}>{s}</option>)}
+      <option value="Not sure">Not sure</option>
+    </select>
+
+    <label for="destination_country">Which country will it be used in?</label>
+    <input id="destination_country" name="destination_country" type="text" required maxlength="80" placeholder="For example: Spain" />
+
+    <label for="deadline">When do you need it back? <span class="opt">(optional)</span></label>
+    <input id="deadline" name="deadline" type="date" />
+
+    <label for="document_count">How many documents? <span class="opt">(optional)</span></label>
+    <input id="document_count" name="document_count" type="number" min="1" max="50" placeholder="1" />
+
+    <label for="name">Your name</label>
+    <input id="name" name="name" type="text" required maxlength="100" autocomplete="name" />
+
+    <label for="email">Your email</label>
+    <input id="email" name="email" type="email" required maxlength="150" autocomplete="email" />
+
+    <label for="notes">Anything else? <span class="opt">(optional)</span></label>
+    <textarea id="notes" name="notes" rows="4" maxlength="1500" placeholder="For example: the document is notarized, it's a certified copy, or you also need a translation."></textarea>
+
+    <label class="check"><input type="checkbox" name="consent" value="yes" required /> I agree that Apostille Atlas can share these details with one or more independent apostille services so they can reply to me with a quote.</label>
+
+    <button type="submit" class="btn">Send my request</button>
+    <p class="meta">Please don't include ID numbers, Social Security numbers, or copies of documents here. The service will tell you what it needs. See our <a href="/privacy/">privacy policy</a>.</p>
+  </form>
+
+  <h2>What happens next</h2>
+  <ol>
+    <li>Your request comes to us by email, and we pass it to a service that handles your issuing state and destination country.</li>
+    <li>The service emails you with its price, turnaround, and what to send.</li>
+    <li>If you'd rather file yourself, every state guide on this site lists the official fee and address. Start from the <a href="/">state guides</a>.</li>
+  </ol>
+
+  <script is:inline>
+    (function(){
+      var p = new URLSearchParams(location.search);
+      var st = p.get('state');
+      var sel = document.getElementById('issuing_state');
+      if (st && sel) { for (var i=0;i<sel.options.length;i++){ if (sel.options[i].value === st) { sel.selectedIndex = i; break; } } }
+      var src = document.getElementById('source_page');
+      if (src) src.value = (st ? 'state=' + st + ' ' : '') + (document.referrer || 'direct');
+    })();
+  </script>
+</Base>

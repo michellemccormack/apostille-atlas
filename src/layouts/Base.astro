@@ -1,5 +1,5 @@
 ---
-const { title, description, updated = '2026-11-22', schema } = Astro.props;
+const { title, description, updated = '2026-11-22', schema, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const siteName = 'Apostille Atlas';
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
@@ -19,7 +19,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta name="twitter:card" content="summary" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <style is:global>
     :root{--ink:#1b1f24;--muted:#5b6470;--line:#e3e6ea;--brand:#6b2a3a;--bg:#fbfcfd;--warn:#8a5a00;--warnbg:#fff4dc}
@@ -61,6 +61,19 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     .card p{margin:0;color:#333;font-size:15px}
     blockquote{margin:1rem 0;padding:.6rem 1rem;border-left:4px solid var(--line);color:#333;background:#fff}
     code{background:#eef1f4;padding:1px 4px;border-radius:3px;font-size:.92em}
+    .helpcta{background:#fff;border:2px solid var(--brand);border-radius:8px;padding:16px 20px;margin:2rem 0}
+    .helpcta p{margin:.3rem 0}
+    .helpcta-h{font-weight:700;font-size:1.1rem}
+    a.btn,button.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;border:0;border-radius:6px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+    a.btn:hover,button.btn:hover{background:#4f1f2b}
+    .reqform{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;margin:1.5rem 0;max-width:560px}
+    .reqform label{font-weight:600;margin-top:10px}
+    .reqform .opt{font-weight:400;color:var(--muted)}
+    .reqform input,.reqform select,.reqform textarea{font:inherit;padding:8px 10px;border:1px solid #c9ced5;border-radius:6px;background:#fff;width:100%}
+    .reqform label.check{font-weight:400;display:flex;gap:8px;align-items:flex-start}
+    .reqform label.check input{width:auto;margin-top:6px}
+    .reqform button{margin-top:14px;align-self:flex-start}
+    @media (max-width: 640px){ nav{flex-wrap:wrap;row-gap:.3rem} }
   </style>
 </head>
 <body>
@@ -70,6 +83,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       <a href="/apostille-vs-authentication/">Apostille vs authentication</a>
       <a href="/online-notarization-for-apostille/">Online notarization</a>
       <a href="/about/">About</a>
+      <a href="/get-it-done/">Get help</a>
     </nav>
   </div></header>
   <main><div class="wrap">
@@ -79,7 +93,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <footer class="site"><div class="wrap" style="padding:20px">
     <p class="publisher"><img src="/atlas-guides.svg" alt="Atlas Guides" width="77" height="22" /></p>
     <p>Apostille Atlas: state-by-state apostille and notary rules, with a source link on every fee and filing step.</p>
-    <p><a href="/about/">About &amp; method</a> · <a href="/contact/">Contact</a> · <a href="/affiliate-disclosure/">Affiliate disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p>
+    <p><a href="/about/">About &amp; method</a> · <a href="/get-it-done/">Get it done for me</a> · <a href="/contact/">Contact</a> · <a href="/affiliate-disclosure/">Affiliate disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></p>
   </div></footer>
 </body>
 </html>

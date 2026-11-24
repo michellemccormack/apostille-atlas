@@ -1,0 +1,10 @@
+---
+// "Get it done for me" call to action. Links to the request form, pre-selecting the state.
+const { state = '' } = Astro.props;
+const href = state ? `/get-it-done/?state=${encodeURIComponent(state)}` : '/get-it-done/';
+---
+<div class="helpcta">
+  <p class="helpcta-h">Rather not do this yourself?</p>
+  <p>Tell us the document, {state ? `that it was issued in ${state}` : 'the state that issued it'}, and where it's going. We'll pass your request to an independent apostille service that can handle the whole thing, and they'll reply with a quote. It's free to ask and you're under no obligation.</p>
+  <p><a class="btn" href={href}>Get it done for me</a></p>
+</div>
