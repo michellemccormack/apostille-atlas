@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+import Crumbs from '../components/Crumbs.astro';
+import offices from '../data/us-apostille-authorities.json';
+import { US_AUTH_URL, SITE, CHECKED, fmt } from '../lib/hague.js';
+const title = 'Who issues apostilles in each U.S. state, plus online apostille verification';
+const description = 'The designated apostille authority for all 50 states, D.C., and U.S. territories, from the U.S. designation filed with the Hague Conference, with links to the states that let you verify an apostille online.';
+const withVerify = offices.filter(o => o.verify_apostille_url);
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Apostille offices by state', item: `${SITE}/apostille-offices-by-state/` },
+    ] },
+    { '@type': 'Article', headline: title, description, url: `${SITE}/apostille-offices-by-state/`, dateModified: CHECKED, citation: [US_AUTH_URL], publisher: { '@type': 'Organization', name: 'Atlas Guides' } },
+  ],
+};
+---
+<Base title={title} description={description} schema={schema} updated={CHECKED}>
+  <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Apostille offices by state' }]} />
+  <h1>Apostille offices by state</h1>
+  <p class="lede">An apostille for a state document comes from that state, not from the federal government. The U.S. designation on file with the Hague Conference names the officers in each state, D.C., and several territories who can sign one.<Src href={US_AUTH_URL} /> In most states that is the Secretary of State; a few use the Lieutenant Governor, the Secretary of the Commonwealth, or another office.</p>
+  <div class="note">Federal documents go to the U.S. Department of State Office of Authentications instead, and U.S. federal court documents to the clerk of that court.<Src href={US_AUTH_URL} /> For where your document is headed, see <a href="/apostille-countries/">apostille by country</a>.</div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>State or territory</th><th>Apostille authority</th><th>Officers designated to sign</th><th>Verify an apostille online</th></tr></thead>
+      <tbody>
+        {offices.map(o => (
+          <tr>
+            <td>{o.our_guide ? <a href={o.our_guide}>{o.jurisdiction}</a> : o.jurisdiction}</td>
+            <td>{o.competent_authority || '—'}</td>
+            <td>{o.designated_signers || '—'}</td>
+            <td>{o.verify_apostille_url ? <a href={o.verify_apostille_url} target="_blank" rel="noopener">Search</a> : '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="meta">Source: United States of America, Competent Authority (Art. 6), HCCH, page last updated September 2, 2026; checked {fmt(CHECKED)}.<Src href={US_AUTH_URL} /> Linked state names go to our full guides with official fees and turnaround. Verification links were tested on {fmt(CHECKED)}.</p>
+
+  <h2>Checking that an apostille is genuine</h2>
+  <p>The Apostille Convention lets each competent authority keep a register of the apostilles it issues. {withVerify.length} of the jurisdictions above publish an online search: {withVerify.map((o, i) => <>{i > 0 && ', '}<a href={o.verify_apostille_url} target="_blank" rel="noopener">{o.jurisdiction}</a></>)}. For the others, contact the issuing office.</p>
+</Base>
