@@ -75,3 +75,10 @@ Every fee, address, and processing statement on the live site is taken from one 
 ## Not fetched
 
 - Illinois Secretary of State apostille pages (https://www.ilsos.gov/departments/index/apostilles.html and the fees page) returned connection or 500 errors on November 22, 2026. No Illinois fees are published on the site.
+
+## Data-driven country and state pages (checked November 23, 2026)
+
+- https://www.hcch.net/en/instruments/conventions/status-table/?cid=41 (130 Contracting Parties; type, joined, entry-into-force dates; Thailand enters into force February 28, 2027)
+- HCCH Competent Authority pages for all 129 non-U.S. Parties (https://www.hcch.net/en/states/authorities/details3/?aid=...; URL per row in src/data/hague-countries.json)
+- HCCH objection notes for the 21 accessions marked A** (URL per row; the U.S. objected only to Liberia, withdrawn May 20, 2015; the U.S. filed a declaration, not an objection, on Kosovo)
+- https://www.hcch.net/en/states/authorities/details3/?aid=353 (U.S. designation: Department of State Office of Authentications, federal court clerks, and officers for each state, D.C., and territories)
