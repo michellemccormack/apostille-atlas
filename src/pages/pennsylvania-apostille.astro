@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Pennsylvania';
+const description = 'Pennsylvania apostilles and certifications from the Department of State in Harrisburg: the $15 per-document fee, the North Office Building walk-in counter, the mailing address, current mail processing, and the signer rules that get documents rejected.';
+const SVC = 'https://www.pa.gov/services/dos/get-document-certifications---apostilles';
+const PROG = 'https://www.pa.gov/agencies/dos/programs/document-certification';
+const FORM = 'https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/document-certification/apostilles-and-authentication.pdf';
+const DOS = 'https://travel.state.gov/content/travel/en/replace-certify-docs/authenticate-your-document/office-of-authentications.html';
+---
+<Base title={title} description={description} updated="2026-11-24">
+  <h1>How to get an apostille in Pennsylvania</h1>
+  <div class="answer"><p><strong>Short answer:</strong> The Pennsylvania Department of State’s Office of Notaries, Commissions and Legislation in Harrisburg charges $15 per document (not per page). Walk-in requests at Room 201 of the North Office Building are processed while you wait; by mail, the services page says 5 to 7 business days after receipt, not counting mailing time. <Src href={SVC} /></p></div>
+  <p class="lede">The Secretary of the Commonwealth authenticates the signatures of Pennsylvania public officials on documents that will be used outside the United States. The destination country decides whether you get an apostille or a certification, and neither is issued for documents used only inside the U.S.<Src href={PROG} /></p>
+
+  <h2>At a glance</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>What the official page says</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fee</td><td>$15 per document, not per page. Checks, money orders, or cashier’s checks payable to “Commonwealth of Pennsylvania.” No cash by mail or drop box.<Src href={SVC} /><Src href={PROG} /></td></tr>
+        <tr><td>Walk-in payment</td><td>Cash has not been accepted for walk-in service since November 25, 2024. Checks, money orders, and credit cards are accepted, and payment is due when the certification is done.<Src href={PROG} /> Credit cards are for walk-in service only.<Src href={FORM} /></td></tr>
+        <tr><td>Walk-in counter</td><td>North Office Building, Room 201, 401 North Street, Harrisburg, PA 17120. Monday to Friday, 8 a.m. to 4:30 p.m., except state holidays; arrive by 4 p.m. The public entrance closes at 3 p.m. daily.<Src href={SVC} /></td></tr>
+        <tr><td>Mailing address</td><td>Pennsylvania Department of State, Apostilles &amp; Certifications, North Office Building, Room 201, 401 North Street, Harrisburg, PA 17120-0029<Src href={PROG} /></td></tr>
+        <tr><td>Mail processing</td><td>The services page says 5 to 7 business days after receipt; the program page says to allow about two to three weeks. Neither includes mailing time.<Src href={SVC} /><Src href={PROG} /> On its last update (November 19, 2026), the office was processing mail requests received November 16, 2026.<Src href={PROG} /></td></tr>
+        <tr><td>Contact</td><td>717-787-5280, ra-certifications@pa.gov<Src href={SVC} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">Thanksgiving 2026: the office is closed Thursday and Friday, November 26 and 27, 2026, and recommends arriving no later than 1 p.m. on Wednesday, November 25.<Src href={PROG} /></div>
+
+  <h2>Apostille or certification?</h2>
+  <p>For a country that belongs to the 1961 Hague Apostille Convention, the department issues an apostille, which needs no further diplomatic or consular legalization. For other countries it attaches a certification, which may still need authentication by the U.S. Department of State and the destination country’s embassy.<Src href={PROG} /> Tell the office exactly where the document is going: substituting one for the other delays your documents.<Src href={PROG} /></p>
+  <p>Pennsylvania now prints both on a single universal certificate, with Spanish and French translations of each section and an electronic seal in black ink instead of a raised gold seal. The department says any certificate can be verified by its certification number in its online document search.<Src href={PROG} /> For the general difference, see <a href="/apostille-vs-authentication/">apostille versus authentication</a>, and check your destination in <a href="/apostille-countries/">apostille by country</a>.</p>
+
+  <h2>Step by step</h2>
+  <ol>
+    <li><strong>Get an original with the right signature.</strong> The document must be an original (no photocopies), signed by and carrying the seal of a Pennsylvania public official: a state elected or appointed official, a county elected official, a judge or magisterial district judge, or a Pennsylvania notary public.<Src href={FORM} /><Src href={SVC} /></li>
+    <li><strong>Fill out the request.</strong> Use a cover letter or the department’s Request for Legalization of Documents form (also in Chinese and Spanish). Give the destination country and the requester’s name, phone, email, and full mailing address.<Src href={SVC} /></li>
+    <li><strong>Pay $15 per document.</strong> One check or money order to “Commonwealth of Pennsylvania.” Checks from a foreign bank must be in U.S. dollars and carry a routing number.<Src href={SVC} /></li>
+    <li><strong>Add a return envelope.</strong> Enclose a self-addressed, stamped envelope, or a prepaid air bill for courier return. For UPS, list yourself as both sender and recipient. FedEx and DHL are not accepted for return shipments.<Src href={SVC} /></li>
+    <li><strong>Walk in or mail it.</strong> Walk-in customers are served first come, first served; tell the counter how many documents (not pages) and the destination country.<Src href={PROG} /></li>
+  </ol>
+
+  <h2>Which signature does each document need?</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>Pennsylvania rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Birth certificate</td><td>Does not need to be, and should not be, notarized.<Src href={PROG} /> Birth and death records come from the Pennsylvania Department of Health, Vital Records.<Src href={PROG} /></td></tr>
+        <tr><td>Death certificate</td><td>Must be signed by the state registrar. Certificates signed by a local registrar are not accepted.<Src href={SVC} /></td></tr>
+        <tr><td>Marriage certificate</td><td>Must be signed by the register of wills or the clerk of the orphans’ court, not only the officiant or clergy. Marriage and divorce records come from the county office where they were filed.<Src href={SVC} /></td></tr>
+        <tr><td>County documents</td><td>Must be signed by the clerk in charge of the county office. Documents signed by an assistant or deputy clerk are not accepted.<Src href={SVC} /></td></tr>
+        <tr><td>Diplomas, transcripts, criminal record checks</td><td>Must be notarized by a Pennsylvania notary public before you request the apostille or certification.<Src href={PROG} /></td></tr>
+        <tr><td>Notarized documents</td><td>The notarial certificate must be worded and completed in English. A version in another language the notary understands may appear immediately next to the English one.<Src href={SVC} /></td></tr>
+        <tr><td>Business documents</td><td>Articles of incorporation, certificates of good standing, and bylaws are among the common examples the department authenticates.<Src href={SVC} /></td></tr>
+        <tr><td>FBI checks and other federal documents</td><td>Not handled here; the department refers you to the U.S. Department of State.<Src href={PROG} /><Src href={DOS} label="U.S. State Dept." /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What gets a request held up?</h2>
+  <ul>
+    <li><strong>Photocopies.</strong> Photocopies of notarized or certified documents can’t be certified.<Src href={PROG} /></li>
+    <li><strong>The wrong signer.</strong> A deputy county clerk, a local registrar on a death certificate, or only the officiant on a marriage certificate.<Src href={SVC} /></li>
+    <li><strong>No destination country, or the wrong fee.</strong> Both are on the department’s acceptance checklist.<Src href={PROG} /></li>
+    <li><strong>Removing the staple.</strong> Pennsylvania attaches its certificate only by staple. Don’t remove it after the document is processed.<Src href={PROG} /></li>
+  </ul>
+
+  <h2>Certificate of Good Standing for a notary</h2>
+  <p>If a Pennsylvania-notarized document is being filed in another state or country that wants proof of the notary’s appointment, the department issues a Certificate of Good Standing for Notary Public. Write a letter asking for one with the notary’s full name and commission ID if known, your name and mailing address, and $15 per certificate.<Src href={SVC} /></p>
+
+  <HelpCTA state="Pennsylvania" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/new-jersey-apostille/">New Jersey apostille</a></li>
+    <li><a href="/new-york-apostille/">New York apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={SVC} target="_blank" rel="noopener">Get Document Certifications &amp; Apostilles (Commonwealth of Pennsylvania)</a></li>
+    <li><a href={PROG} target="_blank" rel="noopener">Certifications, Apostilles, and the Authentication of Documents (Pa. Department of State)</a></li>
+    <li><a href={FORM} target="_blank" rel="noopener">Apostille/Certification Request Form (PDF)</a></li>
+    <li><a href={DOS} target="_blank" rel="noopener">U.S. Department of State, Office of Authentications</a></li>
+  </ul>
+</Base>

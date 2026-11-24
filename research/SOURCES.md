@@ -82,3 +82,32 @@ Every fee, address, and processing statement on the live site is taken from one 
 - HCCH Competent Authority pages for all 129 non-U.S. Parties (https://www.hcch.net/en/states/authorities/details3/?aid=...; URL per row in src/data/hague-countries.json)
 - HCCH objection notes for the 21 accessions marked A** (URL per row; the U.S. objected only to Liberia, withdrawn May 20, 2015; the U.S. filed a declaration, not an objection, on Kosovo)
 - https://www.hcch.net/en/states/authorities/details3/?aid=353 (U.S. designation: Department of State Office of Authentications, federal court clerks, and officers for each state, D.C., and territories)
+
+## Pennsylvania (checked 2026-11-24)
+
+- https://www.pa.gov/services/dos/get-document-certifications---apostilles ($15 per document; walk-in hours 8 a.m. to 4:30 p.m., arrive by 4 p.m., entrance closes 3 p.m.; mail 5 to 7 business days after receipt; signer rules; no FedEx/DHL returns; 717-787-5280)
+- https://www.pa.gov/agencies/dos/programs/document-certification (mailing address 17120-0029; allow two to three weeks by mail; processing mail received 11/16/2026 as of 11/19/2026 update; no walk-in cash since Nov 25, 2024; universal certificate and document search; diplomas, transcripts and criminal record checks notarized first; staple rule; Thanksgiving closure Nov 26 and 27, 2026)
+- https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/document-certification/apostilles-and-authentication.pdf (request form; credit card for walk-in only; eligible signers)
+
+## Missouri (checked 2026-11-24)
+
+- https://www.sos.mo.gov/Business/Notary/notary/certify ($10 per certification or authentication, counted per notary; $100 adoption cap; payment methods; Room 322 address; document preparation rules)
+- https://www.sos.mo.gov/CMSImages/Business/Notary/CoverLetterComplete.pdf (cover letter; phone numbers)
+- https://www.sos.mo.gov/CMSImages/Business/Notary/CreditCardPaymentSheet.pdf
+- https://www.sos.mo.gov/CMSImages/Business/Notary/NotaryHandbook.pdf (PDF modified Oct 23, 2026: walk-in same day 8 a.m. to 4:30 p.m.; mail same-day or next-day service; branch offices in St. Louis, Kansas City, Springfield; school document statement; third-party forwarding; RSMo 486.975 electronic certificate up to $10. The handbook also lists PO Box 784 for mail and "Director of Revenue" as payee; the page uses the web page's Room 322 address and "Secretary of State's Office" payee, which match the current cover letter.)
+- https://health.mo.gov/data/vitalrecords/index.php (linked only)
+
+## Washington (checked 2026-11-24)
+
+- https://www.sos.wa.gov/corporations-charities/apostilles-services-information-resource-page ($15; standard 7 to 10 business days; expedite $100 per 10 docs, 2 to 3 days; same day $150 first 10; universal certificate; document rules)
+- https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-schedules-priority-services (same fees; payments not refundable)
+- https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-frequently-asked-questions (vital records, school records, background checks)
+- https://www.sos.wa.gov/corporations-charities/contact-us (PO Box 40234, Olympia 98504-0234 as the only mailing address; Tumwater and Cheney addresses and hours; 30-minute cutoff; 360-725-0377. The June 2025 request form prints PO Box 40228; the page uses the contact page's address.)
+- https://www.sos.wa.gov/sites/default/files/2025-06/6.2025%20-%20Apostilles%20request%20form.pdf
+- https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-and-certificate-authenticity-search
+
+## Not published Nov 24, 2026
+
+- Illinois: ilsos.gov did not respond from our network (connection failed); left queued.
+- Georgia: sos.ga.gov returned 403; left queued.
+

@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Washington State';
+const description = 'Washington State apostilles from the Secretary of State: $15 per document, standard (7 to 10 business days), expedited ($100 per 10 documents, 2 to 3 days), and same-day in-person service in Tumwater or Cheney ($150 for the first 10), plus the document rules for vital records, school records, and background checks.';
+const RES = 'https://www.sos.wa.gov/corporations-charities/apostilles-services-information-resource-page';
+const FEES = 'https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-schedules-priority-services';
+const FAQ = 'https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-frequently-asked-questions';
+const CONTACT = 'https://www.sos.wa.gov/corporations-charities/contact-us';
+const FORM = 'https://www.sos.wa.gov/sites/default/files/2025-06/6.2025%20-%20Apostilles%20request%20form.pdf';
+const SEARCH = 'https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-and-certificate-authenticity-search';
+const DOS = 'https://travel.state.gov/content/travel/en/replace-certify-docs/authenticate-your-document/office-of-authentications.html';
+---
+<Base title={title} description={description} updated="2026-11-24">
+  <h1>How to get an apostille in Washington State</h1>
+  <div class="answer"><p><strong>Short answer:</strong> The Washington Secretary of State charges $15 per document. Standard mail service typically takes 7 to 10 business days; expedited service adds $100 per 10 documents and typically takes 2 to 3 business days; same-day service in person at Tumwater or Cheney adds $150 for the first 10 documents. <Src href={RES} /><Src href={FEES} /></p></div>
+  <p class="lede">The Corporations &amp; Charities Division of the Washington Secretary of State certifies documents signed by a Washington state official or a Washington notary public for use in another country. Washington issues one “universal certificate” that works as an apostille for Hague Convention countries or as an authentication for other countries.<Src href={RES} /></p>
+
+  <h2>Fees and speed</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Fee</th><th>Typical time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Standard</td><td>$15 per document (a document can be more than one page)</td><td>7 to 10 business days from receipt, longer at high volume</td></tr>
+        <tr><td>Expedited</td><td>$15 per document, plus $100 per 10 documents (1–10 documents $100, 11–20 documents $200, and so on)</td><td>2 to 3 business days from receipt</td></tr>
+        <tr><td>Same day, in person (Tumwater or Cheney)</td><td>$15 per document, plus $150 for the first 10 documents and $100 for each additional 10 (1–10 $150, 11–20 $250, and so on)</td><td>Processed while you wait, subject to hours, cutoff times, and volume</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Fees and times as published on the apostille resource page and the fee schedule.<Src href={RES} /><Src href={FEES} /> By mail, pay by check or money order in U.S. dollars to “Secretary of State.”<Src href={RES} /><Src href={FORM} /> The division says payments are not refundable.<Src href={FEES} /></p>
+
+  <h2>Where to go or send it</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Option</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mail (USPS)</td><td>The division has only one mailing address: PO Box 40234, Olympia, WA 98504-0234.<Src href={CONTACT} /></td></tr>
+        <tr><td>Overnight courier</td><td>UPS, FedEx, and other commercial couriers must use the overnight address, 243 Israel Rd SE, Tumwater, WA 98501, which receives only commercial-carrier overnight deliveries.<Src href={CONTACT} /></td></tr>
+        <tr><td>In person, Tumwater</td><td>243 Israel Rd SE, Tumwater. Monday to Thursday 8 a.m. to 4 p.m., Friday 8 a.m. to 3 p.m. (Pacific). Documents must be in 30 minutes before closing to make the same-day cutoff.<Src href={CONTACT} /></td></tr>
+        <tr><td>In person, Cheney</td><td>960 Washington St, Cheney, WA 99004. Monday to Wednesday and Friday, 9 a.m. to 3 p.m. (Pacific); closed Thursdays. Same-day service only, with the $150 same-day fee. This location can’t receive mail.<Src href={CONTACT} /></td></tr>
+        <tr><td>Phone and chat</td><td>360-725-0377, Monday to Thursday 8 a.m. to 4 p.m., Friday 8 a.m. to 3 p.m. (Pacific)<Src href={CONTACT} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Processed documents go back by regular first-class mail. If your deadline is tight or the documents are going abroad, include a prepaid, traceable return label or envelope.<Src href={RES} /></p>
+
+  <h2>Step by step</h2>
+  <ol>
+    <li><strong>Check the document is eligible.</strong> It must be an original or certified copy issued by a Washington government entity, a certified Washington court document, or a personal document notarized by a Washington notary with a full notarial certificate.<Src href={RES} /></li>
+    <li><strong>Fill out the Apostille Authentication Request Form.</strong> It asks for the country requesting the document, your name, address, email, and phone, and the number of documents.<Src href={FORM} /></li>
+    <li><strong>Choose standard or expedited and add the fee.</strong><Src href={FORM} /></li>
+    <li><strong>Mail it, courier it, or bring it in</strong> using the addresses above.<Src href={CONTACT} /></li>
+  </ol>
+
+  <h2>Document rules</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>Washington rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Birth, death, marriage, divorce certificates; letter of single status</td><td>Send an original certified copy. Vital records must be apostilled by the state that issued them, so a birth certificate from another state goes to that state.<Src href={FAQ} /> Certified copies come from the county auditor that issued the marriage certificate or the Center for Vital Statistics in Tumwater.<Src href={RES} /></td></tr>
+        <tr><td>Public high school transcripts</td><td>No notarization, but they must be official transcripts signed by the principal, vice principal, or registrar (a district superintendent or assistant superintendent also works). Ask the school for the signature specifically.<Src href={FAQ} /></td></tr>
+        <tr><td>Washington college and university records</td><td>Official transcripts signed by the registrar (associate or interim registrar also accepted); original degrees are signed by the president. Both must carry the school seal.<Src href={RES} /> An original diploma doesn’t need a notary.<Src href={FAQ} /></td></tr>
+        <tr><td>Private and out-of-state school documents</td><td>Notarized by a Washington notary. Copies of out-of-state school documents are accepted only when notarized by a Washington notary.<Src href={RES} /><Src href={FAQ} /></td></tr>
+        <tr><td>Personal documents (power of attorney, affidavits, consents)</td><td>Properly notarized by a Washington notary.<Src href={RES} /></td></tr>
+        <tr><td>Washington background check</td><td>A notarized clearance letter from the Washington State Patrol. If the check was fingerprint-based, include the original fingerprint card.<Src href={RES} /></td></tr>
+        <tr><td>Business entity records</td><td>Only certified copies or certificates of documents on file with the Corporations Division. Order the certified copy and the apostille together on the Business Records Request form; these can’t be ordered online.<Src href={RES} /></td></tr>
+        <tr><td>Driver license or passport</td><td>A notarized copy. Outside Washington, you can send an Abstract Driving Record from the Department of Licensing, issued within 30 days of reaching the office.<Src href={RES} /><Src href={FAQ} /></td></tr>
+        <tr><td>FBI checks, naturalization certificates, military-notary documents</td><td>Federal documents; the Secretary of State can’t apostille them. They go to the U.S. Department of State.<Src href={RES} /><Src href={DOS} label="U.S. State Dept." /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What makes a notarization acceptable?</h2>
+  <p>The notary certificate must be complete, signed, and stamped by a Washington notary, with the notary’s signed and printed name, title, commission expiration date, the date of the notarial act, and the Washington state and county where it took place. The signature name and stamp name must match each other and the Notary Division license directory. A notary signature without a notarial certificate can’t be authenticated.<Src href={RES} /></p>
+  <p>Since 2016, the Secretary of State won’t certify a notary’s signature on documents about allegiance to a government, renouncing citizenship or military status, or claiming immunity from state or federal law.<Src href={RES} /></p>
+
+  <h2>Non-Hague countries and verification</h2>
+  <p>For a country that isn’t in the Hague Convention, the universal certificate may need further certification by the U.S. Department of State, the country’s embassy, or both.<Src href={RES} /> See <a href="/apostille-vs-authentication/">apostille versus authentication</a> and <a href="/apostille-countries/">apostille by country</a>. The Secretary of State also offers an online apostille and certificate authenticity search.<Src href={SEARCH} /></p>
+
+  <HelpCTA state="Washington" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/california-apostille/">California apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={RES} target="_blank" rel="noopener">Apostilles Services &amp; Information (WA Secretary of State)</a></li>
+    <li><a href={FAQ} target="_blank" rel="noopener">Apostille Frequently Asked Questions</a></li>
+    <li><a href={FEES} target="_blank" rel="noopener">Fee Schedules &amp; Priority Services</a></li>
+    <li><a href={CONTACT} target="_blank" rel="noopener">Corporations &amp; Charities Contact Us</a></li>
+    <li><a href={FORM} target="_blank" rel="noopener">Apostille Authentication Request Form (PDF)</a></li>
+    <li><a href={SEARCH} target="_blank" rel="noopener">Apostille and Certificate Authenticity Search</a></li>
+  </ul>
+</Base>

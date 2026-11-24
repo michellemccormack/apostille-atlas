@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Missouri';
+const description = 'Missouri apostilles, authentications, and notary certifications from the Secretary of State: the $10 fee per notary or official, the $100 adoption cap, same-day walk-in service in Jefferson City and three branch offices, and how to prepare birth, marriage, divorce, and school documents.';
+const CERT = 'https://www.sos.mo.gov/Business/Notary/notary/certify';
+const COVER = 'https://www.sos.mo.gov/CMSImages/Business/Notary/CoverLetterComplete.pdf';
+const CARD = 'https://www.sos.mo.gov/CMSImages/Business/Notary/CreditCardPaymentSheet.pdf';
+const HB = 'https://www.sos.mo.gov/CMSImages/Business/Notary/NotaryHandbook.pdf';
+const VR = 'https://health.mo.gov/data/vitalrecords/index.php';
+---
+<Base title={title} description={description} updated="2026-11-24">
+  <h1>How to get an apostille in Missouri</h1>
+  <div class="answer"><p><strong>Short answer:</strong> The Missouri Secretary of State charges $10 per apostille, authentication, or certification, counted per notary or official on the document. Walk-in customers in Jefferson City can get same-day processing, and the St. Louis, Kansas City, and Springfield branch offices provide the service too. Mailed documents are given same-day or next-day service, according to the state’s Notary Handbook. <Src href={CERT} /><Src href={HB} label="handbook" /></p></div>
+  <p class="lede">The Secretary of State’s Notaries &amp; Commissions Unit confirms that a Missouri official, such as a notary public, recorder of deeds, circuit clerk, judge, county clerk, or the State Registrar, had the authority to sign your document. The country where the document will be used decides which certificate is attached.<Src href={CERT} /></p>
+
+  <h2>At a glance</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>What the official page says</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fee</td><td>$10 per certification or authentication (including an apostille).<Src href={CERT} /><Src href={COVER} /></td></tr>
+        <tr><td>Adoptions</td><td>State law caps the fee for certain adoption documents at $100 per child per adoption, or per group of children adopted at the same time.<Src href={CERT} /></td></tr>
+        <tr><td>Payment</td><td>Check or money order payable to the Secretary of State’s Office, or MasterCard, Visa, American Express, or Discover using the credit card payment sheet. Card payments carry a small convenience fee.<Src href={CERT} /><Src href={CARD} label="card sheet" /></td></tr>
+        <tr><td>Where to send it</td><td>Commissions, Secretary of State’s Office, 600 West Main, Room 322, Jefferson City, MO 65101<Src href={CERT} /><Src href={COVER} /></td></tr>
+        <tr><td>Walk-in</td><td>Same-day processing for walk-in customers, 8 a.m. to 4:30 p.m., at 600 W. Main St., Room 322, Jefferson City<Src href={HB} label="handbook" /></td></tr>
+        <tr><td>Branch offices</td><td>St. Louis: 815 Olive St., Ste. 150 (314-340-7490). Kansas City: 615 E. 13th St., Ste. 513 (816-889-2925). Springfield: 149 Park Central Sq., Ste. 624 (417-895-6330).<Src href={HB} label="handbook" /></td></tr>
+        <tr><td>Mail processing</td><td>Documents received in the mail are given same-day or next-day service.<Src href={HB} label="handbook" /></td></tr>
+        <tr><td>Phone</td><td>(573) 751-2783, or toll-free (866) 223-6535<Src href={COVER} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>How the $10 fee is counted</h2>
+  <p>Missouri charges by the official being verified, document by document. The Secretary of State gives these examples:<Src href={CERT} /></p>
+  <ul>
+    <li>One document with several notarizations, all by the same notary: $10.</li>
+    <li>Several documents, all notarized by the same notary: $10 per document.</li>
+    <li>One document notarized by several different notaries: $10 per notary.</li>
+  </ul>
+
+  <h2>Apostille, authentication, or certification?</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Certificate</th><th>What it verifies</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Certification</td><td>A Missouri notary public.</td></tr>
+        <tr><td>Authentication</td><td>A recorder of deeds, circuit clerk, judge, county clerk, or the State Registrar (for example on a birth certificate, marriage statement, or divorce statement).</td></tr>
+        <tr><td>Apostille</td><td>The same officials, for a country that has joined the Hague Apostille Convention. No authentication above the Secretary of State is needed.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The country of use determines which of these the office attaches.<Src href={CERT} /> The handbook adds that the apostille must be requested for documents going to member countries.<Src href={HB} label="handbook" /> Check your destination in <a href="/apostille-countries/">apostille by country</a>, and see <a href="/apostille-vs-authentication/">apostille versus authentication</a> for what happens after a non-Hague authentication.</p>
+
+  <h2>Preparing each document</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>What Missouri needs</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Birth certificate</td><td>A certified copy from the Bureau of Vital Records, (573) 751-6387.<Src href={CERT} /><Src href={VR} label="Vital Records" /></td></tr>
+        <tr><td>Marriage license</td><td>A certified copy from the Recorder of Deeds in the county of the marriage, or a statement related to marriage from the Bureau of Vital Records.<Src href={CERT} /></td></tr>
+        <tr><td>Divorce decree</td><td>A certified copy from the Circuit Clerk of the county where the divorce is recorded.<Src href={CERT} /></td></tr>
+        <tr><td>Diplomas and transcripts</td><td>A certified copy from the school. The registrar or another school authority signs a statement typed on the back of the diploma or transcript saying it is the original record (or a copy of it) and the date issued, and a notary witnesses that signature. Don’t alter the face of the diploma.<Src href={CERT} /><Src href={HB} label="handbook" /></td></tr>
+        <tr><td>Notarized documents</td><td>A complete notarization: the notarial paragraph, the notary’s signature, and the seal.<Src href={CERT} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Missouri notaries can’t certify copies of birth certificates, death certificates, divorce decrees, or marriage licenses; those must come certified from the issuing agency. Missouri notaries also can’t certify documents from other states or countries.<Src href={HB} label="handbook" /></p>
+
+  <h2>Step by step</h2>
+  <ol>
+    <li><strong>Get the document certified or notarized</strong> as shown above.<Src href={CERT} /></li>
+    <li><strong>Fill out the cover letter</strong> with your contact details, the number of documents, the country of use, and return instructions.<Src href={COVER} /></li>
+    <li><strong>Add payment</strong> at $10 per apostille or authentication, or the credit card payment sheet.<Src href={COVER} /></li>
+    <li><strong>Plan the return.</strong> Documents come back by regular mail unless you include a prepaid envelope with an addressed air bill. If you pay by card and send documents by special delivery, include a completed air bill.<Src href={CERT} /></li>
+  </ol>
+  <p>The office will also forward documents straight to a third party, such as a consulate, if you enclose a stamped envelope addressed to them.<Src href={HB} label="handbook" /></p>
+
+  <h2>Electronic notarizations</h2>
+  <p>Missouri law provides for an electronic certificate of authority for an electronic notarial act, including an electronic form of the apostille, with a fee of up to $10 (section 486.975, reprinted in the Notary Handbook).<Src href={HB} label="handbook" /> If you are thinking about notarizing online first, read <a href="/online-notarization-for-apostille/">online notarization for apostille documents</a>, and confirm with the receiving country that it accepts an electronically notarized document.</p>
+
+  <HelpCTA state="Missouri" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/pennsylvania-apostille/">Pennsylvania apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={CERT} target="_blank" rel="noopener">Certification, Authentication, &amp; Apostilles (Missouri Secretary of State)</a></li>
+    <li><a href={COVER} target="_blank" rel="noopener">Apostille/Authentication Cover Letter (PDF)</a></li>
+    <li><a href={CARD} target="_blank" rel="noopener">Credit Card Payment Sheet (PDF)</a></li>
+    <li><a href={HB} target="_blank" rel="noopener">Missouri Notary Handbook (PDF)</a></li>
+    <li><a href={VR} target="_blank" rel="noopener">Bureau of Vital Records (Missouri DHSS)</a></li>
+  </ul>
+</Base>
