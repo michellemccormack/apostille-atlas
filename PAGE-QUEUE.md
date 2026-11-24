@@ -23,15 +23,18 @@ November 23, 2026:
 - [x] Virginia apostille (/virginia-apostille/)
 - [x] North Carolina apostille (/north-carolina-apostille/)
 
+November 24, 2026:
+
+- [x] Pennsylvania apostille (/pennsylvania-apostille/)
+- [x] Missouri apostille (/missouri-apostille/)
+- [x] Washington apostille (/washington-apostille/)
+
 ## Queued (next first)
 
-- [ ] Pennsylvania apostille (find current pa.gov apostille page; old dos.pa.gov URL now redirects to the DOS home page)
-- [ ] Illinois apostille (ilsos.gov unreachable on Nov 22 and Nov 23, 2026)
-- [ ] Missouri apostille (sos.mo.gov/business/commissions/certifications reachable Nov 23)
-- [ ] Georgia apostille (sos.ga.gov returned 403 Nov 23)
-- [ ] Washington apostille
-- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23)
-- [ ] Michigan apostille
+- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, and 24, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
+- [ ] Georgia apostille (sos.ga.gov returned 403 Nov 23 and Nov 24)
+- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23 and Nov 24)
+- [ ] Michigan apostille (michigan.gov/sos/all-services/document-authentication-and-apostille found Nov 24)
 - [ ] Connecticut apostille
 - [ ] Maryland apostille
 - [ ] Colorado apostille
