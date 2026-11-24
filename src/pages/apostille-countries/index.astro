@@ -7,17 +7,10 @@ const title = 'Hague Apostille Convention countries: full list with U.S. status'
 const description = `All ${sorted.length} Hague Apostille Convention countries other than the U.S., with the date the Convention took effect, whether it applies with the United States, and which countries still need embassy legalization.`;
 const recent = [...sorted].filter(c => c.entry_into_force >= '2022-01-01').sort((a, b) => b.entry_into_force.localeCompare(a.entry_into_force));
 const NON_HAGUE = ['Afghanistan','Angola','Cambodia','Cameroon','Cuba','Egypt','Ethiopia','Ghana','Haiti','Iran','Iraq','Jordan','Kenya','Kuwait','Lebanon','Libya','Malaysia','Myanmar','Nepal','Nigeria','Qatar','Sri Lanka','Sudan','Syria','Taiwan','Tanzania','Uganda','United Arab Emirates','Yemen','Zambia','Zimbabwe'];
-const schema = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-      { '@type': 'ListItem', position: 2, name: 'Apostille by country', item: `${SITE}/apostille-countries/` },
-    ] },
+const schema = [
     { '@type': 'ItemList', name: 'Hague Apostille Convention Contracting Parties', numberOfItems: sorted.length,
       itemListElement: sorted.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, url: `${SITE}/apostille-countries/${c.slug}/` })) },
-  ],
-};
+];
 ---
 <Base title={title} description={description} schema={schema} updated={CHECKED}>
   <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Apostille by country' }]} />

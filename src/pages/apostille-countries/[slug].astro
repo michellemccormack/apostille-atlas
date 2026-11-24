@@ -18,9 +18,7 @@ const description = c.in_force
   ? `${c.name} has applied the Hague Apostille Convention since ${fmt(c.entry_into_force)}. Which U.S. office apostilles your document, and who issues apostilles in ${c.name}, with fees from the HCCH.`
   : `${c.name} has joined the Hague Apostille Convention, effective ${fmt(c.entry_into_force)}. What that means for U.S. documents now, and who will issue apostilles in ${c.name}.`;
 const url = `${SITE}/apostille-countries/${c.slug}/`;
-const schema = {
-  '@context': 'https://schema.org',
-  '@graph': [
+const schema = [
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'Apostille by country', item: `${SITE}/apostille-countries/` },
@@ -29,8 +27,7 @@ const schema = {
     { '@type': 'Article', headline: title, description, url, dateModified: CHECKED, about: { '@type': 'Country', name: c.name },
       publisher: { '@type': 'Organization', name: 'Atlas Guides' },
       citation: [STATUS_URL, ...c.authority_pages.map(p => p.source_url)] },
-  ],
-};
+];
 ---
 <Base title={title} description={description} schema={schema} updated={CHECKED}>
   <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Apostille by country', href: '/apostille-countries/' }, { name: c.name }]} />
