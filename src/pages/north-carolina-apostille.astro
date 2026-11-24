@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
 import Src from '../components/Src.astro';
 const title = 'How to get an apostille in North Carolina';
 const description = 'North Carolina apostille, authentication, and authority certificates: the $10 fee, the Raleigh mailing and walk-in addresses, the wet-signature translation rule, school-document notarization, and the post-April-2000 signature rule.';
@@ -85,6 +86,8 @@ const FORMS = 'https://www.sosnc.gov/forms/by_title/_Authentications';
   <p>Without a prepaid label or self-addressed stamped envelope, documents come back by regular mail. A prepaid courier label must be computer-printed and paid for when you print it; a handwritten label with an account number doesn’t count. The office rejects FedEx labels that list the Secretary of State with “Bill Sender.” UPS and FedEx air labels are picked up automatically; for ground labels, the office calls you and you schedule the pickup.<Src href={COURIER} /><Src href={APO} /></p>
   <p>For documents going back to a foreign address, the office no longer uses UPS, FedEx, or DHL. It will mail a USPS prepaid envelope and label to a foreign address as long as the sender address isn’t the Secretary of State’s.<Src href={COURIER} /></p>
   <p>Emergencies can be considered for expedited processing if you send documentation of the emergency.<Src href={APO} /></p>
+
+  <HelpCTA state="North Carolina" />
 
   <h2>Related guides</h2>
   <ul>

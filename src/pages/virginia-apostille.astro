@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
 import Src from '../components/Src.astro';
 const title = 'How to get an apostille in Virginia';
 const description = 'Virginia apostille and Great Seal authentication: the $10 fee ($5 for extra same-signer documents), the 12-month rule, appointment-only Richmond service, mail times, and why Virginia will not authenticate eNotary documents.';
@@ -82,6 +83,8 @@ const REJECT = 'https://www.commonwealth.virginia.gov/official-documents/authent
 
   <h2>Online and electronic notarization</h2>
   <p>The Virginia authentications page says that, at this time, it cannot authenticate an electronic notarization with an Apostille or Great Seal authentication.<Src href={TYPES} /> If your document is headed abroad from Virginia, have it notarized in person by a commissioned Virginia notary. The office says many banks, FedEx stores, UPS stores, and USPS locations offer notary services. Other states handle this differently; see <a href="/online-notarization-for-apostille/">online notarization for apostille documents</a>.<Src href={MAIN} /></p>
+
+  <HelpCTA state="Virginia" />
 
   <h2>Related guides</h2>
   <ul>
