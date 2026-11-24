@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
 import Src from '../components/Src.astro';
 const title = 'How to get an apostille in New Jersey';
 const description = 'New Jersey apostille and certification: the $25 standard and $40 expedited fees, the required online order, 12 to 20 business day mail processing, and Trenton walk-in service from the Division of Revenue and Enterprise Services.';
@@ -58,6 +59,8 @@ const INFO = 'https://www.nj.gov/treasury/revenue/apostilles.shtml';
   <p>New Jersey cannot issue apostilles or certifications for vital records from other states. Those must be authenticated in the state where they were issued.<Src href={INFO} /></p>
   <h3>Documents in another language</h3>
   <p>For documents that are not in English, the Division recommends attaching a notarized English translation. If you attach a notarized translation to a vital record, it issues two apostilles or certifications and charges two fees.<Src href={INFO} /></p>
+
+  <HelpCTA state="New Jersey" />
 
   <h2>Related guides</h2>
   <ul>
