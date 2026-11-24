@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+// Set PRICE (e.g. '$29') and CHECKOUT_URL when the kit goes on sale; until then the page shows the coming-soon notice.
+const PRICE = null;
+const CHECKOUT_URL = null;
+const title = 'Apostille Done-Right Checklist Pack: Flowchart, Document Checklists and Cover Letters';
+const description = 'A 14-page pack for getting an apostille or embassy legalization right the first time: a Hague vs. non-Hague flowchart, checklists for vital, court, notarized, school, business and federal documents, three fill-in cover letters, and a quick reference for eight state offices plus the U.S. Department of State.';
+const updated = '2026-11-23';
+const schema = {"@context":"https://schema.org","@type":"Product","name":'Apostille Done-Right Checklist Pack',"description":description,"brand":{"@type":"Brand","name":'Apostille Atlas'},"image":'https://apostillesteps.com/kit/kit-hero.svg'};
+---
+<Base title={title} description={description} updated={updated} schema={schema}>
+<style>
+  .kit-hero{margin:1.2rem 0 1rem;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .kit-hero img{display:block;width:100%;height:auto}
+  .kit-cta{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center;border:1px solid var(--line);border-left:4px solid var(--brand);background:#fff;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0 1.6rem}
+  .kit-cta .soon{font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
+  .kit-btn{display:inline-block;background:var(--brand);color:#fff!important;text-decoration:none;font-weight:600;padding:.6rem 1.1rem;border-radius:6px}
+  .kit-btn:hover{opacity:.92}
+  .kit-cta .fine{flex:1 0 100%;margin:0;font-size:14px;color:var(--muted)}
+  .kit-list{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.4rem;padding-left:1.1rem}
+  .kit-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:1rem 0}
+  .kit-gallery figure{margin:0}
+  .kit-gallery img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:4px;box-shadow:0 2px 10px rgba(0,0,0,.08);background:#fff}
+  .kit-gallery figcaption{font-size:13px;color:var(--muted);margin-top:.35rem}
+  .kit-formats{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 0;padding:0;list-style:none}
+  .kit-formats li{border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem;font-size:14px;background:#fff}
+  @media (max-width:640px){.kit-list{grid-template-columns:1fr}.kit-gallery{grid-template-columns:1fr 1fr}}
+</style>
+  <h1>Apostille Done-Right Checklist Pack</h1>
+  <p class="lede">Most apostille rejections come from sending a document to the wrong office or in the wrong form. This pack shows which office handles your document, what it must look like before you send it, and what to put in the envelope, with a cover letter ready to fill in.</p>
+  <div class="kit-hero"><img src="/kit/kit-hero.svg" alt="The Apostille Done-Right Checklist Pack cover with sample pages: decision flowchart, document checklist and state office quick reference" width="1200" height="750" /></div>
+  <div class="kit-cta">
+    {CHECKOUT_URL ? (
+      <>
+        <a class="kit-btn" href={CHECKOUT_URL} rel="noopener">Get the kit · {PRICE}</a>
+        <p class="fine">Instant download. 14-page PDF, 3 editable Word cover letters and an Excel order log.</p>
+      </>
+    ) : (
+      <>
+        <span class="soon">Coming soon</span>
+        <a class="kit-btn" href="mailto:ds59tmmv@mail.grokbot.com?subject=Notify%20me%3A%20Apostille%20Done-Right%20Checklist%20Pack">Get notified when it launches</a>
+        <p class="fine">We'll send one email when the kit is available. 14-page PDF, 3 editable Word cover letters and an Excel order log.</p>
+      </>
+    )}
+  </div>
+
+  <h2>What's inside</h2>
+  <ul class="kit-list">
+      <li>Flowchart: apostille or embassy legalization?</li>
+      <li>State office vs. U.S. Department of State</li>
+      <li>Vital records and court records checklists</li>
+      <li>Notarized and school document checklists</li>
+      <li>Business and federal document checklists</li>
+      <li>Rejection-proof mailing checklist</li>
+      <li>State office request template</li>
+      <li>Cover letter for the U.S. Department of State</li>
+      <li>Cover letter for embassy legalization</li>
+      <li>Quick reference: NY, CA, TX, FL, MA, NJ, VA, NC and federal</li>
+      <li>Legalization chain tracker and order log</li>
+  </ul>
+  <ul class="kit-formats">
+    <li>14-page PDF</li>
+    <li>3 editable Word letters</li>
+    <li>Excel order log</li>
+  </ul>
+
+  <h2>A look inside</h2>
+  <div class="kit-gallery">
+    <figure><img src="/kit/kit-preview-1.svg" alt="Hague vs. legalization flowchart" width="620" height="803" loading="lazy" /><figcaption>Hague vs. legalization flowchart</figcaption></figure>
+    <figure><img src="/kit/kit-preview-2.svg" alt="Vital and court records checklist" width="620" height="803" loading="lazy" /><figcaption>Vital and court records checklist</figcaption></figure>
+    <figure><img src="/kit/kit-preview-3.svg" alt="State office quick reference" width="620" height="803" loading="lazy" /><figcaption>State office quick reference</figcaption></figure>
+  </div>
+
+  <h2>Who it's for</h2>
+  <ul>
+    <li>People sending a birth, marriage or court document abroad</li>
+    <li>Businesses sending corporate documents to a foreign bank, registry or partner</li>
+    <li>Anyone facing a non-Hague country's embassy legalization for the first time</li>
+  </ul>
+
+  <h2>How it's sourced</h2>
+  <p>Every fee, address and rule in the pack is cited to the official page: the Hague Conference (HCCH), the U.S. Department of State's Office of Authentications and its fee schedule (22 C.F.R. § 22.1), and each state office named. State office details were checked November 22–23, 2026, the same research behind the state guides on this site.</p>
+
+  <h2>Questions</h2>
+  <h3>Is this legal advice?</h3>
+  <p>No. It is general information based on the cited official pages. The receiving country, court or agency decides what it accepts, so confirm with them and check the official office page before you send anything.</p>
+  <h3>My state isn&#x27;t in the quick reference. Is the pack still useful?</h3>
+  <p>Yes. The flowchart, document checklists, mailing checklist and letters work for any state. For office details, see our <a href="/apostille-offices-by-state/">apostille offices by state</a>.</p>
+  <h3>Can I edit the cover letters?</h3>
+  <p>Yes. All three come as Word files, and the order log as an Excel file.</p>
+  <h3>Would you rather not do it yourself?</h3>
+  <p>Use <a href="/get-it-done/">get it done for me</a> to request a quote from an independent apostille service.</p>
+
+  <p class="meta">General information, not legal advice. Apostille Atlas is independent and is not affiliated with the U.S. Department of State, any state office or any embassy.</p>
+</Base>
