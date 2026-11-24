@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Src from '../../components/Src.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { sorted, fmt, usRelation, STATUS_URL, SITE, CHECKED } from '../../lib/hague.js';
+const title = 'Hague Apostille Convention countries: full list with U.S. status';
+const description = `All ${sorted.length} Hague Apostille Convention countries other than the U.S., with the date the Convention took effect, whether it applies with the United States, and which countries still need embassy legalization.`;
+const recent = [...sorted].filter(c => c.entry_into_force >= '2022-01-01').sort((a, b) => b.entry_into_force.localeCompare(a.entry_into_force));
+const NON_HAGUE = ['Afghanistan','Angola','Cambodia','Cameroon','Cuba','Egypt','Ethiopia','Ghana','Haiti','Iran','Iraq','Jordan','Kenya','Kuwait','Lebanon','Libya','Malaysia','Myanmar','Nepal','Nigeria','Qatar','Sri Lanka','Sudan','Syria','Taiwan','Tanzania','Uganda','United Arab Emirates','Yemen','Zambia','Zimbabwe'];
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Apostille by country', item: `${SITE}/apostille-countries/` },
+    ] },
+    { '@type': 'ItemList', name: 'Hague Apostille Convention Contracting Parties', numberOfItems: sorted.length,
+      itemListElement: sorted.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, url: `${SITE}/apostille-countries/${c.slug}/` })) },
+  ],
+};
+---
+<Base title={title} description={description} schema={schema} updated={CHECKED}>
+  <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Apostille by country' }]} />
+  <h1>Apostille by country</h1>
+  <p class="lede">The HCCH status table, checked {fmt(CHECKED)}, lists 130 Contracting Parties to the 1961 Apostille Convention, including the United States.<Src href={STATUS_URL} /> Each country below has its own page with its entry-into-force date, whether the Convention applies with the U.S., and the authority that issues apostilles there.</p>
+  <div class="note">If the destination country is on this list and the Convention is in force, a U.S. document generally needs an apostille. If it is not on the list, plan on authentication plus embassy or consulate legalization. <a href="/apostille-vs-authentication/">How the two differ</a>.</div>
+
+  <h2>Recent joiners</h2>
+  <p>Countries where the Convention took effect (or takes effect) in 2022 or later. Older guidance may still tell you to get these documents legalized.</p>
+  <ul>
+    {recent.map(c => <li><a href={`/apostille-countries/${c.slug}/`}>{c.name}</a>: {c.in_force ? 'in force since' : 'takes effect'} {fmt(c.entry_into_force)}</li>)}
+  </ul>
+
+  <h2>All Contracting Parties</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Country</th><th>In force since</th><th>Applies with the U.S.</th></tr></thead>
+      <tbody>
+        {sorted.map(c => (
+          <tr><td><a href={`/apostille-countries/${c.slug}/`}>{c.name}</a></td><td>{fmt(c.entry_into_force)}</td><td>{usRelation(c).short}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="meta">Source: HCCH status table for the Convention of 5 October 1961.<Src href={STATUS_URL} /> The United States has been a Party since October 15, 1981.</p>
+
+  <h2>Common destinations that are not on the list</h2>
+  <p>These countries and territories did not appear in the HCCH status table on {fmt(CHECKED)}, so an apostille alone is not the usual route for them:<Src href={STATUS_URL} /></p>
+  <p>{NON_HAGUE.join(', ')}.</p>
+  <p>For these destinations the chain is usually a state authentication certificate, sometimes a further certificate from the U.S. Department of State, and then legalization by the destination country’s embassy or consulate in the U.S. Each state’s rules differ; see <a href="/apostille-vs-authentication/">apostille versus authentication</a> and the <a href="/apostille-offices-by-state/">state offices list</a>.</p>
+</Base>

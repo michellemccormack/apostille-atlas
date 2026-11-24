@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+import Src from '../../components/Src.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { sorted, fmt, usRelation, STATUS_URL, US_AUTH_URL, SITE, CHECKED, GUIDES } from '../../lib/hague.js';
+
+export function getStaticPaths() {
+  return sorted.map((c, i) => ({ params: { slug: c.slug }, props: { c, prev: sorted[i - 1] || null, next: sorted[i + 1] || null } }));
+}
+const { c, prev, next } = Astro.props;
+const rel = usRelation(c);
+const typeLabel = c.type_label;
+const nAuth = c.authority_pages.reduce((n, p) => n + (p.authorities.length || 1), 0);
+const title = c.in_force
+  ? `Apostille for ${c.name}: Hague status, U.S. documents, and ${c.name}'s issuing office`
+  : `Apostille for ${c.name}: joins the Hague Convention ${fmt(c.entry_into_force)}`;
+const description = c.in_force
+  ? `${c.name} has applied the Hague Apostille Convention since ${fmt(c.entry_into_force)}. Which U.S. office apostilles your document, and who issues apostilles in ${c.name}, with fees from the HCCH.`
+  : `${c.name} has joined the Hague Apostille Convention, effective ${fmt(c.entry_into_force)}. What that means for U.S. documents now, and who will issue apostilles in ${c.name}.`;
+const url = `${SITE}/apostille-countries/${c.slug}/`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Apostille by country', item: `${SITE}/apostille-countries/` },
+      { '@type': 'ListItem', position: 3, name: c.name, item: url },
+    ] },
+    { '@type': 'Article', headline: title, description, url, dateModified: CHECKED, about: { '@type': 'Country', name: c.name },
+      publisher: { '@type': 'Organization', name: 'Atlas Guides' },
+      citation: [STATUS_URL, ...c.authority_pages.map(p => p.source_url)] },
+  ],
+};
+---
+<Base title={title} description={description} schema={schema} updated={CHECKED}>
+  <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Apostille by country', href: '/apostille-countries/' }, { name: c.name }]} />
+  <h1>Apostille for {c.name}</h1>
+  {c.in_force ? (
+    <p class="lede">{c.name} is a Contracting Party to the 1961 Hague Apostille Convention, in force there since {fmt(c.entry_into_force)}.<Src href={STATUS_URL} /> A U.S. public document headed to {c.name} generally needs an apostille from the U.S. office that covers the document, not embassy legalization.</p>
+  ) : (
+    <p class="lede">{c.name} has joined the 1961 Hague Apostille Convention, but the HCCH status table gives {fmt(c.entry_into_force)} as the date it takes effect for {c.name}.<Src href={STATUS_URL} /> Until then, plan on the authentication and legalization route for U.S. documents.</p>
+  )}
+
+  <div class="tablewrap">
+    <table>
+      <tbody>
+        <tr><th scope="row">Hague Apostille Convention</th><td>{c.in_force ? 'Contracting Party, in force' : 'Contracting Party, not yet in force'}<Src href={STATUS_URL} /></td></tr>
+        <tr><th scope="row">How it joined</th><td>{typeLabel}{c.joined ? `, ${fmt(c.joined)}` : ''}{c.signed ? ` (signed ${fmt(c.signed)})` : ''}</td></tr>
+        <tr><th scope="row">In force for {c.name}</th><td>{fmt(c.entry_into_force)}</td></tr>
+        <tr><th scope="row">Applies between {c.name} and the U.S.</th><td>{rel.text}{c.objection_notes_url && <Src href={c.objection_notes_url} label="HCCH notes" />}</td></tr>
+        <tr><th scope="row">Competent authorities in {c.name}</th><td>{nAuth} listed by the HCCH{c.authority_pages.map(p => <Src href={p.source_url} />)}</td></tr>
+        <tr><th scope="row">HCCH authority page last updated</th><td>{c.authority_pages.map(p => p.hcch_page_updated || '—').join('; ')}</td></tr>
+        {c.declarations_url && <tr><th scope="row">Declarations or notifications</th><td>{c.name} has filed declarations, reservations, or notifications under the Convention. <a href={c.declarations_url} target="_blank" rel="noopener">Read them on the HCCH site</a>.</td></tr>}
+      </tbody>
+    </table>
+  </div>
+
+  {c.objection_excerpt && (
+    <>
+      <h2>Objections to {c.name}’s accession</h2>
+      <p>When a country accedes, existing Parties have six months to object, and the Convention then does not apply between the two. The HCCH records the following for {c.name}:</p>
+      <blockquote>{c.objection_excerpt}<Src href={c.objection_notes_url} /></blockquote>
+    </>
+  )}
+
+  <h2>Sending a U.S. document to {c.name}</h2>
+  {c.in_force ? (
+    <>
+      <p>The apostille comes from the U.S. jurisdiction that issued or notarized the document, not from {c.name}. Under the U.S. designation filed with the Hague Conference:<Src href={US_AUTH_URL} /></p>
+      <ul>
+        <li><strong>State documents</strong> (birth, marriage, and death certificates, state court records, documents signed by a notary in that state): the competent authority of that state, generally the Secretary of State. See <a href="/apostille-offices-by-state/">who issues apostilles in each state</a>.</li>
+        <li><strong>Federal documents</strong> (documents issued by U.S. federal agencies): the U.S. Department of State Office of Authentications.</li>
+        <li><strong>U.S. federal court documents</strong>: the clerk or a deputy clerk of the federal court that issued them.</li>
+        <li><strong>Consular Reports of Birth, Death, and Marriage Abroad</strong>: the State Department’s Passport Services, Vital Records Section.</li>
+      </ul>
+      <p>The office in {c.name} that receives your document can still set its own rules about translations, how recent the document must be, and whether it accepts a notarized copy. Ask before you order the apostille.</p>
+    </>
+  ) : (
+    <>
+      <p>Until {fmt(c.entry_into_force)}, an apostille is not the finished product for {c.name}. The usual route for a non-Hague destination is a state authentication certificate, sometimes a further U.S. Department of State certificate, and then legalization by {c.name}’s embassy or consulate. <a href="/apostille-vs-authentication/">How apostilles differ from authentication certificates</a>.</p>
+      <p>If your document will be presented on or after {fmt(c.entry_into_force)}, ask the receiving office in {c.name} whether it will accept an apostille instead.</p>
+    </>
+  )}
+  <p>State guides with official fees and turnaround: {GUIDES.map(([n, h], i) => <>{i > 0 && ', '}<a href={h}>{n}</a></>)}.</p>
+
+  <h2>Using a document from {c.name} in the U.S.</h2>
+  <p>A public document issued in {c.name} gets its apostille from {c.name}’s own competent authority. This is what {c.name} has registered with the HCCH:</p>
+  {c.authority_pages.map(p => (
+    <>
+      {c.authority_pages.length > 1 && p.title && <h3>{p.title}</h3>}
+      {p.authorities.length ? p.authorities.map(a => (
+        <div class="tablewrap">
+          <table>
+            <tbody>
+              <tr><th scope="row" style="width:30%">Authority</th><td>{a.name || '—'}<Src href={p.source_url} /></td></tr>
+              <tr><th scope="row">Address</th><td>{a.address || '—'}</td></tr>
+              <tr><th scope="row">Telephone</th><td>{a.phone || '—'}</td></tr>
+              <tr><th scope="row">Fee</th><td>{a.price || '—'}</td></tr>
+              <tr><th scope="row">Website</th><td>{a.website ? <a href={a.website} target="_blank" rel="noopener">{a.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a> : '—'}</td></tr>
+              <tr><th scope="row">Online apostille register</th><td>{a.eregister ? <a href={a.eregister} target="_blank" rel="noopener">Verify an apostille</a> : '—'}</td></tr>
+              <tr><th scope="row">Languages</th><td>{a.languages || '—'}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      )) : (
+        <blockquote>{p.summary ? (p.summary.length >= 900 ? p.summary.slice(0, p.summary.lastIndexOf(' ')) + ' …' : p.summary) : '—'}<Src href={p.source_url} /></blockquote>
+      )}
+    </>
+  ))}
+  {c.authority_pages.some(p => p.authorities.some(a => a.price)) && <p>Fees are shown as {c.name} reported them to the HCCH, usually in local currency, and may be out of date. The HCCH page date is in the table above.</p>}
+
+  <h2>Related</h2>
+  <ul>
+    <li><a href="/apostille-countries/">All Hague Apostille Convention countries</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by U.S. state</a></li>
+    <li><a href="/apostille-vs-authentication/">Apostille versus authentication</a></li>
+    <li><a href="/online-notarization-for-apostille/">Online notarization for documents that need an apostille</a></li>
+    {prev && <li>Previous country: <a href={`/apostille-countries/${prev.slug}/`}>{prev.name}</a></li>}
+    {next && <li>Next country: <a href={`/apostille-countries/${next.slug}/`}>{next.name}</a></li>}
+  </ul>
+</Base>
