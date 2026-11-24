@@ -3,6 +3,37 @@ const { title, description, updated = '2026-11-22', schema, noindex = false } = 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const siteName = 'Apostille Atlas';
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+// AEO_LD: site-wide JSON-LD graph (Organization, WebSite, WebPage, BreadcrumbList, Article).
+const origin = new URL(Astro.site).origin;
+const pathname = Astro.url.pathname;
+const modified = Astro.props.updated ?? (schema && schema.dateModified) ?? updated;
+const isHome = pathname === '/' || pathname === '';
+const utilityPaths = ['/about/', '/contact/', '/privacy/', '/affiliate-disclosure/', '/404/', '/404.html', '/get-it-done/', '/subscribe/'];
+const is404 = title === 'Page not found';
+const isContent = !isHome && !is404 && !Astro.props.noindex && !utilityPaths.includes(pathname) && !/\/(thanks|thank-you|confirm|confirmed|unsubscribe)\/$/.test(pathname);
+const pubId = `${origin}/#publisher`;
+const siteId = `${origin}/#website`;
+const pageId = `${canonical}#webpage`;
+const pageSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+const siteSchema = pageSchemas.find((x) => x && x['@type'] === 'WebSite');
+const articleSchema = pageSchemas.find((x) => x && x['@type'] === 'Article');
+const otherSchemas = pageSchemas.filter((x) => x && x !== siteSchema && x !== articleSchema).map((x) => { const { ['@context']: _c, ...rest } = x; return { url: canonical, ...rest }; });
+const graph = [
+  { '@type': 'Organization', '@id': pubId, name: 'Atlas Guides', url: `${origin}/about/`, logo: { '@type': 'ImageObject', url: `${origin}/atlas-guides.svg` } },
+  { '@type': 'WebSite', '@id': siteId, url: `${origin}/`, name: siteName, description: (siteSchema && siteSchema.description) || (isHome ? description : undefined), inLanguage: 'en-US', publisher: { '@id': pubId } },
+  { '@type': isHome ? 'CollectionPage' : (pathname === '/about/' ? 'AboutPage' : (pathname === '/contact/' ? 'ContactPage' : 'WebPage')), '@id': pageId, url: canonical, name: fullTitle, description, isPartOf: { '@id': siteId }, inLanguage: 'en-US', dateModified: modified, ...(isHome ? {} : { breadcrumb: { '@id': `${canonical}#breadcrumb` } }) },
+];
+if (!isHome && !is404) graph.push({ '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumb`, itemListElement: [
+  { '@type': 'ListItem', position: 1, name: siteName, item: `${origin}/` },
+  { '@type': 'ListItem', position: 2, name: title, item: canonical },
+] });
+if (isContent) {
+  const { ['@context']: _c, ...a } = articleSchema || {};
+  graph.push({ ...a, '@type': 'Article', '@id': `${canonical}#article`, headline: (a.headline || title).slice(0, 110), description: a.description || description, url: canonical, mainEntityOfPage: { '@id': pageId }, isPartOf: { '@id': siteId }, author: { '@id': pubId }, publisher: { '@id': pubId }, dateModified: modified, inLanguage: 'en-US' });
+}
+graph.push(...otherSchemas);
+const ld = { '@context': 'https://schema.org', '@graph': graph };
+const prettyDate = (d) => { const t = new Date(`${d}T12:00:00Z`); return isNaN(t) ? d : t.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }); };
 ---
 <!doctype html>
 <html lang="en">
@@ -19,8 +50,8 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta name="twitter:card" content="summary" />
-  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
-  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large"} />
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
   <style is:global>
     :root{--ink:#1b1f24;--muted:#5b6470;--line:#e3e6ea;--brand:#6b2a3a;--bg:#fbfcfd;--warn:#8a5a00;--warnbg:#fff4dc}
     *{box-sizing:border-box}
@@ -74,6 +105,9 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     .reqform label.check input{width:auto;margin-top:6px}
     .reqform button{margin-top:14px;align-self:flex-start}
     @media (max-width: 640px){ nav{flex-wrap:wrap;row-gap:.3rem} }
+    .answer{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:6px;padding:12px 16px;margin:1rem 0 1.4rem}
+    .answer p{margin:0}
+    .updated{margin:0 0 .3rem}
   </style>
 </head>
 <body>
@@ -88,8 +122,9 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     </nav>
   </div></header>
   <main><div class="wrap">
+    {isContent && <p class="meta updated">Last updated <time datetime={modified}>{prettyDate(modified)}</time></p>}
     <slot />
-    <p class="meta" style="margin-top:3rem">Last checked: {updated}. General information, not legal advice. Fees and office rules change; follow the source links before you file or pay.</p>
+    <p class="meta" style="margin-top:3rem">Last checked: {modified}. General information, not legal advice. Fees and office rules change; follow the source links before you file or pay.</p>
   </div></main>
   <footer class="site"><div class="wrap" style="padding:20px">
     <p class="publisher"><img src="/atlas-guides.svg" alt="Atlas Guides" width="77" height="22" /></p>
