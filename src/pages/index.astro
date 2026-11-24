@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
 import Src from '../components/Src.astro';
 const title = 'Apostille Atlas';
 const description = 'State-by-state apostille fees, offices, and mail versus in-person rules, copied from official secretary of state pages, plus apostille versus authentication and online notarization.';
@@ -16,7 +17,8 @@ const schema = {
   <h1>Apostille Atlas</h1>
   <p class="lede">A state-by-state guide to U.S. apostilles and authentication certificates: the official fee, the issuing office, mail versus in-person filing, and whatever processing time that office actually publishes.</p>
   <p>An apostille is a certificate that authenticates the signature on a public document so the document can be used in another country that belongs to the 1961 Hague Apostille Convention. The Hague Conference describes the Convention as replacing the longer legalization chain with a single apostille issued by a competent authority where the document originates.<Src href="https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille" /></p>
-  <div class="note">We copy fees and rules from official government pages and put a source link on every claim. Offices change prices and counter hours. This is general information, not legal advice, and we don't file documents for you.</div>
+  <div class="note">We copy fees and rules from official government pages and put a source link on every claim. Offices change prices and counter hours. This is general information, not legal advice. We don't file documents ourselves, but if you'd rather hand the job off, our request form passes it to an independent apostille service.</div>
+  <HelpCTA />
 
   <h2>State guides</h2>
   <div class="cards">
