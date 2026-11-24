@@ -23,4 +23,5 @@ export function usRelation(c) {
 export const GUIDES = [
   ['New York', '/new-york-apostille/'], ['California', '/california-apostille/'], ['Texas', '/texas-apostille/'], ['Florida', '/florida-apostille/'],
   ['Massachusetts', '/massachusetts-apostille/'], ['New Jersey', '/new-jersey-apostille/'], ['Virginia', '/virginia-apostille/'], ['North Carolina', '/north-carolina-apostille/'],
+  ['Pennsylvania', '/pennsylvania-apostille/'], ['Missouri', '/missouri-apostille/'], ['Washington', '/washington-apostille/'],
 ];

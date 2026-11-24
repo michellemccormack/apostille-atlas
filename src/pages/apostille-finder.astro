@@ -80,6 +80,7 @@ const schema = [
       if(f.kind==='ca'){ if(how==='mail') return {v:f.per*n,t:n+' × $20 (no handling fee by mail)'}; var off=same?1:n; return {v:f.per*n+f.handling*off,t:n+' × $20 + '+off+' × $6 special handling'}; }
       if(f.kind==='fl'){ var p=doc==='court'?f.court:f.per; return {v:p*n,t:n+' × '+money(p)+(doc==='court'?' (apostille + certificate of incumbency)':'')}; }
       if(f.kind==='nj'){ var p2=how==='person'?f.exp:f.std; return {v:p2*n,t:n+' × '+money(p2)+(how==='person'?' expedited':' standard')+', plus the card or e-check service fee'}; }
+      if(f.kind==='wa'){ if(how==='person'){ var extra=f.same+Math.max(0,Math.ceil((n-10)/10))*f.exp; return {v:f.per*n+extra,t:n+' × $15 + '+money(extra)+' same-day fee'}; } return {v:f.per*n,t:n+' × $15 standard (expedite adds $100 per 10 documents)'}; }
       if(f.kind==='va'){ if(same&&n>1) return {v:f.per+(n-1)*f.extra,t:'$10 + '+(n-1)+' × $5 (same official, same date, same country)'}; return {v:f.per*n,t:n+' × $10'}; }
       return {v:null,t:'—'};
     }
