@@ -29,15 +29,20 @@ November 24, 2026:
 - [x] Missouri apostille (/missouri-apostille/)
 - [x] Washington apostille (/washington-apostille/)
 
+November 25, 2026:
+
+- [x] Michigan apostille (/michigan-apostille/)
+- [x] Connecticut apostille (/connecticut-apostille/)
+- [x] Maryland apostille (/maryland-apostille/)
+
 ## Queued (next first)
 
-- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, and 24, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
-- [ ] Georgia apostille (sos.ga.gov returned 403 Nov 23 and Nov 24)
-- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23 and Nov 24)
-- [ ] Michigan apostille (michigan.gov/sos/all-services/document-authentication-and-apostille found Nov 24)
-- [ ] Connecticut apostille
-- [ ] Maryland apostille
+- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, 24, and 25, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
+- [ ] Georgia apostille (sos.ga.gov returned 403 Nov 23, 24, and 25)
+- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23, 24, and 25)
 - [ ] Colorado apostille
+- [ ] Minnesota apostille
+- [ ] Arizona apostille
 - [ ] Federal documents: apostilles from the U.S. Department of State Office of Authentications (needs travel.state.gov; do not invent the fee)
 - [ ] FBI background check apostille (FBI Identity History Summary plus State Department; needs fbi.gov and travel.state.gov)
 - [ ] Birth certificate apostille: which office issues it, state by state, from the official pages already cited
