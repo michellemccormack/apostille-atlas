@@ -63,8 +63,8 @@
   "jurisdiction": "Connecticut",
   "competent_authority": "Secretary of the State",
   "designated_signers": "Secretary of the State, Deputy Secretary of the State, Business Services Division Director",
-  "verify_apostille_url": null,
-  "our_guide": null,
+  "verify_apostille_url": "https://sots.service.ct.gov/apostille/apostilleverification",
+  "our_guide": "/connecticut-apostille/",
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
   "last_checked": "2026-11-23"
@@ -194,7 +194,7 @@
   "competent_authority": "Secretary of State",
   "designated_signers": "Secretary of State",
   "verify_apostille_url": null,
-  "our_guide": null,
+  "our_guide": "/maryland-apostille/",
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
   "last_checked": "2026-11-23"
@@ -214,7 +214,7 @@
   "competent_authority": "Secretary of State",
   "designated_signers": "Secretary of State; Deputy Secretary of State",
   "verify_apostille_url": null,
-  "our_guide": null,
+  "our_guide": "/michigan-apostille/",
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
   "last_checked": "2026-11-23"
