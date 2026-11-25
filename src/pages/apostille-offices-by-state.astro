@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Src from '../components/Src.astro';
 import Crumbs from '../components/Crumbs.astro';
+import HelpCTA from '../components/HelpCTA.astro';
 import offices from '../data/us-apostille-authorities.json';
 import { US_AUTH_URL, SITE, CHECKED, fmt } from '../lib/hague.js';
 const title = 'Who issues apostilles in each U.S. state, plus online apostille verification';
@@ -36,4 +37,5 @@ const schema = [
 
   <h2>Checking that an apostille is genuine</h2>
   <p>The Apostille Convention lets each competent authority keep a register of the apostilles it issues. {withVerify.length} of the jurisdictions above publish an online search: {withVerify.map((o, i) => <>{i > 0 && ', '}<a href={o.verify_apostille_url} target="_blank" rel="noopener">{o.jurisdiction}</a></>)}. For the others, contact the issuing office.</p>
+  <HelpCTA />
 </Base>
