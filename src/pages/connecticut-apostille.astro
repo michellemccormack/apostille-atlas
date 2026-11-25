@@ -1,0 +1,124 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Connecticut';
+const description = 'Connecticut apostilles from the Secretary of the State: every order starts in the online apostille system, paper apostilles take 5 to 7 business days and e-Apostilles about 24 hours, documents must be signed or notarized in Connecticut within the last 10 years, and vital records still need a paper apostille.';
+const PAGE = 'https://portal.ct.gov/sots/legislative-services/authentication-of-documents-and-the-apostille';
+const PORTAL = 'https://sots.service.ct.gov/apostille/';
+const VERIFY = 'https://sots.service.ct.gov/apostille/apostilleverification';
+const ACT = 'https://prdext2.cga.ct.gov/2026/sum/pdf/2026SUM00081-R01SB-00294-SUM.pdf';
+const NOTARY = 'https://portal.ct.gov/sots/business-services/notary/notary-public-licensing';
+const DPH = 'https://portal.ct.gov/DPH/Vital-Records/How-to-Obtain-a-Record';
+---
+<Base title={title} description={description} updated="2026-11-25">
+  <h1>How to get an apostille in Connecticut</h1>
+  <div class="answer"><p><strong>Short answer:</strong> Order online through the Connecticut Secretary of the State’s apostille system; paper order forms are no longer accepted. For a paper apostille you then mail or courier the original to Hartford, and regular orders are processed within 5 to 7 business days of arrival. Eligible documents can get an e-Apostille instead, processed within 24 hours.<Src href={PAGE} /> The fee set by law is $40 per document, or $15 for documents connected with a child’s adoption, and an e-Apostille costs the same as paper.<Src href={ACT} /></p></div>
+  <p class="lede">The Secretary of the State issues an <strong>apostille</strong> for Hague Apostille Convention countries and an <strong>authentication</strong> for other countries, which may then need the U.S. Department of State or the destination country’s embassy. Since July 21, 2025, Connecticut uses a single authentication certificate for all legalization requests.<Src href={PAGE} /></p>
+
+  <h2>Fees and processing times</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Fee</th><th>Processing time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Paper apostille or authentication, regular</td><td>$40 per document<Src href={ACT} /></td><td>Within 5 to 7 business days of receipt<Src href={PAGE} /></td></tr>
+        <tr><td>Adoption-related document</td><td>$15 per document<Src href={ACT} /></td><td>—</td></tr>
+        <tr><td>Expedited paper order</td><td>—</td><td>Within 24 hours of receipt<Src href={PAGE} /></td></tr>
+        <tr><td>e-Apostille</td><td>Same as paper<Src href={ACT} /></td><td>Within 24 hours (one business day) of a complete application<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Fees are from the Office of Legislative Research summary of Public Act 26-81, which sets the per-document fee for apostilles and authentications.<Src href={ACT} /> The online system shows your total when you order.<Src href={PORTAL} label="portal" /> Postage and courier costs are yours.</p>
+
+  <h2>Step by step</h2>
+  <ol>
+    <li><strong>Prepare the document.</strong> Use an original or a certified copy. It must be notarized by a Connecticut notary or certified by a Connecticut official, within the last 10 years, with an original signature and/or seal.<Src href={PAGE} /></li>
+    <li><strong>Order online.</strong> Go to <a href={PORTAL} target="_blank" rel="noopener">sots.service.ct.gov/apostille</a>, create an account, log in, and place the order. All orders must be submitted online.<Src href={PAGE} /></li>
+    <li><strong>e-Apostille:</strong> upload the document to be processed digitally.<Src href={PAGE} /></li>
+    <li><strong>Paper apostille:</strong> mail the original or certified document with your printed order receipt (or your APO Work Order number) and a prepaid, pre-addressed return envelope or shipping label.<Src href={PAGE} /></li>
+    <li><strong>Track it</strong> in your online account, which has real-time order tracking and secure messaging.<Src href={PAGE} /></li>
+  </ol>
+
+  <h2>Where to send paper orders</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Method</th><th>Address</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>FedEx, UPS, DHL, or hand delivery (the office calls this the preferred method)</td><td>Secretary of the State, Authentications and Apostilles, 165 Capitol Avenue, Suite 1000, Hartford, CT 06106<Src href={PAGE} /></td></tr>
+        <tr><td>U.S. Postal Service (slower)</td><td>Secretary of the State, Authentications and Apostilles, P.O. Box 150470, Hartford, CT 06115-0470<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>If you include a prepaid FedEx, UPS, DHL, or USPS label, the document comes back that way; otherwise it is returned by first-class mail. International return shipping needs a prepaid label.<Src href={PAGE} /></p>
+
+  <h2>Paper apostille or e-Apostille?</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th></th><th>Paper apostille</th><th>e-Apostille</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>What you get</td><td>A physical certificate attached to the original<Src href={PAGE} /></td><td>A secure electronic certificate you download<Src href={PAGE} /></td></tr>
+        <tr><td>Speed</td><td>5 to 7 business days; 24 hours if expedited<Src href={PAGE} /></td><td>One business day from a complete application<Src href={PAGE} /></td></tr>
+        <tr><td>Vital records (birth, death, marriage, adoption certificates)</td><td>Required<Src href={PAGE} /></td><td>Not eligible<Src href={PAGE} /></td></tr>
+        <tr><td>Printing</td><td>—</td><td>Not valid if printed<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Connecticut began issuing e-Apostilles on July 6, 2026, and not every document type is eligible yet. e-Apostilles are accepted by Hague Convention members, but the office suggests confirming with the receiving agency or institution before you order. Anyone can check a Connecticut paper apostille or e-Apostille on the <a href={VERIFY} target="_blank" rel="noopener">verification portal</a>.<Src href={PAGE} /></p>
+
+  <h2>What Connecticut can authenticate</h2>
+  <p>Only documents signed by a Connecticut public official: Connecticut notaries public; town clerks and their assistants and deputies; local registrars of vital statistics and their assistants and deputies; clerks and assistant clerks of the Superior and Probate Courts; commissioners of Connecticut state agencies; and justices of the peace.<Src href={PAGE} /></p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>Connecticut rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Birth, death, marriage certificates</td><td>A certified copy from the town clerk or the Department of Public Health Vital Records Unit, with a paper apostille.<Src href={PAGE} /> See <a href={DPH} target="_blank" rel="noopener">how to obtain a record</a>.</td></tr>
+        <tr><td>Copies of documents</td><td>A copy can be authenticated if it comes with a written statement that it is true and accurate, sworn to and signed before a Connecticut notary.<Src href={PAGE} /></td></tr>
+        <tr><td>Court records</td><td>Signed by a clerk or assistant clerk of the Superior or Probate Court. Out-of-state court documents go to the issuing state.<Src href={PAGE} /></td></tr>
+        <tr><td>School transcripts</td><td>Connecticut schools only; out-of-state transcripts are authenticated by the state where the school is.<Src href={PAGE} /></td></tr>
+        <tr><td>Federal documents (for example, FBI checks)</td><td>Not Connecticut’s; they go to the U.S. Department of State.<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What Connecticut won’t authenticate</h2>
+  <ul>
+    <li>Documents signed by an out-of-state notary.<Src href={PAGE} /></li>
+    <li>Documents executed by an attorney signing as a Commissioner of the Superior Court.<Src href={PAGE} /></li>
+    <li>Out-of-state vital records, court documents, and school transcripts.<Src href={PAGE} /></li>
+    <li>Documents to be presented in a U.S. territory such as Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, or the Northern Mariana Islands. Territories aren’t foreign jurisdictions, so a properly notarized or Connecticut-issued document can be used there without a certificate.<Src href={PAGE} /></li>
+  </ul>
+
+  <h2>Getting the notarization right</h2>
+  <p>Because the notary must be commissioned in Connecticut, a notarization by a notary from another state won’t work.<Src href={PAGE} /> Connecticut notaries may charge up to $10 per notarial act since July 1, 2026, and Connecticut has allowed remote notarial acts since October 1, 2023.<Src href={NOTARY} /> If you use <a href="/online-notarization-for-apostille/">online notarization</a>, make sure the notary holds a Connecticut commission.</p>
+
+  <h2>Contact</h2>
+  <p>Email BSD@ct.gov or call 860-509-6002 (option 4), Monday through Friday, 8:30 a.m. to 4 p.m.<Src href={PAGE} /></p>
+
+  <HelpCTA state="Connecticut" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/new-york-apostille/">New York apostille</a>: documents notarized or issued in New York go to Albany, not Hartford.</li>
+    <li><a href="/massachusetts-apostille/">Massachusetts apostille</a></li>
+    <li><a href="/apostille-vs-authentication/">Apostille versus authentication</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={PAGE} target="_blank" rel="noopener">Authentication of Documents and the Apostille (CT Secretary of the State)</a></li>
+    <li><a href={PORTAL} target="_blank" rel="noopener">Online Apostille Application</a></li>
+    <li><a href={VERIFY} target="_blank" rel="noopener">Apostille and e-Apostille Registry and Verification Portal</a></li>
+    <li><a href={ACT} target="_blank" rel="noopener">Public Act 26-81 summary, Office of Legislative Research (PDF)</a></li>
+    <li><a href={NOTARY} target="_blank" rel="noopener">Notary Public Licensing (CT Secretary of the State)</a></li>
+  </ul>
+</Base>

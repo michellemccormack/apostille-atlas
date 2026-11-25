@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Maryland';
+const description = 'Maryland apostilles from the Secretary of State in Annapolis: $5 per document, by mail or by scheduled appointment, with notarized documents certified first by the Clerk of the Circuit Court in the county where the notary is commissioned.';
+const PAGE = 'https://sos.maryland.gov/Certifications/Pages/default.aspx';
+const CHECK = 'https://sos.maryland.gov/Certifications/SiteAssets/Pages/default/check%20list%20FOR%20DOCUMENTS%20to%20be%20certified1.pdf';
+const BOOK = 'https://outlook.office.com/book/SecretaryofStateFrontDesk%40stateofmaryland.onmicrosoft.com/?ismsaljsauthenabled';
+const MOCO = 'https://www.montgomerycountymd.gov/circuit-court/how-do-i/apostille-standard-certification-documents-international-use';
+---
+<Base title={title} description={description} updated="2026-11-25">
+  <h1>How to get an apostille in Maryland</h1>
+  <div class="answer"><p><strong>Short answer:</strong> The Maryland Secretary of State’s Certification Desk in Annapolis charges $5 per document for an apostille or a standard certification. Mail is the dependable route right now: walk-in service is not available, scheduled appointments are subject to change because of building construction, and the office says it will move to mail-in only once construction begins. If the document is notarized, take it to the Clerk of the Circuit Court in the notary’s county first.<Src href={PAGE} /></p></div>
+  <p class="lede">Maryland issues an <strong>apostille</strong> for countries in the Hague Convention and a <strong>standard certification</strong> for all others. A standard certification then goes to the U.S. Department of State, Office of Authentications, before the destination country’s embassy.<Src href={PAGE} /></p>
+
+  <h2>Fees, speed, and contact</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Maryland rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>State fee</td><td>$5 per document. By mail, pay by U.S. check or U.S. money order made out to the Secretary of State, one payment per order (don’t staple the check). In person you can also pay by credit or debit card.<Src href={PAGE} /><Src href={CHECK} /></td></tr>
+        <tr><td>Processing, FedEx and UPS</td><td>Around 3 to 4 days<Src href={PAGE} /></td></tr>
+        <tr><td>Processing, USPS Priority Mail</td><td>Up to 3 to 4 days<Src href={PAGE} /></td></tr>
+        <tr><td>Processing, regular mail</td><td>7 to 14 business days<Src href={PAGE} /></td></tr>
+        <tr><td>Mailing address</td><td>Certification Desk, Office of the Secretary of State, 16 Francis Street, 1st floor, Annapolis, MD 21401<Src href={CHECK} /></td></tr>
+        <tr><td>In person</td><td>16 Francis Street, Wineland Building, Annapolis. Hours 9 a.m. to 1 p.m., Monday to Friday, closed on Maryland state holidays. Walk-in service is not available; appointments are booked online, are limited to 10 documents per customer per day, and space is limited to two family members.<Src href={PAGE} /></td></tr>
+        <tr><td>Phone and email</td><td>410-974-5521; DLCertifications_sos@maryland.gov<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Check the Secretary of State’s page or call before you travel; the office posts closures and appointment changes there.<Src href={PAGE} /> Appointments are booked through the <a href={BOOK} target="_blank" rel="noopener">Secretary of State front desk booking page</a>.</p>
+
+  <h2>The two routes</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Your document</th><th>Steps</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Notarized document (power of attorney, affidavit, consent, school record)</td><td>1. Take it to the Clerk of the Circuit Court in the county where the notary was commissioned (the county is on the notary’s seal). 2. Send it to the Secretary of State in Annapolis.<Src href={PAGE} /></td></tr>
+        <tr><td>State or county document (birth or death certificate, marriage certificate, divorce decree, criminal record status certification, motor vehicle ownership certification)</td><td>Send it straight to the Secretary of State, as long as it carries the seal and authorized signature of the issuing department. No circuit court step. If your copy isn’t current, call 410-974-5521 first to confirm it can be authenticated.<Src href={PAGE} /></td></tr>
+        <tr><td>Federal document (FBI background check, USCIS documents, birth abroad certificates)</td><td>Not Maryland’s. Submit it directly to the U.S. Department of State. Naturalization and immigration documents can’t be notarized, originals or copies.<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>For a Hague country, the Secretary of State’s apostille is the last step; the document doesn’t go to the U.S. Department of State. For a non-Hague country, it goes to the U.S. Department of State after the Maryland certificate.<Src href={PAGE} /></p>
+
+  <h2>What does the circuit court step cost?</h2>
+  <p>Each county’s Clerk of the Circuit Court handles its own certification. In Montgomery County, for example, the Circuit Court’s License Department (50 Maryland Avenue, North Tower, Room 1300, Rockville) charges $1, with no appointment needed.<Src href={MOCO} /> Check with the clerk in your notary’s county for its fee and hours. If the clerk who certified your document isn’t the current clerk, call the Secretary of State to confirm it can still be authenticated.<Src href={PAGE} /></p>
+
+  <h2>Diplomas and transcripts</h2>
+  <p>School records follow the notarized-document route. Schools often send records in a sealed envelope marked not to open. Take the sealed envelope to a notary, who opens it and notarizes the school record. Then the Clerk of the Circuit Court in the notary’s county certifies that the notary is in good standing, and the record goes to the Secretary of State.<Src href={PAGE} /> If you have the record notarized <a href="/online-notarization-for-apostille/">online</a>, the circuit court step still has to happen in the county where that notary is commissioned, so a Maryland-commissioned notary keeps this simple.</p>
+
+  <h2>What to put in a mailed request</h2>
+  <ol>
+    <li>The documents, already certified by the circuit court where needed.<Src href={PAGE} /></li>
+    <li>The <a href={CHECK} target="_blank" rel="noopener">mailing checklist</a>: your name, address, daytime phone, email, and the country where the documents will be used.<Src href={CHECK} /></li>
+    <li>A check or money order to the Secretary of State for $5 per document.<Src href={CHECK} /></li>
+    <li>A postage-paid, self-addressed return envelope, or a prepaid FedEx or UPS envelope. Keep your tracking numbers.<Src href={CHECK} /></li>
+  </ol>
+
+  <h2>Things to know</h2>
+  <ul>
+    <li>The Secretary of State can’t guarantee that a foreign country will accept the document; confirm requirements with the receiving office first.<Src href={PAGE} /></li>
+    <li>The Secretary of State’s authority to certify comes from State Government Article, §7-106.<Src href={PAGE} /></li>
+  </ul>
+  <p>For the difference between the two certificates, see <a href="/apostille-vs-authentication/">apostille versus authentication</a>; for the destination country, see <a href="/apostille-countries/">apostille by country</a>.</p>
+
+  <HelpCTA state="Maryland" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/virginia-apostille/">Virginia apostille</a>: documents notarized or issued in Virginia go to Richmond.</li>
+    <li><a href="/pennsylvania-apostille/">Pennsylvania apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={PAGE} target="_blank" rel="noopener">Certifications and Authentication (Maryland Secretary of State)</a></li>
+    <li><a href={CHECK} target="_blank" rel="noopener">Mailing checklist for documents to be certified (PDF)</a></li>
+    <li><a href={MOCO} target="_blank" rel="noopener">Apostille or standard certification, Montgomery County Circuit Court</a></li>
+  </ul>
+</Base>

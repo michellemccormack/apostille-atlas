@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Michigan';
+const description = 'Michigan apostilles and certificates of authority from the Office of the Great Seal: $1 per document, by mail to Lansing or by appointment at nine offices, no expedited service, plus the true copy statement rules for diplomas, transcripts, court papers, and background checks.';
+const PAGE = 'https://www.michigan.gov/sos/all-services/document-authentication-and-apostille';
+const FAQ = 'https://www.michigan.gov/sos/faqs/office-of-the-great-seal/document-authentication';
+const M = 'https://www.michigan.gov/sos/-/media/Project/Websites/sos/Notary/';
+const FORM = M + 'OGS_AUTHENTICATION_REQUEST_FORM.pdf?rev=ca5c4ec5c20a4ec0a31da36855d6e5c6&hash=BEE3D98ED703927F62A9E6A6C9D18723';
+const BIRTH = M + 'Birth-Certificate.pdf?rev=8ed74e66574a46c09d978cd70ad817bb&hash=C06DC53466B430B9EEBD31BE7CD60DDD';
+const MARRIAGE = M + 'Marriage-License.pdf?rev=25be22542f8141439a425462fb292f2a&hash=796E2A6575DA414956E46AAACDD5EA58';
+const COURT = M + 'Court-Document.pdf?rev=eb3245895f97456badb4a19e3cea0ccb&hash=580C610BA37047052B7CD08BA6F262D6';
+const SCHOOL = M + 'School-Records.pdf?rev=7c7d70fe5dd74fc0a56218a7612f44c6&hash=3AE8327DB756BA4154D794614C19B87C';
+const BG = M + 'Criminal-Background-Checks.pdf?rev=d5844264215b405483037ff09158d0d2&hash=7D926F2120A1DFE8D1D1AC5E65AB9E8E';
+const POA = M + 'Power-of-Attorney.pdf?rev=59de6d5ca9de45218d99199f3d1d344f&hash=C5B1F29A72ACE8497074EAC94214B3D3';
+const BANNED = M + 'Prohibited-Documents.pdf?rev=88ec2c61cdd844a28645943f3fb45789&hash=F88371F110B1599DE13B6D70B0D0267C';
+const APPT = 'https://dsvsesvc.sos.state.mi.us/TAP/?Link=APPOINTMENT';
+const VITAL = 'https://www.michigan.gov/mdhhs/doing-business/vitalrecords';
+---
+<Base title={title} description={description} updated="2026-11-25">
+  <h1>How to get an apostille in Michigan</h1>
+  <div class="answer"><p><strong>Short answer:</strong> Michigan apostilles come from the Office of the Great Seal, part of the Michigan Department of State. The fee is $1 per document, paid by check or money order to “State of Michigan.” You can mail the request to Lansing or book an office visit. There is no online filing and no expedited service.<Src href={PAGE} /><Src href={FAQ} /></p></div>
+  <p class="lede">Michigan issues an <strong>apostille</strong> for countries in the Hague Apostille Convention and a <strong>Certificate of Authority</strong> for every other country. Both have the same requirements, fee, and instructions. Michigan won’t issue either one for a document that will be used in the United States.<Src href={PAGE} /></p>
+
+  <h2>Fee, speed, and how to submit</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Michigan rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>State fee</td><td>$1 per document (the request form says per authentication, not per page). Check or money order payable to the State of Michigan; don’t send cash.<Src href={PAGE} /><Src href={FORM} /></td></tr>
+        <tr><td>Online</td><td>Not available. Documents can’t be authenticated or apostilled online or at a self-service station.<Src href={PAGE} /></td></tr>
+        <tr><td>By mail</td><td>Michigan Department of State, Office of the Great Seal, 7064 Crowner Drive, Lansing, MI 48918.<Src href={PAGE} /></td></tr>
+        <tr><td>In person</td><td>By appointment only, through the online appointment system or by calling (888) 767-6424. At the Bureau of Elections, visits are Mondays and Wednesdays, 8:30 a.m. to 4 p.m.<Src href={PAGE} /></td></tr>
+        <tr><td>Processing time</td><td>The FAQ says turnaround is 1 to 2 weeks.<Src href={PAGE} /> The current request form (Rev. 8/23) says to allow 4 to 6 weeks after the office receives it, plus mail time.<Src href={FORM} /> Plan for the longer figure if you have a deadline.</td></tr>
+        <tr><td>Expedited</td><td>Not available. Requests are handled in the order received, and courier, Express, or Priority Mail envelopes are not processed any faster than regular mail.<Src href={FAQ} /><Src href={FORM} /></td></tr>
+        <tr><td>Questions</td><td>MDOS-Notary@Michigan.gov<Src href={FORM} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Which offices can do it in person?</h2>
+  <p>Document authentication is available, by appointment, at the Office of the Great Seal (Richard H. Austin Building, 1st Floor, 430 W. Allegan Street, Lansing) and at eight Secretary of State offices: Clinton Township, Detroit (West Grand Boulevard), Flint (Fenton Road), Grand Rapids (28th Street), Lansing (East Michigan Avenue), Livonia, Marquette, and Pontiac.<Src href={PAGE} /><Src href={FAQ} /> Book through the <a href={APPT} target="_blank" rel="noopener">Secretary of State appointment system</a>. Bring the signed request form, the $1 per document fee, and the documents.<Src href={PAGE} /></p>
+
+  <h2>Step by step by mail</h2>
+  <ol>
+    <li><strong>Get the right version of the document.</strong> Use the table below. Vital records must be certified copies, and anything in a foreign language needs a written English translation.<Src href={PAGE} /></li>
+    <li><strong>Fill out and sign the Authentication Request Form.</strong> It asks for your name, phone and email, the return address, the number of documents, and the destination country. For China it also asks whether the document is going to Mainland China, Hong Kong, or Macao.<Src href={FORM} /></li>
+    <li><strong>Add the fee:</strong> a check or money order for $1 per document to the State of Michigan.<Src href={FORM} /></li>
+    <li><strong>Add a return envelope:</strong> a self-addressed, stamped envelope or a prepaid air bill (FedEx, UPS, USPS). On a courier air bill, list yourself as both sender and receiver.<Src href={FORM} /> The office won’t pay return postage.<Src href={FAQ} /></li>
+    <li><strong>Mail everything</strong> to 7064 Crowner Drive, Lansing, MI 48918.<Src href={PAGE} /></li>
+  </ol>
+
+  <h2>Document rules</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>Michigan rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Birth, death, marriage, divorce records</td><td>Only certified copies from the county clerk, the State Registrar, or (for Wayne, Oakland, and Macomb counties only) the city clerk. Not copies from court or probate clerks, not notarized vital records, not photocopies, and not records from other states. Don’t notarize the certificate or attach anything to it.<Src href={BIRTH} /><Src href={MARRIAGE} /> The Great Seal’s instruction sheet also says the record must have been produced within 15 years.<Src href={BIRTH} /> You can ask the State Registrar (517-335-8666) for a certified copy for use abroad and arrange for it to be mailed straight to the Office of the Great Seal.<Src href={BIRTH} /> Certified copies are ordered through <a href={VITAL} target="_blank" rel="noopener">MDHHS Vital Records</a>.<Src href={FAQ} /></td></tr>
+        <tr><td>Michigan court documents</td><td>Must be a Michigan court document. If the copy is certified by the court and a court official, the person named in it adds a signed “true copy” statement in front of a Michigan notary.<Src href={COURT} /></td></tr>
+        <tr><td>Diplomas and transcripts</td><td>On your original, write or type “this is my original (name of record)” and sign it in front of a Michigan notary. On a copy, write “this is a true copy of my (name of record)” and sign it the same way. A school official can instead state “this is a true copy,” add their title, and sign in front of a Michigan notary (no signature stamps). The authentication is permanently attached, so you may prefer to use a copy.<Src href={SCHOOL} /></td></tr>
+        <tr><td>Criminal background checks</td><td>Michigan checks come from the Michigan State Police (including the I-CHAT online tool). If the agency didn’t notarize the record, put a true copy statement on it and sign it before a Michigan notary.<Src href={BG} /></td></tr>
+        <tr><td>Power of attorney and other signed papers</td><td>Signed in front of a Michigan notary, with original signatures. The notary must not be named at the beginning of the document as if attesting to the whole thing, and the notarial block can’t include details about the signer such as address or date of birth. Foreign-language documents need a notarized English translation.<Src href={POA} /></td></tr>
+        <tr><td>Articles of incorporation</td><td>Certified copies issued by the Michigan Department of Licensing and Regulatory Affairs (LARA).<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Why a Michigan notary, and what is a “true copy” statement?</h2>
+  <p>Michigan notaries can’t certify that a copy is a true copy. Only the person named on the document (or the person or institution that produced it) can make that statement. The notary then notarizes that person’s signature.<Src href={FAQ} /> A parent can sign for someone under 18.<Src href={SCHOOL} /></p>
+  <p>The Office of the Great Seal checks the notarization closely. It must show the notary’s printed name, signature, date, commission expiration date, county of commission, and the county of the act if different. An embosser alone isn’t enough, the whole notarial block must be on one page, and stamped or photocopied notary signatures are rejected.<Src href={PAGE} /><Src href={COURT} /><Src href={FAQ} /></p>
+  <p>Documents notarized by an out-of-state notary can’t be authenticated in Michigan.<Src href={BANNED} /> If you plan to <a href="/online-notarization-for-apostille/">notarize online</a>, the notary still has to be a Michigan notary for Michigan to apostille it.</p>
+
+  <h2>What Michigan won’t authenticate</h2>
+  <ul>
+    <li>Documents notarized by an out-of-state notary, and out-of-country or out-of-state records and vital records.<Src href={BANNED} /></li>
+    <li>Business and non-business documents with no tie to Michigan.<Src href={BANNED} /></li>
+    <li>U.S. immigration and naturalization paperwork.<Src href={BANNED} /></li>
+    <li>Documents to be used in the United States.<Src href={BANNED} /></li>
+    <li>Documents that make claims about citizenship, immunity, allegiance, or sovereignty, or that use “Notario Publico” or “Notaria Publica.”<Src href={BANNED} /></li>
+  </ul>
+
+  <h2>Non-Hague countries</h2>
+  <p>For a country outside the Hague Convention, Michigan issues a Certificate of Authority. The Great Seal notes that many of these countries only accept documents certified at both the state and federal levels, so expect a further step at the U.S. Department of State and possibly the embassy.<Src href={PAGE} /> See <a href="/apostille-vs-authentication/">apostille versus authentication</a> and <a href="/apostille-countries/">apostille by country</a>.</p>
+
+  <HelpCTA state="Michigan" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/pennsylvania-apostille/">Pennsylvania apostille</a></li>
+    <li><a href="/missouri-apostille/">Missouri apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={PAGE} target="_blank" rel="noopener">Document authentication and apostille (Michigan Department of State)</a></li>
+    <li><a href={FAQ} target="_blank" rel="noopener">Office of the Great Seal FAQs: document authentication</a></li>
+    <li><a href={FORM} target="_blank" rel="noopener">Authentication Request Form (PDF)</a></li>
+    <li><a href={BIRTH} target="_blank" rel="noopener">Instructions: birth certificate (PDF)</a></li>
+    <li><a href={COURT} target="_blank" rel="noopener">Instructions: court documents (PDF)</a></li>
+    <li><a href={SCHOOL} target="_blank" rel="noopener">Instructions: school records (PDF)</a></li>
+    <li><a href={BG} target="_blank" rel="noopener">Instructions: criminal background checks (PDF)</a></li>
+    <li><a href={POA} target="_blank" rel="noopener">Instructions: power of attorney (PDF)</a></li>
+    <li><a href={BANNED} target="_blank" rel="noopener">Prohibited documents (PDF)</a></li>
+  </ul>
+</Base>

@@ -111,3 +111,30 @@ Every fee, address, and processing statement on the live site is taken from one 
 - Illinois: ilsos.gov did not respond from our network (connection failed); left queued.
 - Georgia: sos.ga.gov returned 403; left queued.
 
+## Michigan (checked 2026-11-25)
+
+- https://www.michigan.gov/sos/all-services/document-authentication-and-apostille ($1 per document; no online or self-service; mail to Office of the Great Seal, 7064 Crowner Drive, Lansing, MI 48918; in person by appointment only, Mondays and Wednesdays 8:30 a.m. to 4 p.m. at the Bureau of Elections, (888) 767-6424; nine offices; Apostille vs Certificate of Authority; authorized officials; LARA articles; FAQ turnaround 1 to 2 weeks)
+- https://www.michigan.gov/sos/faqs/office-of-the-great-seal/document-authentication (no expedite; Great Seal won't pay return postage; notaries can't certify copies; office addresses. The FAQ prints "7064 Crowner Blvd., Lansing, MI 48918-1750"; the page uses the main page and request form's "7064 Crowner Drive, Lansing, MI 48918".)
+- https://www.michigan.gov/sos/-/media/Project/Websites/sos/Notary/OGS_AUTHENTICATION_REQUEST_FORM.pdf (Rev. 8/23: $1 per authentication, not page; allow 4 to 6 weeks after receipt; expedited service not available; China Mainland/Hong Kong/Macao; courier air bill sender and receiver; MDOS-Notary@Michigan.gov)
+- Instruction PDFs on the same media path: Birth-Certificate.pdf (certified copies only from county clerk, State Registrar 517-335-8666, or Wayne/Oakland/Macomb city clerks; produced within 15 years; no notarizing), Marriage-License.pdf, Court-Document.pdf (true copy statement before a Michigan notary), School-Records.pdf (original/true copy statements), Criminal-Background-Checks.pdf (MSP and I-CHAT; true copy statement), Power-of-Attorney.pdf, Prohibited-Documents.pdf (out-of-state notaries, out-of-state records, immigration paperwork, U.S. use)
+- https://www.michigan.gov/mdhhs/doing-business/vitalrecords (linked only)
+
+## Connecticut (checked 2026-11-25)
+
+- https://portal.ct.gov/sots/legislative-services/authentication-of-documents-and-the-apostille (all orders online at sots.service.ct.gov/apostille, no paper order forms; e-Apostilles since July 6, 2026, not for vital records; single authentication certificate since July 21, 2025; original or certified, Connecticut notary or official, within last 10 years; courier address 165 Capitol Avenue, Suite 1000, Hartford, CT 06106; USPS P.O. Box 150470, Hartford, CT 06115-0470; regular 5 to 7 business days, e-Apostille and expedited within 24 hours; U.S. territories; eligible signers; what cannot be authenticated; copies with sworn statement; BSD@ct.gov, 860-509-6002 option 4, 8:30 a.m. to 4 p.m.)
+- https://prdext2.cga.ct.gov/2026/sum/pdf/2026SUM00081-R01SB-00294-SUM.pdf (OLR Public Act Summary, PA 26-81, section 10: $40 per document for an apostille or authentication, $15 for adoption; section 11: electronic format same fee. The official SOTS page does not print the fee. An April 2024 OLR bill analysis of sHB 5301 described a cut to $5, but PA 26-81's summary describes $40 as the fee under prior and current law, so the site uses $40. No current expedite fee is published by SOTS; the page shows a dash.)
+- https://portal.ct.gov/sots/business-services/notary/notary-public-licensing (notary maximum fee $10 from July 1, 2026, PA 26-81; remote notarial acts PA 23-28 effective October 1, 2023)
+- https://sots.service.ct.gov/apostille/ and https://sots.service.ct.gov/apostille/apostilleverification (online order system and verification portal; verification URL also added to src/data/us-apostille-authorities.json)
+- https://portal.ct.gov/DPH/Vital-Records/How-to-Obtain-a-Record (linked only)
+
+## Maryland (checked 2026-11-25)
+
+- https://sos.maryland.gov/Certifications/Pages/default.aspx ($5 per document; walk-in service not available, scheduled appointments subject to change for construction, mail-in only once construction begins; 10 documents per customer per day; 9 a.m. to 1 p.m. weekdays; 16 Francis Street, Wineland Building, Annapolis; 410-974-5521; DLCertifications_sos@maryland.gov; circuit court step for notarized documents; state/county documents direct; school records via notary and circuit court; federal documents to U.S. Department of State; naturalization and immigration documents can't be notarized; processing FedEx/UPS about 3 to 4 days, USPS Priority max 3 to 4 days, regular mail 7 to 14 business days; State Government Article 7-106; booking link)
+- https://sos.maryland.gov/Certifications/SiteAssets/Pages/default/check%20list%20FOR%20DOCUMENTS%20to%20be%20certified1.pdf (mailing checklist: 16 Francis Street, 1st floor, Annapolis, MD 21401; $5 per document; one payment per order; don't staple check)
+- https://www.montgomerycountymd.gov/circuit-court/how-do-i/apostille-standard-certification-documents-international-use (Montgomery County Circuit Court License Department, $1 certification fee, no appointment; cited only as a county example. It says 15 documents per day at the Secretary of State; the page uses the Secretary of State's own figure of 10.)
+
+## Not published Nov 25, 2026
+
+- Illinois: ilsos.gov apostille page still did not respond (connection failed from our network; 500 via the fetch service); left queued.
+- Georgia: sos.ga.gov returned 403 again; left queued.
+- Ohio: ohiosos.gov returned 403 (404 via the fetch service at the old URL); left queued.
