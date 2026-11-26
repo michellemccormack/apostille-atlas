@@ -1,11 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Aff from '../../components/Aff.astro';
 const title = 'Get your apostille done for you';
 const description = 'Send one short request and an independent apostille service will reply with a quote to handle your state, federal, or embassy authentication for you.';
 const STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
 const DOCS = ['Birth certificate','Marriage certificate','Death certificate','Divorce decree','Diploma or transcript','FBI background check','Power of attorney or other notarized document','Business document (articles, good standing, etc.)','Court document','Other'];
 ---
-<Base title={title} description={description} updated="2026-11-23">
+<Base title={title} description={description} updated="2026-11-26">
   <h1>Get your apostille done for you</h1>
   <p class="lede">Fill in what you know and send it. We'll pass your request to an independent apostille service that handles state, federal, and embassy authentications, and they'll reply by email with a price and a timeline.</p>
   <div class="note">Apostille Atlas is a free guide, not an apostille service. This form sends a request to partner services we work with; it isn't an order, and nothing is charged. A service only starts work after you accept its quote and pay it directly. We may receive a referral fee from the service you choose, at no extra cost to you.</div>
@@ -55,6 +56,15 @@ const DOCS = ['Birth certificate','Marriage certificate','Death certificate','Di
     <p class="meta">We'll share your request with a trusted apostille service so they can quote and handle it.</p>
     <p class="meta">Please don't include ID numbers, Social Security numbers, or copies of documents here. The service will tell you what it needs. See our <a href="/privacy/">privacy policy</a>.</p>
   </form>
+
+
+  <h2>Or start with Apostille-USA</h2>
+  <p>If you'd rather go to an apostille service now, you can start a request with Apostille-USA for an original document, a true (certified) copy, or a federal (U.S. Department of State) apostille. We may earn a referral fee, at no extra cost to you. See the <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+  <ul>
+    <li><Aff id="apostille-usa" href="https://apstl.us/0RTwQf" text="Apostille-USA, original document" /></li>
+    <li><Aff id="apostille-usa" href="https://apstl.us/Qu73QB" text="Apostille-USA, true (certified) copy" /></li>
+    <li><Aff id="apostille-usa" href="https://apstl.us/VbYPEP" text="Apostille-USA, federal (U.S. Department of State) apostille" /></li>
+  </ul>
 
   <h2>What happens next</h2>
   <ol>

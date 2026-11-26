@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Src from '../components/Src.astro';
 import Crumbs from '../components/Crumbs.astro';
 import HelpCTA from '../components/HelpCTA.astro';
+import Aff from '../components/Aff.astro';
 import offices from '../data/us-apostille-authorities.json';
 import { US_AUTH_URL, SITE, CHECKED, fmt } from '../lib/hague.js';
 const title = 'Who issues apostilles in each U.S. state, plus online apostille verification';
@@ -16,7 +17,7 @@ const schema = [
   <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Apostille offices by state' }]} />
   <h1>Apostille offices by state</h1>
   <p class="lede">An apostille for a state document comes from that state, not from the federal government. The U.S. designation on file with the Hague Conference names the officers in each state, D.C., and several territories who can sign one.<Src href={US_AUTH_URL} /> In most states that is the Secretary of State; a few use the Lieutenant Governor, the Secretary of the Commonwealth, or another office.</p>
-  <div class="note">Federal documents go to the U.S. Department of State Office of Authentications instead, and U.S. federal court documents to the clerk of that court.<Src href={US_AUTH_URL} /> For where your document is headed, see <a href="/apostille-countries/">apostille by country</a>.</div>
+  <div class="note">Federal documents go to the U.S. Department of State Office of Authentications instead, and U.S. federal court documents to the clerk of that court.<Src href={US_AUTH_URL} /> If you'd rather have a service handle a federal (U.S. Department of State) apostille, one option is <Aff id="apostille-usa" href="https://apstl.us/VbYPEP" text="Apostille-USA" />. For where your document is headed, see <a href="/apostille-countries/">apostille by country</a>.</div>
 
   <div class="tablewrap">
     <table>
