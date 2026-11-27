@@ -1,0 +1,99 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Colorado';
+const description = 'Colorado apostilles from the Secretary of State in Denver: $5 per apostille by mail or drop-off, $15 for expedited walk-in service that is generally done in under an hour, check or money order only, plus a free document review by email before you submit.';
+const PAGE = 'https://www.coloradosos.gov/pubs/apostilles/general.html';
+const HOME = 'https://www.coloradosos.gov/pubs/apostilles/home.html';
+const FORM = 'https://www.coloradosos.gov/pubs/notary/forms/NAUTH.pdf';
+const REJECT = 'https://www.coloradosos.gov/pubs/apostilles/rejectReasons.html';
+const BIZ = 'https://www.coloradosos.gov/pubs/apostilles/business.html';
+const CONTACT = 'https://www.coloradosos.gov/pubs/info_center/contact.html';
+const VERIFY = 'https://www.coloradosos.gov/auth/VerifyApostilleSearch.do';
+---
+<Base title={title} description={description} updated="2026-11-27">
+  <h1>How to get an apostille in Colorado</h1>
+  <div class="answer"><p><strong>Short answer:</strong> The Colorado Secretary of State, 1700 Broadway, Suite 550, Denver, charges $5 per apostille when you mail or drop off your documents, and $15 per apostille for expedited walk-in service. Pay by check or money order to “Colorado Secretary of State”; cards aren’t accepted. There’s no online apostille.<Src href={FORM} /><Src href={PAGE} /></p></div>
+  <p class="lede">Since April 2, 2018, Colorado has issued one combined certificate of authentication. For a country in the Hague Apostille Convention, that certificate serves as the apostille.<Src href={PAGE} /> Colorado won’t issue one for use in the United States or its territories (American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands).<Src href={FORM} /></p>
+
+  <h2>Fees, speed, and contact</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Fee</th><th>How long</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mail in</td><td>$5 per apostille<Src href={FORM} /></td><td>Worked in the order received. The office says it is seeing longer than normal wait times; mail first goes through a state distribution center.<Src href={PAGE} /></td></tr>
+        <tr><td>Drop off</td><td>$5 per apostille<Src href={FORM} /></td><td>The office emails or calls when the documents are ready to pick up.<Src href={PAGE} /></td></tr>
+        <tr><td>Expedited, walk-in only</td><td>$15 per apostille<Src href={FORM} /></td><td>Hand-deliver before 4:30 p.m. The office tries to finish while you wait, generally in under an hour, but may ask you to come back when it is busy.<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li><strong>Address:</strong> Colorado Secretary of State, Authentications Program, 1700 Broadway, Ste. 550, Denver, CO 80290<Src href={FORM} /></li>
+    <li><strong>Walk-in hours for expedited service:</strong> 8 a.m. to 4:30 p.m.<Src href={CONTACT} /></li>
+    <li><strong>Payment:</strong> check or money order payable to Colorado Secretary of State. The request form also lists cash for in-person service; never mail cash. No credit or debit cards.<Src href={PAGE} /><Src href={FORM} /></li>
+    <li><strong>Contact:</strong> 303-894-2200; Authentications@coloradosos.gov<Src href={FORM} /></li>
+    <li>Documents aren’t processed on weekends or holidays.<Src href={PAGE} /></li>
+  </ul>
+
+  <h2>Which documents Colorado can apostille</h2>
+  <p>The original document must carry at least one of these: a Colorado notary public’s signature, a certification by Colorado Vital Records, or a certification by a Colorado county clerk’s office.<Src href={PAGE} /> The rejection guide adds originals certified by the Colorado Secretary of State or the Colorado State Archives.<Src href={REJECT} /> The office doesn’t notarize.<Src href={PAGE} /></p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Your document</th><th>Where it comes from</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Colorado birth or death certificate</td><td>A certified copy from the Vital Records Office of Colorado<Src href={PAGE} /></td></tr>
+        <tr><td>Marriage license, divorce decree, court documents</td><td>Copies from the County Clerk and Recorder or the Clerk of the District Court where they were issued<Src href={PAGE} /></td></tr>
+        <tr><td>Business records</td><td>Free certified copies from the Secretary of State’s business database (“Get certified copies of documents” on the entity’s summary page). Print in color for official use.<Src href={BIZ} /></td></tr>
+        <tr><td>Power of attorney, school transcripts, other private documents</td><td>Notarized by a Colorado notary public<Src href={PAGE} /></td></tr>
+        <tr><td>Certificate of Naturalization</td><td>Not Colorado’s. Get a certified true copy from the U.S. Department of Homeland Security, then send it to the U.S. Department of State, Office of Authentications.<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>For business records, check first whether the receiving country accepts a plain certified copy; Colorado says certified copies generally meet other countries’ requirements. It only adds an apostille to business records for Hague countries. For other countries, the certified copies go to the U.S. Department of State.<Src href={BIZ} /></p>
+  <p><strong>Out-of-state records:</strong> Colorado can’t authenticate another state’s document, but a Colorado notary can make a certified copy of an out-of-state government document such as a birth certificate or marriage license.<Src href={PAGE} /> A Colorado notary can’t certify a copy of a record you can get from a Colorado clerk and recorder, the Secretary of State, the State Archives, or a vital records office; order a certified copy from that office instead.<Src href={REJECT} /></p>
+
+  <h2>Why Colorado rejects documents</h2>
+  <ul>
+    <li><strong>Blanks:</strong> every blank must be filled in or crossed out, or the notarization doesn’t comply with Colorado law.<Src href={PAGE} /><Src href={REJECT} /></li>
+    <li><strong>The notary statement:</strong> it needs original signatures and must show the state, the county, and the date of notarization. The document can be in another language, but the notary’s statement must be in English.<Src href={PAGE} /></li>
+    <li><strong>Powers of attorney with legal conclusions:</strong> many foreign POAs have the notary state the parties’ legal capacity or say the notary explained the document. Unless the notary is also a Colorado-licensed attorney, that is the unauthorized practice of law, and Colorado will authenticate the POA only if it is revised to fit Colorado law or the notary is a Colorado attorney. The consulate or embassy may be another option.<Src href={REJECT} /></li>
+    <li><strong>“Proof of life” certifications:</strong> a Colorado notary can’t certify that someone is alive. The person can instead swear to a written statement that they are alive and have that notarized; check that the receiving country accepts it.<Src href={REJECT} /></li>
+    <li><strong>I-9 forms:</strong> they aren’t notarized and are federal documents.<Src href={REJECT} /></li>
+    <li><strong>Certain subjects:</strong> Colorado won’t authenticate notarized records about allegiance, renouncing or relinquishing citizenship, sovereignty, “in itinere” status, the World Service Authority, or claimed immunity from state or federal law.<Src href={REJECT} /></li>
+  </ul>
+  <p><strong>Free review first:</strong> email a PDF of your document to Authentications@coloradosos.gov and the office will review it and give feedback, within 3 to 5 business days according to its rejection guide.<Src href={PAGE} /><Src href={REJECT} /> If you plan to <a href="/online-notarization-for-apostille/">notarize online</a>, the notary must be a Colorado notary public for Colorado to authenticate it, so the review is a good way to check the certificate wording first.<Src href={PAGE} /></p>
+
+  <h2>What to send</h2>
+  <ol>
+    <li>The original document.<Src href={PAGE} /></li>
+    <li>The completed <a href={FORM} target="_blank" rel="noopener">Apostilles &amp; Authentications Request Form</a> (a Spanish version is on the <a href={HOME} target="_blank" rel="noopener">program page</a>), naming the country where the documents will be used and the number of apostilles.<Src href={FORM} /><Src href={HOME} /></li>
+    <li>A check or money order to “Colorado Secretary of State” for $5 per apostille.<Src href={FORM} /></li>
+    <li>Your return choice: hold for pickup, free standard USPS, or a prepaid FedEx or UPS label. Don’t put the office’s own name or address as the return address on the label, or the documents come back by standard mail.<Src href={FORM} /></li>
+  </ol>
+  <p>Receiving an apostille issued in Colorado? You can <a href={VERIFY} target="_blank" rel="noopener">verify it on the Secretary of State’s site</a>.<Src href={HOME} /> For the destination country, see <a href="/apostille-countries/">apostille by country</a>; for non-Hague countries, see <a href="/apostille-vs-authentication/">apostille versus authentication</a>.</p>
+
+  <HelpCTA state="Colorado" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/washington-apostille/">Washington apostille</a>: another state that issues one universal certificate for every country.</li>
+    <li><a href="/texas-apostille/">Texas apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={PAGE} target="_blank" rel="noopener">Apostilles and Authentications, general information (Colorado Secretary of State)</a></li>
+    <li><a href={FORM} target="_blank" rel="noopener">Apostilles &amp; Authentications Request Form (PDF)</a></li>
+    <li><a href={REJECT} target="_blank" rel="noopener">Common reasons for rejection</a></li>
+    <li><a href={BIZ} target="_blank" rel="noopener">Apostilles for business records</a></li>
+    <li><a href={CONTACT} target="_blank" rel="noopener">Contact the Secretary of State’s Office</a></li>
+  </ul>
+</Base>

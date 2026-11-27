@@ -138,3 +138,36 @@ Every fee, address, and processing statement on the live site is taken from one 
 - Illinois: ilsos.gov apostille page still did not respond (connection failed from our network; 500 via the fetch service); left queued.
 - Georgia: sos.ga.gov returned 403 again; left queued.
 - Ohio: ohiosos.gov returned 403 (404 via the fetch service at the old URL); left queued.
+
+## Georgia (checked 2026-11-27)
+
+- https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information (GSCCCA is the only Georgia agency that issues apostilles, Atlanta the only location; Great Seal Certification for non-Hague countries from the Secretary of State, 404-656-2871; certification of notary public $2, U.S. use only, never with an apostille; apostille $3 per document; walk-in 9 a.m. to 4 p.m. weekdays, no appointment, 1875 Century Blvd., Ste. 100, Atlanta, GA 30345; typically under 20 minutes in person; mail normally one to two business days, Attn: Notary Division; payment options; credit card pre-payment voucher; cover letter naming destination country; computer-generated airbills only; no county certification for notarized documents; notarial certificate and seal rules; documents it can and can't apostille; vital records preferably issued since 2000; eCertification divorce decrees; transcripts, diplomas, FBI/GBI/local police checks, translations, passport copies, single status affidavit, corporate certified copies; notary@gsccca.org, 404-327-6023, 800-304-5175; GSCCCA does not offer notary services)
+- https://www.gsccca.org/notary-and-apostilles/apostilles/hague-apostille-country-list (participating countries, last revised September 11, 2026)
+- https://www.gsccca.org/file/notary-forms (linked only: sample certificates, request letter, affidavits)
+- https://www.hcch.net/en/states/authorities/details3/?aid=353 (GSCCCA designated for Georgia)
+- https://dph.georgia.gov/VitalRecords (linked only)
+- Not used: sos.ga.gov (Great Seal page) still returned 403/404, so no Great Seal fee or turnaround is quoted; the page gives only the phone number printed by the GSCCCA.
+
+## Colorado (checked 2026-11-27)
+
+- https://www.coloradosos.gov/pubs/apostilles/general.html (combined single certificate since April 2, 2018, serves as apostille in Hague countries; accepted originals: Colorado notary, Vital Records, county clerk; check or money order to Colorado Secretary of State, no credit cards; no online apostilles; office doesn't notarize; out-of-state documents via Colorado notary certified copy; naturalization certificate via DHS then U.S. Department of State; longer than normal wait times, mail worked in order received, state distribution center; drop-off with pickup notice; expedited for hand delivery before 4:30 p.m., generally under an hour; free review by email; notary statement in English with state, county, date; no blanks)
+- https://www.coloradosos.gov/pubs/notary/forms/NAUTH.pdf (Rev. 08/22/2024: 1700 Broadway, Ste. 550, Denver, CO 80290; 303-894-2200; Authentications@coloradosos.gov; mail in $5, drop off $5, expedited $15 walk-in only, per apostille; cash, checks or money orders, no cards, no cash by mail; return options; prepaid label rule; no apostilles for U.S. territories. The general page says check or money order; the page says check or money order and notes the form also lists cash in person.)
+- https://www.coloradosos.gov/pubs/apostilles/rejectReasons.html (accepted certifiers incl. Secretary of State and State Archives; being-alive certifications; blanks; I-9; copy certification limits; POA unauthorized practice of law; review feedback within 3 to 5 business days; prohibited subjects, 24-21-534(2) C.R.S.)
+- https://www.coloradosos.gov/pubs/apostilles/business.html (free certified copies of business records; apostille only for Hague countries; others to U.S. Department of State)
+- https://www.coloradosos.gov/pubs/apostilles/home.html (Spanish request form; verify an apostille link)
+- https://www.coloradosos.gov/pubs/info_center/contact.html (expedited walk-in 8:00 AM to 4:30 PM)
+- https://www.coloradosos.gov/auth/VerifyApostilleSearch.do (verification search)
+
+## Minnesota (checked 2026-11-27)
+
+- https://www.sos.mn.gov/media/2264/authentication-mail-form.pdf (information sheet and request form, PDF modified Jan 7, 2026: only one certificate type, apostille, regardless of country; non-accepting countries contact embassy or consulate; in-person appointment at sos.mn.gov/appointment; certified state or county documents without notarization, issued in Minnesota, original, not photocopy; all other documents notarized by a Minnesota notary; six elements per MS 358.65; $5 per document with $10 example; payment types incl. cash, no credit card or wire by mail; pickup rule with three business days; no tracking on USPS return; First National Bank Building, 332 Minnesota Street, Suite N201, Saint Paul, MN 55101; apostille.oss@state.mn.us; 651-296-2803)
+- https://www.sos.mn.gov/media/4253/authentication-mail-form.pdf (July 26, 2024 form: $5 each; common rejection problems; 651-296-2803 or 1-877-551-6767, 9 a.m. to 4 p.m.)
+- https://sos.mn.gov/appointment (redirects to the office's Microsoft Bookings page)
+- https://www.hcch.net/en/states/authorities/details3/?aid=353 (Secretary of State designated for Minnesota)
+- Not used: the sos.mn.gov apostille web page returned a CAPTCHA/403 to us, so in-person card payment and any processing time are not quoted (processing time shown as a dash).
+
+## Not published Nov 27, 2026
+
+- Illinois: ilsos.gov still did not respond (connection failed; 500 via the fetch service); left queued.
+- Ohio: ohiosos.gov returned 403 (bot challenge) and timed out via the fetch service; left queued.
+- Georgia was published from the GSCCCA, the state's actual apostille authority, instead of sos.ga.gov.

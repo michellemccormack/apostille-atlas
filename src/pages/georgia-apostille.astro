@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Georgia';
+const description = 'Georgia apostilles come from the Superior Court Clerks’ Cooperative Authority (GSCCCA) in Atlanta, not the Secretary of State: $3 per document, walk-in with no appointment, mail usually one to two business days, and no county certification for notarized documents.';
+const PAGE = 'https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information';
+const LIST = 'https://www.gsccca.org/notary-and-apostilles/apostilles/hague-apostille-country-list';
+const FORMS = 'https://www.gsccca.org/file/notary-forms';
+const HCCH_US = 'https://www.hcch.net/en/states/authorities/details3/?aid=353';
+const VITAL = 'https://dph.georgia.gov/VitalRecords';
+---
+<Base title={title} description={description} updated="2026-11-27">
+  <h1>How to get an apostille in Georgia</h1>
+  <div class="answer"><p><strong>Short answer:</strong> In Georgia, apostilles are issued by the Georgia Superior Court Clerks’ Cooperative Authority (GSCCCA), not the Secretary of State. It charges $3 per document. You can walk in at 1875 Century Blvd. in Atlanta, 9 a.m. to 4 p.m. on weekdays with no appointment, or mail your originals; mailed requests normally take one to two business days.<Src href={PAGE} /></p></div>
+  <p class="lede">Georgia splits the work between two agencies. The <strong>GSCCCA</strong> issues apostilles for countries in the Hague Apostille Convention. For a country that isn’t in the Convention, the <strong>Georgia Secretary of State</strong> issues a Great Seal Certification instead; the GSCCCA can’t.<Src href={PAGE} /> The GSCCCA is the designated apostille authority for Georgia on the Hague Conference’s list for the United States.<Src href={HCCH_US} /></p>
+
+  <h2>Fees, speed, and contact</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Georgia rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Apostille fee</td><td>$3 per document<Src href={PAGE} /></td></tr>
+        <tr><td>Walk-in</td><td>1875 Century Blvd., Ste. 100, Atlanta, GA 30345. 9 a.m. to 4 p.m., Monday to Friday, no appointment. Usually under 20 minutes, depending on how many documents you bring; the office may limit how many it handles while you wait.<Src href={PAGE} /></td></tr>
+        <tr><td>Mail</td><td>GSCCCA, Attn: Notary Division, 1875 Century Blvd., Ste. 100, Atlanta, GA 30345. Processing is normally one to two business days.<Src href={PAGE} /></td></tr>
+        <tr><td>Payment, walk-in</td><td>Cash, a check with a pre-printed name and address, or a money order payable to GSCCCA, or a credit card<Src href={PAGE} /></td></tr>
+        <tr><td>Payment, mail</td><td>A check with a pre-printed name and address or a money order payable to GSCCCA, or the GSCCCA’s credit card pre-payment voucher<Src href={PAGE} /></td></tr>
+        <tr><td>Contact</td><td>notary@gsccca.org; 404-327-6023 or 800-304-5175<Src href={PAGE} /></td></tr>
+        <tr><td>Non-Hague countries</td><td>Great Seal Certification from the Georgia Secretary of State, 404-656-2871<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Atlanta is the only place in Georgia that issues apostilles. The GSCCCA doesn’t notarize documents, so arrive with the notarization already done.<Src href={PAGE} /></p>
+
+  <h2>Apostille or Great Seal Certification?</h2>
+  <p>Start with the destination country. If it is on the <a href={LIST} target="_blank" rel="noopener">GSCCCA’s list of participating countries</a>, the document goes to the GSCCCA for an apostille. If it isn’t listed, the country isn’t part of the Apostille Convention and you need the Secretary of State’s Great Seal Certification.<Src href={PAGE} /> A document going to a foreign embassy or consulate inside the United States counts as going to that country.<Src href={PAGE} /></p>
+  <p>The GSCCCA also issues a <strong>certification of notary public</strong> ($2), but that one is only for documents used inside the U.S., a U.S. territory, or a U.S. embassy, typically for visa requests. It is never used together with an apostille.<Src href={PAGE} /> For how the two foreign certificates differ, see <a href="/apostille-vs-authentication/">apostille versus authentication</a>.</p>
+
+  <h2>What Georgia can apostille</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Your document</th><th>What it needs</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Birth or death certificate</td><td>An official certified copy from the Georgia Department of Community Health, or a county Probate Court or Health Department, with the issuing official’s signature and seal. Never notarized.<Src href={PAGE} /></td></tr>
+        <tr><td>Marriage certificate or license</td><td>An official certified copy from the county Probate Court<Src href={PAGE} /></td></tr>
+        <tr><td>Divorce decree and court documents</td><td>An official certified copy from the county Clerk of Superior Court. In counties in the eCertification program, a printed digital certified copy of a divorce decree can be apostilled.<Src href={PAGE} /></td></tr>
+        <tr><td>Corporate records (articles, certificates)</td><td>Certified copies issued by the current Secretary of State, either from the Corporations Division or downloaded from its website<Src href={PAGE} /></td></tr>
+        <tr><td>Notarized documents (power of attorney, affidavit, translation, school records)</td><td>Notarized by a Georgia notary in line with Georgia law. No county certification is needed before the apostille.<Src href={PAGE} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The GSCCCA checks the official’s signature against the ones it has on file. If your vital record was issued before 2000, it recommends getting a new certified copy, and it prefers copies issued since then.<Src href={PAGE} /> New certified birth and death certificates come from the Georgia Department of Community Health (<a href={VITAL} target="_blank" rel="noopener">Vital Records</a>) or the county Probate Court or Health Department.<Src href={PAGE} /></p>
+
+  <h2>What it can’t apostille</h2>
+  <ul>
+    <li>Documents from another state; send them to that state.<Src href={PAGE} /></li>
+    <li>Federal documents signed and sealed by a federal agency or court, including a consular report of birth abroad. These go to the U.S. Department of State.<Src href={PAGE} /></li>
+    <li>Photocopies, unless a Georgia notary has properly certified the copy.<Src href={PAGE} /></li>
+    <li>Foreign documents, documents for non-Hague countries, and documents for use inside the United States.<Src href={PAGE} /></li>
+  </ul>
+
+  <h2>What the notarization must show</h2>
+  <p>The notary completes a notarial certificate and signs by hand in ink, using exactly the name on the commission, with the exact date of notarization. The seal must show the notary’s name, the county of commission, the words “Notary Public,” and the state, and the impression has to be clear.<Src href={PAGE} /> Sample certificates are in the GSCCCA’s <a href={FORMS} target="_blank" rel="noopener">notary files and forms</a>. If you plan to <a href="/online-notarization-for-apostille/">notarize online</a>, the document still has to be a Georgia notarization for the GSCCCA to apostille it.</p>
+
+  <h2>Specific documents</h2>
+  <ul>
+    <li><strong>Transcripts and grades:</strong> a school official signs in front of a notary. The simplest route is a short letter from the official saying the attached are the student’s official records. Only Georgia school records can be apostilled in Georgia.<Src href={PAGE} /></li>
+    <li><strong>Diplomas:</strong> a Georgia notary can certify a copy of the original as a “true and exact copy of the original,” and the apostille goes on that copy.<Src href={PAGE} /></li>
+    <li><strong>Background checks:</strong> an FBI check signed and sealed by an FBI official goes to the U.S. Department of State. A GBI check signed by a GBI official before a notary is ready for the apostille. For an unsigned FBI check or a local police check that wasn’t notarized, you sign the GSCCCA’s Criminal Records Check affidavit before a Georgia notary.<Src href={PAGE} /></li>
+    <li><strong>Translations:</strong> the translator signs an affidavit before a Georgia notary saying they know both languages and the translation is true and complete. The notary can’t also be the translator. The original document doesn’t need to be in English.<Src href={PAGE} /></li>
+    <li><strong>Passport copies:</strong> a Georgia notary can certify a copy of a U.S. passport using the GSCCCA’s passport affidavit; a foreign passport copy uses its Foreign Passport Affidavit.<Src href={PAGE} /></li>
+    <li><strong>Getting married abroad:</strong> there’s no standard U.S. certificate of freedom to marry, and a notarized single status affidavit often works; the GSCCCA has sample language.<Src href={PAGE} /></li>
+    <li><strong>Adoptions:</strong> the GSCCCA encourages adoptive parents to contact it before submitting.<Src href={PAGE} /></li>
+  </ul>
+
+  <h2>What to put in a mailed request</h2>
+  <ol>
+    <li>The original documents.<Src href={PAGE} /></li>
+    <li>A cover letter or note naming the destination country, with your contact information. The GSCCCA has a sample Apostille Request Letter in its <a href={FORMS} target="_blank" rel="noopener">forms</a>.<Src href={PAGE} /></li>
+    <li>$3 per document by check or money order payable to GSCCCA, or a credit card pre-payment voucher.<Src href={PAGE} /></li>
+    <li>A prepaid, self-addressed return envelope or airbill. FedEx and UPS airbills must be computer generated; handwritten ones are not accepted.<Src href={PAGE} /></li>
+  </ol>
+  <p>For the country itself, see <a href="/apostille-countries/">apostille by country</a>, or build your checklist with the <a href="/apostille-finder/">apostille finder</a>.</p>
+
+  <HelpCTA state="Georgia" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/north-carolina-apostille/">North Carolina apostille</a>: documents issued or notarized in North Carolina go to Raleigh.</li>
+    <li><a href="/florida-apostille/">Florida apostille</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={PAGE} target="_blank" rel="noopener">General Apostille Information (GSCCCA)</a></li>
+    <li><a href={LIST} target="_blank" rel="noopener">Hague Apostille country list (GSCCCA)</a></li>
+    <li><a href={FORMS} target="_blank" rel="noopener">Notary files and forms (GSCCCA)</a></li>
+    <li><a href={HCCH_US} target="_blank" rel="noopener">United States competent authorities (HCCH)</a></li>
+  </ul>
+</Base>

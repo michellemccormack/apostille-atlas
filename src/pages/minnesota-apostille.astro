@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Minnesota';
+const description = 'Minnesota apostilles from the Secretary of State in Saint Paul: $5 per document, by mail or by in-person appointment. Minnesota issues only apostilles, whatever the destination country, and notarized documents must show all six elements Minnesota law requires.';
+const INFO = 'https://www.sos.mn.gov/media/2264/authentication-mail-form.pdf';
+const OLDFORM = 'https://www.sos.mn.gov/media/4253/authentication-mail-form.pdf';
+const BOOK = 'https://sos.mn.gov/appointment';
+const HCCH_US = 'https://www.hcch.net/en/states/authorities/details3/?aid=353';
+---
+<Base title={title} description={description} updated="2026-11-27">
+  <h1>How to get an apostille in Minnesota</h1>
+  <div class="answer"><p><strong>Short answer:</strong> The Minnesota Secretary of State charges $5 per document for an apostille. Mail the documents with the request form and payment to the First National Bank Building, 332 Minnesota Street, Suite N201, Saint Paul, MN 55101, or book an in-person appointment. Birth, marriage, and other certified records go as they are; everything else must be notarized by a Minnesota notary first.<Src href={INFO} /></p></div>
+  <p class="lede">Minnesota issues only one kind of certificate: the <strong>apostille</strong>, whatever the destination country. If the receiving country doesn’t accept an apostille, contact that country’s embassy or consulate about your options.<Src href={INFO} /> An apostille is for international use only and can’t be used in the United States or its territories.<Src href={INFO} /></p>
+
+  <h2>Fees and contact</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Minnesota rule</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>State fee</td><td>$5 per document presented. A Minnesota birth certificate plus a three-page notarized transcript is two documents, so $10.<Src href={INFO} /></td></tr>
+        <tr><td>Payment by mail</td><td>Personal or business check, cashier’s check, or money order payable to MN Secretary of State, or a charge to a Secretary of State client account. Cash is accepted but mailing it is at your own risk. No credit card or wire payments by mail; U.S. dollars only.<Src href={INFO} /></td></tr>
+        <tr><td>Mailing address</td><td>MN Secretary of State, First National Bank Building, 332 Minnesota Street, Suite N201, Saint Paul, MN 55101<Src href={INFO} /></td></tr>
+        <tr><td>In person</td><td>By appointment, booked at <a href={BOOK} target="_blank" rel="noopener">sos.mn.gov/appointment</a><Src href={INFO} /></td></tr>
+        <tr><td>Processing time</td><td>—</td></tr>
+        <tr><td>Contact</td><td>apostille.oss@state.mn.us; 651-296-2803<Src href={INFO} /> or 1-877-551-6767, 9 a.m. to 4 p.m.<Src href={OLDFORM} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Two kinds of documents</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Your document</th><th>What it needs</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>State or county certified records: birth and death certificates, marriage certificates, divorce decrees, judgments</td><td>No notarization. It must be issued in Minnesota, be the original certified document (most county-issued documents have an embossed seal), and not be a photocopy.<Src href={INFO} /></td></tr>
+        <tr><td>Everything else: adoption papers, affidavits, diplomas, transcripts, powers of attorney</td><td>Properly notarized by a Minnesota notary public<Src href={INFO} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Documents that originated outside Minnesota are a common reason for rejection, as are private documents that weren’t notarized and documents without an original signature.<Src href={OLDFORM} /></p>
+
+  <h2>The six things a Minnesota notarization must show</h2>
+  <p>Minnesota checks notarized documents against Minnesota Statutes 358.65. All six elements must be there:<Src href={INFO} /></p>
+  <ol>
+    <li><strong>Jurisdiction:</strong> where the notarization took place, for example County of Ramsey, State of Minnesota.</li>
+    <li><strong>Notarial statement:</strong> what the notary witnessed, such as a signature, an oath, or a true copy.</li>
+    <li><strong>Title:</strong> stated as Notary Public.</li>
+    <li><strong>Date</strong> of the notarization.</li>
+    <li><strong>Notary signature</strong> in wet ink, not a photocopy.</li>
+    <li><strong>Notary stamp.</strong></li>
+  </ol>
+  <p>A missing certificate and an invalid notary commission, including a stamp that doesn’t match, are the notarization problems the office lists most often.<Src href={OLDFORM} /> If you plan to <a href="/online-notarization-for-apostille/">notarize online</a>, choose a notary commissioned in Minnesota, because documents must be notarized by a Minnesota notary public.<Src href={INFO} /></p>
+
+  <h2>What to put in a mailed request</h2>
+  <ol>
+    <li>The <a href={INFO} target="_blank" rel="noopener">Apostille/Authentication Request Form</a>, with the number of documents (you need one document for each apostille).<Src href={INFO} /></li>
+    <li>The original certified or notarized documents.<Src href={INFO} /></li>
+    <li>$5 per document, payable to MN Secretary of State.<Src href={INFO} /></li>
+    <li>Your return choice. You can pick up from the office, but payment must be in the envelope (you can’t pay at pickup), and if you don’t confirm within three business days the order is mailed by regular U.S. mail. Otherwise enclose a prepaid return envelope, or the documents come back by regular U.S. mail, which has no tracking.<Src href={INFO} /></li>
+  </ol>
+  <p>The Secretary of State is the designated apostille authority for Minnesota on the Hague Conference’s list for the United States.<Src href={HCCH_US} /> For the destination country, see <a href="/apostille-countries/">apostille by country</a>, and for countries outside the Convention, see <a href="/apostille-vs-authentication/">apostille versus authentication</a>.</p>
+
+  <HelpCTA state="Minnesota" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/michigan-apostille/">Michigan apostille</a>: documents issued or notarized in Michigan go to the Office of the Great Seal.</li>
+    <li><a href="/missouri-apostille/">Missouri apostille</a></li>
+    <li><a href="/apostille-finder/">Apostille finder</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={INFO} target="_blank" rel="noopener">Apostille/Authentication information and request form (Minnesota Secretary of State, PDF)</a></li>
+    <li><a href={OLDFORM} target="_blank" rel="noopener">Apostille Authentication Request Form, July 2024 (PDF)</a></li>
+    <li><a href={BOOK} target="_blank" rel="noopener">Book an appointment</a></li>
+    <li><a href={HCCH_US} target="_blank" rel="noopener">United States competent authorities (HCCH)</a></li>
+  </ul>
+</Base>
