@@ -35,14 +35,17 @@ November 25, 2026:
 - [x] Connecticut apostille (/connecticut-apostille/)
 - [x] Maryland apostille (/maryland-apostille/)
 
+November 27, 2026:
+
+- [x] Georgia apostille (/georgia-apostille/), sourced from the GSCCCA, Georgia's apostille authority
+- [x] Colorado apostille (/colorado-apostille/)
+- [x] Minnesota apostille (/minnesota-apostille/)
+
 ## Queued (next first)
 
-- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, 24, and 25, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
-- [ ] Georgia apostille (sos.ga.gov returned 403 Nov 23, 24, and 25)
-- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23, 24, and 25)
-- [ ] Colorado apostille
-- [ ] Minnesota apostille
-- [ ] Arizona apostille
+- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, 24, 25, and 27, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
+- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23, 24, 25, and 27)
+- [ ] Arizona apostille (azsos.gov returned 403 Nov 27)
 - [ ] Federal documents: apostilles from the U.S. Department of State Office of Authentications (needs travel.state.gov; do not invent the fee)
 - [ ] FBI background check apostille (FBI Identity History Summary plus State Department; needs fbi.gov and travel.state.gov)
 - [ ] Birth certificate apostille: which office issues it, state by state, from the official pages already cited
@@ -56,3 +59,7 @@ November 25, 2026:
 - [ ] Apostille for documents going to Mexico, Spain, and Italy (official consulate pages)
 - [ ] Translations and apostilles: which comes first, by state
 - [ ] Apostille fees and processing times compared across covered states
+- [ ] How to verify an apostille online (states with official verification portals: Colorado, Connecticut, Washington and others from the authorities list)
+- [ ] Apostille on a copy of a U.S. passport (notary-certified copy rules by state)
+- [ ] Single status affidavit / certificate of no impediment for marriage abroad
+- [ ] Does an apostille expire? (HCCH Apostille Handbook and destination-country rules)
