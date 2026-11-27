@@ -25,4 +25,5 @@ export const GUIDES = [
   ['Massachusetts', '/massachusetts-apostille/'], ['New Jersey', '/new-jersey-apostille/'], ['Virginia', '/virginia-apostille/'], ['North Carolina', '/north-carolina-apostille/'],
   ['Pennsylvania', '/pennsylvania-apostille/'], ['Missouri', '/missouri-apostille/'], ['Washington', '/washington-apostille/'],
   ['Michigan', '/michigan-apostille/'], ['Connecticut', '/connecticut-apostille/'], ['Maryland', '/maryland-apostille/'],
+  ['Georgia', '/georgia-apostille/'], ['Colorado', '/colorado-apostille/'], ['Minnesota', '/minnesota-apostille/'],
 ];
