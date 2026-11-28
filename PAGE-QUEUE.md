@@ -41,12 +41,17 @@ November 27, 2026:
 - [x] Colorado apostille (/colorado-apostille/)
 - [x] Minnesota apostille (/minnesota-apostille/)
 
+November 28, 2026:
+
+- [x] Arizona apostille (/arizona-apostille/)
+- [x] How to verify an apostille online (/how-to-verify-an-apostille/), from the HCCH e-APP chart and Apostille Handbook
+- [x] Does an apostille expire? (/does-an-apostille-expire/), from the HCCH Apostille Handbook
+
 ## Queued (next first)
 
-- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, 24, 25, and 27, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
-- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23, 24, 25, and 27)
-- [ ] Arizona apostille (azsos.gov returned 403 Nov 27)
-- [ ] Federal documents: apostilles from the U.S. Department of State Office of Authentications (needs travel.state.gov; do not invent the fee)
+- [ ] Illinois apostille (ilsos.gov unreachable from our network on Nov 22, 23, 24, 25, 27, and 28, 2026; official page is https://www.ilsos.gov/departments/index/apostilles.html)
+- [ ] Ohio apostille (ohiosos.gov returned 403 Nov 23, 24, 25, and 27; on Nov 28 the redesigned site showed only a general page with no fee, address or form)
+- [ ] Federal documents: apostilles from the U.S. Department of State Office of Authentications (needs travel.state.gov, 403 again Nov 28; Form DS-4194 at eforms.state.gov loads and gives $20 per document)
 - [ ] FBI background check apostille (FBI Identity History Summary plus State Department; needs fbi.gov and travel.state.gov)
 - [ ] Birth certificate apostille: which office issues it, state by state, from the official pages already cited
 - [ ] Diploma and transcript apostilles: the notarization rule in each covered state
@@ -59,7 +64,10 @@ November 27, 2026:
 - [ ] Apostille for documents going to Mexico, Spain, and Italy (official consulate pages)
 - [ ] Translations and apostilles: which comes first, by state
 - [ ] Apostille fees and processing times compared across covered states
-- [ ] How to verify an apostille online (states with official verification portals: Colorado, Connecticut, Washington and others from the authorities list)
 - [ ] Apostille on a copy of a U.S. passport (notary-certified copy rules by state)
 - [ ] Single status affidavit / certificate of no impediment for marriage abroad
-- [ ] Does an apostille expire? (HCCH Apostille Handbook and destination-country rules)
+- [ ] Nevada apostille (Secretary of State; e-Register listed by the HCCH)
+- [ ] Tennessee apostille (Secretary of State)
+- [ ] Utah apostille (Lieutenant Governor, not a Secretary of State; e-Apostilles since July 2026)
+- [ ] Kentucky apostille (Secretary of State; e-Apostilles since May 2024)
+- [ ] e-Apostilles: which U.S. states issue them and whether the destination must accept them (HCCH e-APP chart and Notice on the Acceptance of e-Apostilles)
