@@ -37,6 +37,6 @@ const schema = [
   <p class="meta">Source: United States of America, Competent Authority (Art. 6), HCCH, page last updated September 2, 2026; checked {fmt(CHECKED)}.<Src href={US_AUTH_URL} /> Linked state names go to our full guides with official fees and turnaround. Verification links were tested on {fmt(CHECKED)}.</p>
 
   <h2>Checking that an apostille is genuine</h2>
-  <p>The Apostille Convention lets each competent authority keep a register of the apostilles it issues. {withVerify.length} of the jurisdictions above publish an online search: {withVerify.map((o, i) => <>{i > 0 && ', '}<a href={o.verify_apostille_url} target="_blank" rel="noopener">{o.jurisdiction}</a></>)}. For the others, contact the issuing office.</p>
+  <p>The Apostille Convention lets each competent authority keep a register of the apostilles it issues. {withVerify.length} of the jurisdictions above publish an online search: {withVerify.map((o, i) => <>{i > 0 && ', '}<a href={o.verify_apostille_url} target="_blank" rel="noopener">{o.jurisdiction}</a></>)}. For the others, contact the issuing office. Our guide to <a href="/how-to-verify-an-apostille/">verifying an apostille</a> has the full list of U.S. e-Registers from the Hague Conference’s November 2026 chart and the steps to follow.</p>
   <HelpCTA />
 </Base>

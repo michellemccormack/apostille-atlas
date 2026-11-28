@@ -24,10 +24,10 @@
   "competent_authority": "Secretary of State",
   "designated_signers": "Secretary of State; Assistant Secretary of State",
   "verify_apostille_url": null,
-  "our_guide": null,
+  "our_guide": "/arizona-apostille/",
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
-  "last_checked": "2026-11-23"
+  "last_checked": "2026-11-28"
  },
  {
   "jurisdiction": "Arkansas",
@@ -163,11 +163,11 @@
   "jurisdiction": "Kentucky",
   "competent_authority": "Secretary of State",
   "designated_signers": "Secretary of State; Assistant Secretary of State",
-  "verify_apostille_url": null,
+  "verify_apostille_url": "https://web.sos.ky.gov/apostille/verification.aspx",
   "our_guide": null,
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
-  "last_checked": "2026-11-23"
+  "last_checked": "2026-11-28"
  },
  {
   "jurisdiction": "Louisiana",
@@ -383,11 +383,11 @@
   "jurisdiction": "Rhode Island",
   "competent_authority": "Secretary of State",
   "designated_signers": "Secretary of State; First Deputy Secretary of State; Second Deputy Secretary of State",
-  "verify_apostille_url": null,
+  "verify_apostille_url": "https://business.sos.ri.gov/Apostille/ApostilleSearch",
   "our_guide": null,
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
-  "last_checked": "2026-11-23"
+  "last_checked": "2026-11-28"
  },
  {
   "jurisdiction": "South Carolina",
@@ -433,11 +433,11 @@
   "jurisdiction": "Utah",
   "competent_authority": "Lieutenant Governor",
   "designated_signers": "Lieutenant Governor; Deputy Lieutenant Governor; Administrative Assistant",
-  "verify_apostille_url": null,
+  "verify_apostille_url": "https://verifyapostille.utah.gov/",
   "our_guide": null,
   "source_url": "https://www.hcch.net/en/states/authorities/details3/?aid=353",
   "hcch_page_updated": "2 September 2026",
-  "last_checked": "2026-11-23"
+  "last_checked": "2026-11-28"
  },
  {
   "jurisdiction": "Vermont",
