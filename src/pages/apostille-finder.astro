@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Src from '../components/Src.astro';
 import { STATES, DOS, HCCH } from '../data/finder.js';
-const updated = '2026-11-27';
+const updated = '2026-11-28';
 const title = 'Apostille Finder: Steps, Office and Fee for Your State and Document';
 const description = 'Pick the state that issued your document, the document type and the destination country. Get the steps in order, the office, the fee for your number of documents, and mail versus in-person options, from official state pages.';
 const all = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
@@ -82,6 +82,7 @@ const schema = [
       if(f.kind==='nj'){ var p2=how==='person'?f.exp:f.std; return {v:p2*n,t:n+' × '+money(p2)+(how==='person'?' expedited':' standard')+', plus the card or e-check service fee'}; }
       if(f.kind==='wa'){ if(how==='person'){ var extra=f.same+Math.max(0,Math.ceil((n-10)/10))*f.exp; return {v:f.per*n+extra,t:n+' × $15 + '+money(extra)+' same-day fee'}; } return {v:f.per*n,t:n+' × $15 standard (expedite adds $100 per 10 documents)'}; }
       if(f.kind==='co'){ if(how==='person') return {v:f.exp*n,t:n+' × $15 expedited walk-in (drop-off for later pickup is $5 each)'}; return {v:f.per*n,t:n+' × $5'}; }
+      if(f.kind==='az'){ if(how==='person') return {v:f.per*n+f.exp,t:n+' × $3 + $25 walk-in expedite fee (limit 6 documents)'}; return {v:f.per*n,t:n+' × $3'}; }
       if(f.kind==='va'){ if(same&&n>1) return {v:f.per+(n-1)*f.extra,t:'$10 + '+(n-1)+' × $5 (same official, same date, same country)'}; return {v:f.per*n,t:n+' × $10'}; }
       return {v:null,t:'—'};
     }

@@ -260,4 +260,17 @@ export const STATES = {
     },
     nonHague: 'Minnesota issues only apostilles. If the country does not accept one, contact its embassy or consulate.',
   },
+  'Arizona': {
+    page: '/arizona-apostille/', src: 'https://azsos.gov/business/authentication',
+    office: 'Arizona Secretary of State, Business Services (Apostille Dept.)',
+    fee: { kind: 'az', per: 3, exp: 25, text: '$3 per document; walk-in service adds a $25 expedite fee, limit 6 documents' },
+    mail: { ok: true, addr: 'Secretary of State, Attn: Apostille Dept., 1700 W. Washington Street, Fl. 7, Phoenix, AZ 85007-2808', time: '10 to 20 business days', notes: 'Include the request form, a check or money order to Arizona Secretary of State (no cash by mail), and return postage; return labels must show your own address as sender and recipient.' },
+    person: { ok: true, where: 'Phoenix (Executive Tower, 1700 W. Washington Street, Suite 220) or Tucson (400 West Congress, Suite 221), weekdays 8 a.m. to 5 p.m.', time: '—', notes: 'The office posted service-change notices in November 2026; call 602-542-6187 before going.' },
+    general: 'Original documents notarized by an Arizona notary or certified by an Arizona court clerk or state document custodian. No photocopies and no other states\' documents.',
+    docs: {
+      notarized: 'Send the original notarized document; a photocopy is not accepted.',
+      vital: 'Send the original certified copy from the Arizona office that recorded it. Another state\'s birth certificate goes to that state.',
+    },
+    nonHague: 'A certificate of authentication instead of an apostille. Arizona does not issue electronic apostilles.',
+  },
 };
