@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+import Src from '../components/Src.astro';
+const title = 'How to get an apostille in Arizona';
+const description = 'Arizona apostilles from the Secretary of State: $3 per document, 10 to 20 business days by mail, or a $25 expedite fee for walk-in service in Phoenix or Tucson (up to 6 documents). Check or money order by mail, no electronic apostilles.';
+const PAGE = 'https://azsos.gov/business/authentication';
+const SERV = 'https://azsos.gov/services/apostille-document-authentication';
+const FORM = 'https://azsos.gov/media/138';
+const HCCH_US = 'https://www.hcch.net/en/states/authorities/details3/?aid=353';
+const CHART = 'https://assets.hcch.net/docs/e8e7549d-e34a-452f-9fa3-cf2241aa4197.pdf';
+---
+<Base title={title} description={description} updated="2026-11-28">
+  <h1>How to get an apostille in Arizona</h1>
+  <div class="answer"><p><strong>Short answer:</strong> Send the original notarized or certified document, the Apostille/Certificate of Authentication Request form, $3 per document, and return postage to the Arizona Secretary of State, Attn: Apostille Dept., 1700 W. Washington Street, Fl. 7, Phoenix, AZ 85007-2808. Mail takes 10 to 20 business days. If you can’t wait, walk-in service costs an extra $25 expedite fee and is limited to 6 documents.<Src href={PAGE} /></p></div>
+  <p class="lede">The Arizona Secretary of State issues an apostille, or for other countries a certificate of authentication, to certify an Arizona notary public, court clerk, or state document custodian. Which one you get depends on the country that asked for it.<Src href={PAGE} /> The Secretary of State and the Assistant Secretary of State are the officers designated to sign Arizona apostilles under the U.S. designation filed with the Hague Conference.<Src href={HCCH_US} /></p>
+
+  <h2>Fees, speed, and contact</h2>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Fee</th><th>How long</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>By mail</td><td>$3 per document<Src href={PAGE} /></td><td>10 to 20 business days<Src href={PAGE} /></td></tr>
+        <tr><td>Walk-in, Phoenix or Tucson</td><td>$3 per document plus a $25 expedite fee; limit of 6 documents<Src href={PAGE} /></td><td>—</td></tr>
+        <tr><td>Puerto Rico or another U.S. territory</td><td>$18 notarial capacity certificate (not an apostille)<Src href={PAGE} /></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li><strong>Mail to:</strong> Secretary of State, Attn: Apostille Dept., 1700 W. Washington Street, Fl. 7, Phoenix, AZ 85007-2808<Src href={PAGE} /></li>
+    <li><strong>In person, Phoenix:</strong> State Capitol Executive Tower, 1700 W. Washington Street, Suite 220<Src href={PAGE} /></li>
+    <li><strong>In person, Tucson:</strong> Arizona State Complex Building, 400 West Congress, Second Floor, Suite 221<Src href={PAGE} /></li>
+    <li><strong>Hours:</strong> both offices are open Monday through Friday, 8 a.m. to 5 p.m., except holidays.<Src href={PAGE} /></li>
+    <li><strong>Payment:</strong> check or money order payable to “Arizona Secretary of State.” Don’t send cash by mail. A returned (NSF) payment adds a $25 fee.<Src href={PAGE} /></li>
+    <li><strong>Questions:</strong> 602-542-6187 or 1-800-458-5842, or the apostille email form on the Secretary of State’s site.<Src href={PAGE} /></li>
+  </ul>
+  <div class="note"><strong>Check before you go in person.</strong> The Secretary of State’s apostille page carries two Business Services notices: one says Phoenix went to appointment-only service from November 2, 2026, with booking online, and a later one says normal walk-in service resumed on November 9, 2026, at the Executive Tower, 1700 W. Washington St., 2nd Floor. Both were still posted when we checked on November 28, 2026, so call 602-542-6187 before making the trip.<Src href={PAGE} /> Couriers can drop filings at the counter only if the documents aren’t in a sealed envelope; sealed envelopes go to the ADOA Mail Room, 1802 W Jackson St, Phoenix, AZ 85007.<Src href={PAGE} /></div>
+
+  <h2>What Arizona will and won’t apostille</h2>
+  <ul>
+    <li><strong>Originals only.</strong> The office must receive an original notarized document or an original certified recorded document. A photocopy isn’t accepted.<Src href={PAGE} /></li>
+    <li><strong>Arizona documents only.</strong> Don’t send a document recorded by another state; the state that produced it has to certify it. Arizona’s own example: a Nevada birth certificate goes to the Nevada Secretary of State. Out-of-state documents are returned to you.<Src href={PAGE} /></li>
+    <li><strong>No electronic apostilles.</strong> Arizona issues paper certificates only.<Src href={PAGE} /> The HCCH’s November 2026 e-APP chart doesn’t list an Arizona e-Register, so a recipient who wants to confirm an Arizona apostille should contact the Secretary of State directly.<Src href={CHART} /> See <a href="/how-to-verify-an-apostille/">how to verify an apostille</a>.</li>
+    <li><strong>U.S. territories.</strong> A document going to Puerto Rico or another U.S. territory gets a notarial capacity certificate for $18, not an apostille.<Src href={PAGE} /></li>
+    <li><strong>Federal documents.</strong> The Secretary of State points federal requests to the U.S. Office of Authentications.<Src href={PAGE} /> Federal documents are signed by a federal official, and the U.S. designation sends them to the U.S. Department of State.<Src href={HCCH_US} /> See <a href="/apostille-vs-authentication/">apostille versus authentication</a>.</li>
+  </ul>
+
+  <h2>What to send</h2>
+  <ol>
+    <li>The original notarized document, or the original certified copy from the office that recorded it.<Src href={PAGE} /></li>
+    <li>The completed <a href={FORM} target="_blank" rel="noopener">Apostille/Certificate of Authentication Request form</a>, naming the country where the document will be used.<Src href={PAGE} /></li>
+    <li>$3 per document by check or money order to “Arizona Secretary of State.”<Src href={PAGE} /></li>
+    <li>Return postage. The office recommends a trackable service. Any FedEx, UPS, DHL or other return label must show your own mailing address as both the sender and the recipient.<Src href={PAGE} /></li>
+  </ol>
+  <p>Arizona’s page says it is a filing agency and can’t give legal advice or interpret statutes.<Src href={PAGE} /> For which certificate your destination needs, see <a href="/apostille-countries/">apostille by country</a>; most Hague members simply take the apostille, and the <a href="/apostille-finder/">apostille finder</a> lays out the steps for other states’ documents.</p>
+
+  <HelpCTA state="Arizona" />
+
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/colorado-apostille/">Colorado apostille</a>: a neighboring state with a $15 expedited walk-in option in Denver.</li>
+    <li><a href="/california-apostille/">California apostille</a></li>
+    <li><a href="/texas-apostille/">Texas apostille</a></li>
+    <li><a href="/does-an-apostille-expire/">Does an apostille expire?</a></li>
+    <li><a href="/apostille-offices-by-state/">Apostille offices by state</a></li>
+    <li><a href="/">All state guides</a></li>
+  </ul>
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={PAGE} target="_blank" rel="noopener">Authentication: Apostille and Certificate of Authentication (Arizona Secretary of State)</a></li>
+    <li><a href={SERV} target="_blank" rel="noopener">Apostille and Document Authentication (Arizona Secretary of State services page)</a></li>
+    <li><a href={FORM} target="_blank" rel="noopener">Apostille/Certificate of Authentication Request form</a></li>
+    <li><a href={HCCH_US} target="_blank" rel="noopener">United States of America, Competent Authorities (HCCH)</a></li>
+  </ul>
+</Base>

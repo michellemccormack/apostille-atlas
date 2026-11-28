@@ -171,3 +171,35 @@ Every fee, address, and processing statement on the live site is taken from one 
 - Illinois: ilsos.gov still did not respond (connection failed; 500 via the fetch service); left queued.
 - Ohio: ohiosos.gov returned 403 (bot challenge) and timed out via the fetch service; left queued.
 - Georgia was published from the GSCCCA, the state's actual apostille authority, instead of sos.ga.gov.
+
+## Arizona (checked 2026-11-28)
+
+- https://azsos.gov/business/authentication (apostille or certificate of authentication certifies an Arizona notary public, court clerk, or state document custodian; request form plus original notarized or certified recorded document, no photocopies; $3 per document; check or money order to "Arizona Secretary of State", no cash by mail; 10-20 business days by mail; walk-in expedite fee $25, limit 6 documents; return postage required, trackable service recommended, return labels must show the customer's address as sender and recipient; Puerto Rico or U.S. territory: notarial capacity certificate, $18; no documents recorded by another state; no electronic apostilles; 602-542-6187, 1-800-458-5842; mail: Attn: Apostille Dept., 1700 W. Washington Street, Fl. 7, Phoenix, AZ 85007-2808; in person: Executive Tower, 1700 W. Washington Street, Suite 220, and Tucson, 400 West Congress, Second Floor, Suite 221; offices Mon-Fri 8 am to 5 pm; NSF fee $25; notices: appointment-only from Nov 2, 2026, and normal walk-in resumed Nov 9, 2026 at 1700 W. Washington St., 2nd Floor, both posted; sealed courier envelopes to ADOA Mail Room, 1802 W Jackson St, Phoenix, AZ 85007). Fetched through the fetch service; direct requests returned 403.
+- https://azsos.gov/services/apostille-document-authentication (same content as above, including 10-20 business days)
+- https://azsos.gov/media/138 (Apostille Request form page; linked only)
+- https://www.hcch.net/en/states/authorities/details3/?aid=353 (Arizona: Secretary of State; Assistant Secretary of State; page last updated 2 September 2026)
+- https://assets.hcch.net/docs/e8e7549d-e34a-452f-9fa3-cf2241aa4197.pdf (e-APP chart lists no Arizona e-Register)
+- Not used: the request form PDF itself (not fetched), so form-only details such as in-person cash are not quoted; no in-person processing time is published, shown as a dash.
+
+## How to verify an apostille (checked 2026-11-28)
+
+- https://assets.hcch.net/docs/e8e7549d-e34a-452f-9fa3-cf2241aa4197.pdf (HCCH Implementation Chart of the e-APP, PDF created Nov 25, 2026: U.S. e-Registers for Arkansas, California, Colorado, Connecticut, Delaware, Kentucky, Minnesota, Montana, Nevada, New York, North Carolina, Rhode Island, Tennessee, Texas, Utah (Lieutenant Governor), Washington, West Virginia; e-Apostilles: Connecticut July 2026 plus pilot Sept 19, 2023 to Sept 30, 2025; Kentucky May 2024; Minnesota pilot Mar 15, 2024 to Sept 30, 2025; Montana Feb 2023; Rhode Island pilot Nov 1, 2023 to Sept 30, 2025; Utah July 2026; Washington pilot Feb 12, 2024 to Sept 30, 2025; pilot e-Apostilles are validly issued; chart content supplied by Contracting Parties and may lag)
+- Register URLs taken from the chart's link annotations. Redirects followed on Nov 28: Delaware to icis.corp.delaware.gov/ecorp2/services/validate; New York to apostille2-verify.dos.ny.gov; Texas CertValidation to CertVerification. Tennessee's chart link (tnbear.tn.gov) timed out, so the existing tncab.tnsos.gov search is used; the chart's Washington row has no link annotation, so the sos.wa.gov search already cited on the Washington guide is used. Responded 200 on Nov 28: CA, CT, DE, KY, NY, RI, TN, TX, UT, WA, WV. Arkansas, Colorado, North Carolina (500), Montana, Nevada (403) and Minnesota (timeout) did not respond to our network; links kept as listed by the HCCH.
+- https://assets.hcch.net/docs/6dd54368-bebd-4b10-a078-0a92e5bca40a.pdf (The ABCs of Apostilles, Question 12: registers, contact the Competent Authority, e-Register address printed on the apostille, Permanent Bureau does not issue, register or keep apostilles; Question 10: apostille certifies origin only)
+- https://assets.hcch.net/docs/a19ae90b-27bf-4596-b5ee-0140858abeaa.pdf (Apostille Handbook, 2nd ed. 2023: paras 25 (admissibility, forged or altered), 267-281 (register, e-Registers, particulars, verification on request, no need to prove interest), 273-274 (e-Register categories and dates))
+- https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille (e-Apostille as valid as paper; Permanent Bureau cannot issue or verify)
+- https://dos.ny.gov/apostille-certificate-authentication (NY online verification for apostilles issued on or after April 9, 2013; as cited on the New York guide)
+- Data update: verify_apostille_url added for Kentucky, Rhode Island and Utah in src/data/us-apostille-authorities.json (all responded 200 on Nov 28).
+
+## Does an apostille expire? (checked 2026-11-28)
+
+- https://assets.hcch.net/docs/a19ae90b-27bf-4596-b5ee-0140858abeaa.pdf (Apostille Handbook, 2nd ed. 2023: para 25 State of destination decides admissibility; para 26 time limits on underlying documents allowed, not on the apostille; para 28 no expiry while identifiable and attached, not rejected on age; para 157 expired documents can still be apostillised if still public documents, examples criminal records, identity and travel documents, provisional court orders; para 306 old apostilles; para 335 e-Apostilles valid after the signer's digital certificate expires if it was valid at issuance)
+- https://www.hcch.net/en/publications-and-studies/details4/?pid=5888 (Handbook publication page)
+- https://assets.hcch.net/docs/6dd54368-bebd-4b10-a078-0a92e5bca40a.pdf (ABCs: apostille certifies origin, not content)
+- https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information (re-checked Nov 28: signature compared to those on file; documents issued before 2000, new certified copy recommended)
+
+## Not published Nov 28, 2026
+
+- Illinois: ilsos.gov answered once, then failed (HTTP/2 stream error, then timeout; 500 via the fetch service); left queued.
+- Ohio: ohiosos.gov now serves one general apostille page at every apostille URL (via the fetch service; direct requests 403). It gives no fee, address, form, or processing time, so a full guide can't be sourced; left queued.
+- Federal documents (U.S. Department of State): travel.state.gov returned 403 and timed out via the fetch service. Form DS-4194 (eforms.state.gov, 01-2023, $20 per document, Sterling, VA mailing address) loaded, but without the live pages processing times and in-person rules can't be confirmed; left queued.

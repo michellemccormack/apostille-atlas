@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+import Crumbs from '../components/Crumbs.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+const title = 'Does an apostille expire?';
+const description = 'An apostille has no expiration date under the Hague Apostille Convention and can’t be refused for its age. What can run out is the receiving country’s time limit on the underlying document. What that means for background checks, vital records and e-Apostilles.';
+const HB = 'https://assets.hcch.net/docs/a19ae90b-27bf-4596-b5ee-0140858abeaa.pdf';
+const HBPAGE = 'https://www.hcch.net/en/publications-and-studies/details4/?pid=5888';
+const ABC = 'https://assets.hcch.net/docs/6dd54368-bebd-4b10-a078-0a92e5bca40a.pdf';
+const SECTION = 'https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille';
+const schema = [
+  { '@type': 'Article', headline: title, description, url: 'https://apostillesteps.com/does-an-apostille-expire/', dateModified: '2026-11-28', citation: [HB, ABC], publisher: { '@type': 'Organization', name: 'Atlas Guides' } },
+];
+---
+<Base title={title} description={description} schema={schema} updated="2026-11-28">
+  <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'Does an apostille expire?' }]} />
+  <h1>Does an apostille expire?</h1>
+  <div class="answer"><p><strong>Short answer:</strong> No. Under the Hague Apostille Convention, a validly issued apostille stays in effect for as long as it can be identified and remains attached to its document, and it can’t be rejected just because of its age. But the country receiving the document can set its own time limit on the document underneath, for example requiring a record issued within a certain period. When people say an apostille “expired,” that is usually what happened.<Src href={HB} /></p></div>
+  <p class="lede">The Hague Conference’s Apostille Handbook (second edition, 2023) is the official practical guide to how the Convention works. It addresses the age question in three places: the general rule, the list of grounds on which an apostille may not be rejected, and the section on e-Apostilles.<Src href={HB} /><Src href={HBPAGE} /></p>
+
+  <h2>What the Convention rule actually says</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Question</th><th>Answer from the Apostille Handbook</th></tr></thead>
+      <tbody>
+        <tr><td>Does the apostille itself have an end date?</td><td>No. It has effect for as long as it is identifiable and stays attached to the underlying public document.<Src href={HB} /></td></tr>
+        <tr><td>Can the receiving country reject an apostille as too old?</td><td>No. An apostille may not be rejected on the basis of its age.<Src href={HB} /></td></tr>
+        <tr><td>Can the receiving country require a recent document?</td><td>Yes. Contracting Parties may set time limits on accepting foreign public documents, for example that the document be produced within a certain period after it was executed. Those limits can’t be applied to the apostille itself.<Src href={HB} /></td></tr>
+        <tr><td>Can an expired document be apostilled?</td><td>Usually. Some documents carry their own validity period (criminal records, identity and travel documents, provisional court orders). Expiry doesn’t ordinarily stop them being public documents unless the law of the issuing country says so, and as long as it is still a public document it can be apostilled.<Src href={HB} /></td></tr>
+        <tr><td>Does an e-Apostille expire when the signer’s digital certificate does?</td><td>No. An e-Apostille stays valid after the signing official’s digital certificate expires, as long as that certificate was valid when the e-Apostille was issued.<Src href={HB} /></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The reason the rule works this way: an apostille only certifies where a public document came from, meaning the signature, the capacity of the person who signed it, and any seal or stamp. It doesn’t certify the content.<Src href={ABC} /> Whether the content is current enough is a separate question for the receiving authority, which keeps the right to decide whether a foreign document is admissible and what weight it carries.<Src href={HB} /></p>
+
+  <h2>Where age limits usually bite</h2>
+  <p>The time limit almost always sits on the document, not the certificate. The Handbook itself names criminal records among the documents that carry their own validity period.<Src href={HB} /> In practice that means:</p>
+  <ul>
+    <li><strong>Criminal record checks</strong> carry their own validity period.<Src href={HB} /> If the receiving office sets a limit on how recent the record must be, ask what it is before you order the check, so the time spent getting the apostille doesn’t use up that window.</li>
+    <li><strong>Vital records</strong> (birth, marriage, death) are a matter for the receiving office’s rules too, and occasionally for the issuing state’s. Georgia’s apostille office, which checks the official’s signature against those on file, recommends a new certified copy if a vital record was issued before 2000.<Src href="https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information" /></li>
+    <li><strong>An old apostille on a still-acceptable document</strong> is fine. If an official refuses it only because the apostille is old, that refusal isn’t consistent with the Convention.<Src href={HB} /></li>
+  </ul>
+  <p>If the receiving office does want a newer document, you need a fresh certified copy (or a new notarization) and a new apostille from the state that issued it; the old apostille can’t be moved onto the new paper, since it only has effect while attached to its own document.<Src href={HB} /> Our <a href="/apostille-finder/">apostille finder</a> gives the office and fee for each covered state.</p>
+
+  <h2>Before you assume it has expired</h2>
+  <ol>
+    <li>Ask the receiving authority what it actually requires. If it wants a recently issued document, that is a rule about the document, not the apostille.<Src href={HB} /></li>
+    <li>Check the apostille is still attached and legible, since its effect depends on staying identifiable and attached.<Src href={HB} /></li>
+    <li>If the receiving office doubts the apostille is genuine, point it to the issuing office’s register; see <a href="/how-to-verify-an-apostille/">how to verify an apostille</a>.</li>
+    <li>If the destination isn’t a Hague country at all, the apostille rules don’t apply; see <a href="/apostille-vs-authentication/">apostille versus authentication</a> and <a href="/apostille-countries/">apostille by country</a>.</li>
+  </ol>
+
+  <HelpCTA />
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={HB} target="_blank" rel="noopener">Apostille Handbook, second edition 2023 (HCCH, PDF): paragraphs 25 to 28 (no effect on admissibility; no expiry), 157 (expired documents), 306 (old apostilles) and 335 (e-Apostilles and digital certificates)</a></li>
+    <li><a href={HBPAGE} target="_blank" rel="noopener">Apostille Handbook publication page (HCCH)</a></li>
+    <li><a href={ABC} target="_blank" rel="noopener">The ABCs of Apostilles (HCCH, PDF)</a></li>
+    <li><a href={SECTION} target="_blank" rel="noopener">Apostille Section (HCCH)</a></li>
+  </ul>
+</Base>

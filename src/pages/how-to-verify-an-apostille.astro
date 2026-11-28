@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import Src from '../components/Src.astro';
+import Crumbs from '../components/Crumbs.astro';
+import HelpCTA from '../components/HelpCTA.astro';
+const title = 'How to verify an apostille: online e-Registers and the issuing office';
+const description = 'How to check that a U.S. apostille is genuine: the states with an online e-Register listed by the Hague Conference (November 2026), what to enter, and who to contact when there is no online search.';
+const ABC = 'https://assets.hcch.net/docs/6dd54368-bebd-4b10-a078-0a92e5bca40a.pdf';
+const HB = 'https://assets.hcch.net/docs/a19ae90b-27bf-4596-b5ee-0140858abeaa.pdf';
+const CHART = 'https://assets.hcch.net/docs/e8e7549d-e34a-452f-9fa3-cf2241aa4197.pdf';
+const SECTION = 'https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille';
+const US_AUTH = 'https://www.hcch.net/en/states/authorities/details3/?aid=353';
+// U.S. e-Registers in the HCCH e-APP Implementation Chart (PDF created November 25, 2026).
+// Where a chart link redirects, the URL it lands on is used.
+const REGS = [
+  { s: 'Arkansas', url: 'http://bcs.sos.arkansas.gov/AuthenticationSearch/ApostilleCertificateSearch' },
+  { s: 'California', url: 'https://apostille-search.sos.ca.gov/', g: '/california-apostille/' },
+  { s: 'Colorado', url: 'https://www.coloradosos.gov/auth/VerifyApostilleSearch.do', g: '/colorado-apostille/' },
+  { s: 'Connecticut', url: 'https://sots.service.ct.gov/apostille/apostilleverification', g: '/connecticut-apostille/', e: 'Issues e-Apostilles (from July 2026; an earlier pilot ran September 19, 2023, to September 30, 2025)' },
+  { s: 'Delaware', url: 'https://icis.corp.delaware.gov/ecorp2/services/validate' },
+  { s: 'Kentucky', url: 'https://web.sos.ky.gov/apostille/verification.aspx', e: 'Issues e-Apostilles (from May 2024)' },
+  { s: 'Minnesota', url: 'https://apostille.sos.state.mn.us/Search', g: '/minnesota-apostille/', e: 'e-Apostille pilot March 15, 2024, to September 30, 2025' },
+  { s: 'Montana', url: 'https://biz.sosmt.gov/apostille', e: 'Issues e-Apostilles (from February 2023)' },
+  { s: 'Nevada', url: 'https://esos.nv.gov/AuthenticationSearch/Index' },
+  { s: 'New York', url: 'https://apostille2-verify.dos.ny.gov/ASPLCNSApostilleVerify/ApostilleVerify.aspx', g: '/new-york-apostille/' },
+  { s: 'North Carolina', url: 'http://www.secretary.state.nc.us/verification/', g: '/north-carolina-apostille/' },
+  { s: 'Rhode Island', url: 'https://business.sos.ri.gov/Apostille/ApostilleSearch', e: 'e-Apostille pilot November 1, 2023, to September 30, 2025' },
+  { s: 'Tennessee', url: 'https://tncab.tnsos.gov/portal/apostille-search' },
+  { s: 'Texas', url: 'https://sosdirectws.sos.state.tx.us/pdfondemand/CertVerification.aspx', g: '/texas-apostille/' },
+  { s: 'Utah (Lieutenant Governor)', url: 'https://verifyapostille.utah.gov/', e: 'Issues e-Apostilles (from July 2026)' },
+  { s: 'Washington', url: 'https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-and-certificate-authenticity-search', g: '/washington-apostille/', e: 'e-Apostille pilot February 12, 2024, to September 30, 2025' },
+  { s: 'West Virginia', url: 'https://apps.sos.wv.gov/business/apostilles/' },
+];
+const schema = [
+  { '@type': 'Article', headline: title, description, url: 'https://apostillesteps.com/how-to-verify-an-apostille/', dateModified: '2026-11-28', citation: [CHART, HB, ABC], publisher: { '@type': 'Organization', name: 'Atlas Guides' } },
+];
+---
+<Base title={title} description={description} schema={schema} updated="2026-11-28">
+  <Crumbs items={[{ name: 'Home', href: '/' }, { name: 'How to verify an apostille' }]} />
+  <h1>How to verify an apostille</h1>
+  <div class="answer"><p><strong>Short answer:</strong> Only the office that issued the apostille can verify it. Look at the apostille for the issuing authority, the date and the certificate number, then search that office’s online register (e-Register) if it has one, or contact the office and ask it to check its register. The Hague Conference itself doesn’t issue, record or verify apostilles.<Src href={ABC} /><Src href={SECTION} /></p></div>
+  <p class="lede">Every apostille authority has to keep a register of the apostilles it issues, and at the request of anyone interested it must confirm whether the details on an apostille match that register. You don’t have to explain why you’re asking.<Src href={HB} /> Seventeen U.S. authorities have a public online register listed by the Hague Conference.<Src href={CHART} /></p>
+
+  <h2>Step by step</h2>
+  <ol>
+    <li><strong>Read the apostille.</strong> The certificate names who signed the underlying document and in what capacity (or, for an unsigned document, the authority whose seal is on it), the date of the apostille, the authority that issued it, and its number. Those are the details every register must record.<Src href={HB} /></li>
+    <li><strong>Find the issuing office.</strong> For a U.S. apostille that is the state office named on the certificate (in most states the Secretary of State), or the U.S. Department of State for a federal document.<Src href={US_AUTH} /> Our <a href="/apostille-offices-by-state/">apostille offices by state</a> table lists every designated office.</li>
+    <li><strong>Use the e-Register if there is one.</strong> If the authority runs an e-Register, its web address is printed on the apostille.<Src href={ABC} /> The U.S. registers listed by the Hague Conference are in the table below.</li>
+    <li><strong>Otherwise, ask the office.</strong> Where there is no e-Register, send the request to the authority that issued the apostille and it checks its register manually.<Src href={HB} /> Contact details for every competent authority are on the Hague Conference’s authorities pages.<Src href={ABC} /></li>
+  </ol>
+
+  <h2>U.S. states with an online apostille register</h2>
+  <p>This is the U.S. list from the HCCH e-APP Implementation Chart, the version created November 25, 2026, checked November 28, 2026. The chart is compiled from information the countries send in, so a newly launched register can be missing for a while.<Src href={CHART} /></p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Issuing authority</th><th>Online register</th><th>e-Apostilles</th></tr></thead>
+      <tbody>
+        {REGS.map(r => (
+          <tr>
+            <td>{r.g ? <a href={r.g}>{r.s}</a> : r.s}</td>
+            <td><a href={r.url} target="_blank" rel="noopener">Search</a><Src href={CHART} /></td>
+            <td>{r.e || '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>Some registers cover only apostilles issued after a certain date, and a country may run separate registers for separate authorities.<Src href={HB} /> New York, for example, says its online tool covers apostilles and certificates issued on or after April 9, 2013.<Src href="https://dos.ny.gov/apostille-certificate-authentication" /> A state that isn’t on the list, such as <a href="/arizona-apostille/">Arizona</a> or <a href="/georgia-apostille/">Georgia</a>, can still verify its apostilles on request.<Src href={HB} /></p>
+
+  <h2>e-Apostilles</h2>
+  <p>An e-Apostille is an apostille issued and signed in digital form. The Hague Conference says it can’t be refused just because it is electronic and is as valid as a paper apostille in every Contracting Party.<Src href={SECTION} /> e-Apostilles issued during the state pilot programs in the table are legitimate, validly issued e-Apostilles, not test certificates.<Src href={CHART} /> An e-Register can record paper apostilles and e-Apostilles alike.<Src href={HB} /></p>
+
+  <h2>What a match does and doesn’t tell you</h2>
+  <p>A matching register entry confirms the apostille was issued as shown. It doesn’t vouch for what the document says: an apostille only certifies the origin of the public document, meaning the signature, the capacity of the signer, and any seal or stamp.<Src href={ABC} /> The receiving country still decides whether the document itself is acceptable, for example whether it meets its domestic requirements or has been altered.<Src href={HB} /> An apostille also can’t be turned down just because it is old; see <a href="/does-an-apostille-expire/">does an apostille expire?</a></p>
+  <p>Not sure your document got the right certificate in the first place? <a href="/apostille-vs-authentication/">Apostille versus authentication</a> explains which countries take an apostille and which need the longer legalization route, and <a href="/apostille-countries/">apostille by country</a> has each Hague member.</p>
+
+  <HelpCTA />
+
+  <h2>Official sources</h2>
+  <ul>
+    <li><a href={CHART} target="_blank" rel="noopener">Implementation Chart of the e-APP, including the list of e-Registers (HCCH, PDF)</a></li>
+    <li><a href={ABC} target="_blank" rel="noopener">The ABCs of Apostilles, Question 12 (HCCH, PDF)</a></li>
+    <li><a href={HB} target="_blank" rel="noopener">Apostille Handbook, second edition 2023, paragraphs 267 to 281 (HCCH, PDF)</a></li>
+    <li><a href={SECTION} target="_blank" rel="noopener">Apostille Section (HCCH)</a></li>
+    <li><a href={US_AUTH} target="_blank" rel="noopener">United States of America, Competent Authorities (HCCH)</a></li>
+  </ul>
+</Base>
